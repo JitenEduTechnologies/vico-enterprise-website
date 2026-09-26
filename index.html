@@ -1,0 +1,4135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07102f">
+<meta name="description"
+content="Vico — Vision Course, SAP services, enterprise transformation and intelligent business solutions.">
+<title>Vico — Vision Course | Enterprise SAP Transformation</title>
+<style>
+:root {
+--ink: #151515;
+--ink-2: #232323;
+--paper: #f5f2ea;
+--paper-2: #ebe7dd;
+--white: #fff;
+--green: #087b70;
+--emerald: #087b70;
+--emerald-2: #0d9a8a;
+--mint: #dcefe8;
+--coral: #f26b5b;
+--sand: #d7c8ad;
+--muted: #66717d;
+--line: rgba(21, 21, 21, .12);
+--dark-line: rgba(255, 255, 255, .14);
+--shadow: 0 25px 70px rgba(21, 21, 21, .12);
+--shadow-dark: 0 28px 80px rgba(0, 0, 0, .30);
+--radius: 28px;
+--max: 1240px;
+--ease: cubic-bezier(.2, .8, .2, 1);
+}
+* {
+box-sizing: border-box
+}
+html {
+scroll-behavior: smooth
+}
+body {
+margin: 0;
+background: var(--paper);
+color: var(--ink);
+font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+overflow-x: hidden;
+}
+body,
+button,
+a {
+font-synthesis: none
+}
+a {
+color: inherit;
+text-decoration: none
+}
+button {
+font: inherit
+}
+img {
+max-width: 100%;
+display: block
+}
+.container {
+width: min(var(--max), calc(100% - 48px));
+margin: auto
+}
+.eyebrow {
+display: inline-flex;
+align-items: center;
+gap: 9px;
+text-transform: uppercase;
+letter-spacing: .17em;
+font-size: 10px;
+font-weight: 850;
+color: var(--emerald);
+background: #fff;
+border: 1px solid rgba(8, 123, 112, .2);
+border-radius: 999px;
+padding: 8px 14px;
+box-shadow: 0 7px 20px rgba(8, 123, 112, .07)
+}
+.eyebrow:before {
+content: "";
+width: 7px;
+height: 7px;
+border-radius: 50%;
+background: var(--coral);
+flex-shrink: 0
+}
+.solutions .eyebrow {
+background: transparent;
+border: none;
+border-radius: 0;
+padding: 0 0 7px 0;
+box-shadow: none;
+color: #83d8c8 !important;
+position: relative;
+display: inline-flex
+}
+.solutions .eyebrow:before {
+display: none
+}
+.solutions .eyebrow:after {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+width: 30px;
+height: 2px;
+background: var(--coral);
+border-radius: 2px
+}
+.section-head {
+text-align: center;
+max-width: 820px;
+margin: 0 auto 54px
+}
+.section-head h2 {
+font-size: clamp(38px, 5.2vw, 68px);
+line-height: .99;
+letter-spacing: -.055em;
+margin: 13px 0 20px;
+font-weight: 820
+}
+.section-head p {
+margin: 0;
+color: var(--muted);
+font-size: 16px;
+line-height: 1.75
+}
+/* HEADER (LIGHT THEME) */
+.site-header {
+position: fixed;
+z-index: 1000;
+inset: 0 0 auto;
+height: 76px;
+background: rgba(255, 255, 255, .88);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+border-bottom: 1px solid rgba(0, 0, 0, .08);
+box-shadow: 0 4px 20px rgba(0, 0, 0, .03);
+transition: transform .46s var(--ease)
+}
+.site-header.is-hidden {
+transform: translateY(-110%)
+}
+.header-inner {
+height: 100%;
+width: min(1420px, calc(100% - 48px));
+margin: auto;
+display: flex;
+align-items: center;
+gap: 30px
+}
+.brand {
+display: flex;
+align-items: center;
+gap: 10px;
+color: #111827;
+flex: none
+}
+.brand-mark {
+width: 35px;
+height: 35px;
+border-radius: 11px;
+background: var(--coral);
+position: relative;
+transform: rotate(-8deg)
+}
+.brand-mark:after {
+content: "";
+position: absolute;
+width: 15px;
+height: 15px;
+border: 4px solid #fff;
+border-left-color: transparent;
+border-radius: 50%;
+left: 8px;
+top: 6px
+}
+.brand-mark:before {
+content: "";
+position: absolute;
+width: 10px;
+height: 4px;
+background: #fff;
+right: 5px;
+bottom: 7px;
+transform: rotate(-35deg)
+}
+.brand-word {
+font-size: 27px;
+font-weight: 850;
+letter-spacing: -.07em;
+color: #111827;
+}
+.nav {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 23px;
+margin-left: auto
+}
+.nav a {
+font-size: 13px;
+font-weight: 720;
+color: #374151;
+white-space: nowrap;
+transition: color .25s
+}
+.nav a:hover {
+color: #087b70
+}
+.header-cta {
+padding: 12px 17px;
+border: 1px solid transparent;
+border-radius: 999px;
+background: #087b70;
+color: #fff;
+font-size: 12px;
+font-weight: 850;
+white-space: nowrap;
+box-shadow: 0 4px 14px rgba(8, 123, 112, .25);
+}
+.menu-btn {
+display: none;
+margin-left: auto;
+width: 42px;
+height: 42px;
+border-radius: 50%;
+border: 1px solid rgba(0, 0, 0, .12);
+background: rgba(0, 0, 0, .04);
+color: #111827;
+}
+/* HERO (LIGHT THEME - SERVICES STYLE) */
+.hero {
+min-height: calc(100svh - 70px);
+position: relative;
+display: flex;
+align-items: flex-end;
+overflow: hidden;
+background: #f6f8f7;
+color: var(--ink);
+}
+.hero video {
+position: absolute;
+inset: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: 52% 43%;
+filter: saturate(1.15) contrast(1.05);
+opacity: .68;
+}
+.hero:after {
+content: "";
+position: absolute;
+inset: 0;
+background:
+radial-gradient(circle at 85% 20%, rgba(8, 123, 112, .14), transparent 45%),
+linear-gradient(90deg, rgba(246, 248, 247, .88) 0%, rgba(246, 248, 247, .62) 55%, rgba(246, 248, 247, .20) 100%),
+linear-gradient(0deg, rgba(246, 248, 247, .85) 0%, transparent 60%);
+pointer-events: none;
+}
+.hero-grid {
+position: absolute;
+inset: 0;
+opacity: .12;
+background-image: linear-gradient(rgba(8, 123, 112, .18) 1px, transparent 1px), linear-gradient(90deg, rgba(8, 123, 112, .18) 1px, transparent 1px);
+background-size: 80px 80px;
+pointer-events: none;
+}
+.hero-side {
+position: absolute;
+right: 5%;
+top: 28%;
+z-index: 2;
+width: 190px;
+height: 190px;
+border: 1px solid rgba(0, 0, 0, .1);
+border-radius: 50%;
+pointer-events: none;
+}
+.hero-side:before {
+content: "";
+position: absolute;
+border-radius: 50%;
+width: 8px;
+height: 8px;
+background: var(--coral);
+right: 18%;
+top: 18%;
+box-shadow: 0 0 25px rgba(242, 107, 91, .8);
+}
+.hero-side:after {
+content: "";
+position: absolute;
+border-radius: 50%;
+width: 6px;
+height: 6px;
+background: var(--green);
+left: 16%;
+bottom: 22%;
+box-shadow: 0 0 20px rgba(8, 123, 112, .8);
+}
+.hero-content {
+position: relative;
+z-index: 10;
+width: min(1320px, calc(100% - 64px));
+margin: auto;
+padding: 130px 0 82px;
+pointer-events: auto;
+}
+.eyebrow {
+display: inline-flex;
+align-items: center;
+gap: 10px;
+padding: 8px 16px;
+background: rgba(255, 255, 255, .88);
+border: 1px solid rgba(8, 123, 112, .22);
+border-radius: 999px;
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+box-shadow: 0 4px 16px rgba(0, 0, 0, .04);
+font-size: 11px;
+font-weight: 900;
+letter-spacing: .16em;
+text-transform: uppercase;
+color: var(--green);
+transition: transform .25s ease, box-shadow .25s ease;
+}
+.eyebrow:hover {
+transform: translateY(-2px);
+box-shadow: 0 6px 20px rgba(8, 123, 112, .12);
+}
+.eyebrow:before {
+content: "";
+width: 8px;
+height: 8px;
+border-radius: 50%;
+background: var(--coral);
+box-shadow: 0 0 10px rgba(242, 107, 91, .7);
+animation: dotPulse 2s infinite ease-in-out;
+}
+@keyframes dotPulse {
+0%, 100% { transform: scale(1); opacity: 1; }
+50% { transform: scale(1.35); opacity: .6; }
+}
+.hero h1,
+.hero-title {
+max-width: 980px;
+font-size: clamp(55px, 7.4vw, 112px);
+line-height: .88;
+letter-spacing: -.055em;
+margin: 25px 0 28px;
+font-weight: 900;
+color: var(--ink);
+}
+.hero h1 span,
+.hero h1 strong,
+.hero-title span {
+color: var(--green);
+font-weight: inherit;
+}
+.hero p,
+.hero-lead {
+max-width: 720px;
+color: var(--muted);
+font-size: clamp(18px, 1.5vw, 21px);
+line-height: 1.6;
+margin: 0 0 34px;
+}
+.actions {
+display: flex;
+flex-wrap: wrap;
+gap: 12px;
+margin-top: 34px;
+position: relative;
+z-index: 20;
+pointer-events: auto;
+}
+.btn {
+min-height: 50px;
+padding: 0 24px;
+border-radius: 999px;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+font-size: 13px;
+font-weight: 850;
+border: 1px solid transparent;
+transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+cursor: pointer;
+pointer-events: auto;
+text-decoration: none;
+position: relative;
+z-index: 20;
+}
+.btn:hover {
+transform: translateY(-3px);
+}
+.btn-primary,
+.btn-green {
+background: var(--green);
+color: #fff;
+box-shadow: 0 8px 25px rgba(8, 123, 112, .3);
+}
+.btn-primary:hover,
+.btn-green:hover {
+background: #06665d;
+box-shadow: 0 14px 35px rgba(8, 123, 112, .45);
+}
+.btn-ghost,
+.btn-outline {
+border: 1px solid rgba(21, 21, 21, .18);
+color: var(--ink);
+background: rgba(255, 255, 255, .8);
+backdrop-filter: blur(8px);
+}
+.btn-ghost:hover,
+.btn-outline:hover {
+background: #fff;
+border-color: var(--green);
+color: var(--green);
+}
+.hero-chips {
+display: flex;
+gap: 10px;
+flex-wrap: wrap;
+margin-top: 40px;
+position: relative;
+z-index: 10;
+}
+.hero-chips span {
+padding: 9px 16px;
+border: 1px solid rgba(0, 0, 0, .1);
+border-radius: 999px;
+background: rgba(255, 255, 255, .75);
+backdrop-filter: blur(8px);
+color: #374151;
+font-size: 10px;
+font-weight: 800;
+letter-spacing: .09em;
+text-transform: uppercase;
+transition: .25s ease;
+box-shadow: 0 4px 15px rgba(0, 0, 0, .04);
+}
+.hero-chips span:hover {
+border-color: var(--green);
+color: var(--green);
+background: #fff;
+transform: translateY(-2px);
+box-shadow: 0 8px 25px rgba(8, 123, 112, .2);
+}
+/* SOLUTIONS (LIGHT THEME) */
+.solutions {
+background: #f0f4f3;
+color: #111827;
+padding: 0 0 90px;
+border-top: 1px solid var(--line);
+}
+.solutions-intro {
+width: min(1000px, calc(100% - 48px));
+margin: auto;
+padding: 105px 0 55px;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 45px;
+align-items: end
+}
+.solutions-intro h2 {
+font-size: clamp(40px, 5.4vw, 70px);
+line-height: .96;
+letter-spacing: -.055em;
+margin: 12px 0 0;
+color: #111827;
+}
+.solutions-intro p {
+color: #4b5563;
+line-height: 1.8;
+margin: 0 0 5px
+}
+.solution-stage {
+position: relative;
+width: min(1450px, 100%);
+height: 68svh;
+min-height: 560px;
+margin: auto;
+overflow: hidden;
+border-radius: 28px;
+border: 1px solid var(--line);
+box-shadow: 0 20px 60px rgba(0, 0, 0, .06);
+}
+.solution-panels {
+height: 100%;
+display: flex
+}
+.solution-panel {
+flex: 1 1 0;
+min-width: 0;
+position: relative;
+overflow: hidden;
+border-right: 1px solid rgba(0, 0, 0, .1);
+cursor: pointer;
+transition: flex-grow .9s var(--ease), background .5s
+}
+.solution-panel:before {
+content: "";
+position: absolute;
+inset: 0;
+background-image: var(--bg, none);
+background-size: cover;
+background-position: center;
+filter: grayscale(.2) brightness(.7);
+transform: scale(1.04);
+transition: filter .8s ease, transform 1.1s var(--ease)
+}
+.solution-panel:after {
+content: "";
+position: absolute;
+inset: 0;
+background: linear-gradient(180deg, rgba(15, 23, 42, .05) 0%, rgba(15, 23, 42, .88) 85%)
+}
+.solution-panel.active {
+flex-grow: 4.8
+}
+.solution-panel.active:before {
+filter: grayscale(0) brightness(.9);
+transform: scale(1.09)
+}
+.solution-closed {
+position: absolute;
+z-index: 2;
+left: 8px;
+right: 8px;
+bottom: 20px;
+background: rgba(15, 23, 42, .88);
+border: 1px solid rgba(255, 255, 255, .20);
+border-radius: 14px;
+padding: 10px 6px;
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+box-shadow: 0 8px 24px rgba(0, 0, 0, .4);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 4px;
+text-align: center;
+writing-mode: horizontal-tb;
+transition: all .45s var(--ease);
+pointer-events: none;
+}
+.solution-closed .closed-pill {
+font-size: 8.5px;
+font-weight: 800;
+letter-spacing: .12em;
+text-transform: uppercase;
+color: #82d7c8;
+line-height: 1;
+}
+.solution-closed .closed-title {
+font-size: 11px;
+font-weight: 800;
+line-height: 1.2;
+color: #ffffff;
+letter-spacing: -.01em;
+}
+.solution-panel.active .solution-closed {
+opacity: 0;
+transform: translateY(14px) scale(0.95);
+pointer-events: none;
+}
+.solution-copy {
+position: absolute;
+z-index: 3;
+left: 6%;
+right: 7%;
+bottom: 7%;
+opacity: 0;
+transform: translateY(24px);
+transition: .55s ease .12s;
+color: #fff;
+}
+.solution-panel.active .solution-copy {
+opacity: 1;
+transform: none
+}
+.solution-copy .mini {
+color: #82d7c8;
+text-transform: uppercase;
+letter-spacing: .16em;
+font-size: 9px;
+font-weight: 850
+}
+.solution-copy h3 {
+font-size: clamp(28px, 3.5vw, 52px);
+letter-spacing: -.05em;
+line-height: .98;
+margin: 10px 0 13px;
+color: #fff;
+}
+.solution-copy p {
+color: rgba(255, 255, 255, .88);
+max-width: 610px;
+line-height: 1.6;
+font-size: 14px;
+margin: 0 0 20px
+}
+.solution-copy a {
+font-size: 12px;
+font-weight: 850;
+color: #8de2d3;
+}
+.solution-copy a span {
+margin-left: 6px;
+transition: .3s
+}
+.solution-copy a:hover span {
+transform: translateX(5px)
+}
+.solution-progress {
+position: absolute;
+z-index: 5;
+right: 18px;
+top: 50%;
+transform: translateY(-50%);
+display: flex;
+flex-direction: column;
+gap: 11px
+}
+.solution-progress button {
+border: 0;
+width: 7px;
+height: 7px;
+padding: 0;
+border-radius: 10px;
+background: rgba(0, 0, 0, .25);
+cursor: pointer;
+transition: .4s
+}
+.solution-progress button.active {
+height: 25px;
+background: var(--coral)
+}
+/* TRUST */
+.trust {
+background: #fff;
+padding: 120px 0 130px
+}
+.trust-grid {
+width: min(1080px, calc(100% - 48px));
+margin: auto;
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+border: 1px solid var(--line);
+border-radius: 24px;
+overflow: hidden;
+background: #fff
+}
+.logo-cell {
+min-height: 130px;
+display: grid;
+place-items: center;
+padding: 25px;
+border-right: 1px solid var(--line);
+border-bottom: 1px solid var(--line);
+transition: .3s
+}
+.logo-cell:nth-child(4n) {
+border-right: 0
+}
+.logo-cell img {
+width: 100%;
+height: 62px;
+object-fit: contain;
+filter: grayscale(1);
+opacity: .62;
+transition: .35s
+}
+.logo-cell:hover {
+background: #faf9f5
+}
+.logo-cell:hover img {
+filter: grayscale(0);
+opacity: 1;
+transform: scale(1.04)
+}
+.trust-note {
+text-align: center;
+color: #85827b;
+font-size: 11px;
+line-height: 1.6;
+max-width: 730px;
+margin: 25px auto 0
+}
+/* CHALLENGES */
+.challenges {
+padding: 120px 0;
+background: var(--paper)
+}
+.challenge-tabs {
+display: flex;
+width: max-content;
+max-width: 100%;
+margin: 0 auto 55px;
+border-bottom: 1px solid var(--line)
+}
+.challenge-tab {
+border: 0;
+background: transparent;
+color: #817d75;
+padding: 15px 24px;
+cursor: pointer;
+font-weight: 760;
+position: relative
+}
+.challenge-tab:after {
+content: "";
+position: absolute;
+left: 15%;
+right: 15%;
+bottom: -1px;
+height: 3px;
+background: transparent
+}
+.challenge-tab.active {
+color: var(--ink);
+background: #fff8f6
+}
+.challenge-tab.active:after {
+background: var(--coral)
+}
+.challenge-content {
+display: grid;
+grid-template-columns: 1.05fr .95fr;
+gap: 75px;
+align-items: center
+}
+.challenge-media {
+height: 500px;
+border-radius: 30px;
+overflow: hidden;
+box-shadow: var(--shadow);
+background: #ddd
+}
+.challenge-media img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: .65s var(--ease)
+}
+.challenge-copy h3 {
+font-size: clamp(34px, 4.1vw, 57px);
+line-height: 1;
+letter-spacing: -.055em;
+margin: 0 0 22px
+}
+.challenge-copy p {
+font-size: 17px;
+line-height: 1.8;
+color: var(--muted);
+margin: 0 0 24px
+}
+.challenge-metrics {
+display: flex;
+flex-wrap: wrap;
+gap: 11px;
+margin-bottom: 25px
+}
+.metric {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+padding: 9px 12px;
+border: 1px solid var(--line);
+background: #fff;
+border-radius: 999px;
+font-size: 11px;
+font-weight: 850
+}
+.metric-icon {
+color: var(--emerald)
+}
+.challenge-link {
+color: var(--emerald);
+font-weight: 850;
+font-size: 12px;
+display: inline-flex;
+gap: 7px
+}
+.challenge-tab {
+transition: color .25s, background .25s, transform .25s
+}
+.challenge-tab:hover {
+color: var(--ink);
+background: #fff
+}
+.challenge-tab:before {
+content: "Explore";
+display: block;
+font-size: 8px;
+font-weight: 850;
+letter-spacing: .11em;
+text-transform: uppercase;
+color: var(--coral);
+opacity: 0;
+height: 0;
+overflow: hidden;
+transition: opacity .2s, height .2s, margin .2s;
+}
+.challenge-tab:hover:before,
+.challenge-tab.active:before {
+opacity: 1;
+height: 10px;
+margin-bottom: 3px;
+}
+.challenge-tab:after {
+transition: background .25s
+}
+/* INDUSTRIES */
+.industries {
+background: #e8eee9;
+padding: 120px 0;
+color: var(--ink)
+}
+.industry-shell {
+width: min(1180px, calc(100% - 48px));
+margin: auto;
+background: #fff;
+border-radius: 30px;
+overflow: hidden;
+display: grid;
+grid-template-columns: 315px 1fr;
+box-shadow: var(--shadow)
+}
+.industry-list {
+background: #f6f4ee
+}
+.industry-title {
+padding: 31px 27px;
+border-bottom: 1px solid var(--line)
+}
+.industry-title h3 {
+margin: 8px 0 0;
+font-size: 25px;
+letter-spacing: -.04em
+}
+.industry-btn {
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border: 0;
+border-bottom: 1px solid var(--line);
+background: transparent;
+padding: 19px 27px;
+text-align: left;
+color: #737067;
+cursor: pointer;
+transition: .25s
+}
+.industry-btn.active {
+background: #fff;
+color: var(--emerald)
+}
+.industry-btn span:first-child {
+font-size: 13px;
+font-weight: 760
+}
+.industry-btn .num {
+font-size: 10px;
+margin-right: 10px;
+color: #9b978d
+}
+.industry-btn .arrow {
+font-size: 20px;
+transition: .3s
+}
+.industry-btn.active .arrow {
+transform: translateX(4px)
+}
+.industry-visual {
+position: relative;
+min-height: 650px;
+background: #222;
+overflow: hidden
+}
+.industry-visual img {
+position: absolute;
+inset: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: .8s var(--ease)
+}
+.industry-visual:after {
+content: "";
+position: absolute;
+inset: 0;
+background: linear-gradient(90deg, rgba(0, 0, 0, .04), rgba(0, 0, 0, .12))
+}
+.industry-card {
+position: absolute;
+z-index: 2;
+left: 6%;
+right: 6%;
+bottom: 6%;
+padding: 29px;
+border-radius: 23px;
+background: rgba(255, 255, 255, .95);
+box-shadow: 0 22px 65px rgba(0, 0, 0, .22);
+backdrop-filter: blur(12px)
+}
+.industry-card h4 {
+font-size: 35px;
+line-height: 1;
+letter-spacing: -.045em;
+margin: 0 0 8px
+}
+.industry-card p {
+color: #625f58;
+line-height: 1.65;
+margin: 0 0 18px
+}
+.tags {
+display: flex;
+flex-wrap: wrap;
+gap: 7px;
+margin-bottom: 19px
+}
+.tag {
+background: var(--mint);
+color: #12665e;
+border-radius: 999px;
+padding: 7px 10px;
+font-size: 10px;
+font-weight: 850
+}
+/* CTA */
+.final-cta {
+padding: 135px 24px;
+background: #161616;
+color: #fff;
+position: relative;
+overflow: hidden;
+text-align: center
+}
+.final-cta:before {
+content: "";
+position: absolute;
+width: 620px;
+height: 620px;
+border-radius: 50%;
+right: -180px;
+top: -300px;
+border: 1px solid rgba(141, 226, 211, .16);
+box-shadow: 0 0 0 70px rgba(141, 226, 211, .025), 0 0 0 140px rgba(141, 226, 211, .018)
+}
+.final-cta:after {
+content: "";
+position: absolute;
+width: 520px;
+height: 520px;
+border-radius: 50%;
+left: -250px;
+bottom: -330px;
+background: rgba(242, 107, 91, .06)
+}
+.cta-inner {
+max-width: 900px;
+margin: auto;
+position: relative;
+z-index: 2
+}
+.cta-pill {
+display: inline-flex;
+border: 1px solid rgba(255, 255, 255, .2);
+padding: 9px 16px;
+border-radius: 999px;
+color: #d7ded9;
+font-size: 10px;
+font-weight: 850;
+letter-spacing: .15em;
+text-transform: uppercase
+}
+.final-cta h2 {
+font-size: clamp(43px, 6vw, 80px);
+line-height: .96;
+letter-spacing: -.06em;
+margin: 26px 0 19px
+}
+.final-cta h2 span {
+color: #83d8c8
+}
+.final-cta p {
+max-width: 690px;
+margin: 0 auto 31px;
+color: #bfc5c0;
+line-height: 1.75
+}
+/* METHOD */
+.method {
+padding: 125px 0;
+background: #fff;
+overflow: hidden
+}
+.method-steps {
+max-width: 1050px;
+margin: 70px auto 0;
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+gap: 0;
+position: relative
+}
+.method-steps:before {
+content: "";
+position: absolute;
+left: 10%;
+right: 10%;
+top: 42px;
+height: 1px;
+background: linear-gradient(90deg, var(--emerald), #73bcae, var(--sand), #e69d8e, var(--coral))
+}
+.method-step {
+position: relative;
+text-align: center;
+padding: 0 12px
+}
+.step-node {
+width: 84px;
+height: 84px;
+border-radius: 50%;
+display: grid;
+place-items: center;
+margin: 0 auto 23px;
+background: #fff;
+border: 8px solid #fff;
+box-shadow: 0 0 0 1px var(--line), 0 15px 30px rgba(21, 21, 21, .12);
+color: var(--emerald);
+font-size: 12px;
+font-weight: 900;
+position: relative;
+z-index: 2
+}
+.method-step:nth-child(2) .step-node {
+color: #3c8b7f
+}
+.method-step:nth-child(3) .step-node {
+color: #8f7a56
+}
+.method-step:nth-child(4) .step-node {
+color: #d47d6e
+}
+.method-step:nth-child(5) .step-node {
+color: var(--coral)
+}
+.method-step h3 {
+font-size: 18px;
+margin: 0 0 8px;
+letter-spacing: -.025em
+}
+.method-step p {
+margin: 0;
+color: #77736b;
+font-size: 12px;
+line-height: 1.65
+}
+.method-note {
+max-width: 820px;
+margin: 65px auto 0;
+padding: 22px 25px;
+border: 1px solid var(--line);
+border-radius: 17px;
+background: var(--paper);
+text-align: center;
+color: #6f6b63;
+font-size: 13px;
+line-height: 1.6
+}
+.method-note strong {
+color: var(--ink)
+}
+/* Connected methodology path */
+.method-steps {
+position: relative;
+max-width: 1120px;
+margin: 78px auto 0;
+display: grid;
+grid-template-columns: repeat(6, minmax(0, 1fr));
+gap: 14px;
+align-items: start;
+}
+.method-steps:before {
+content: "";
+position: absolute;
+left: 7%;
+right: 7%;
+top: 47px;
+height: 3px;
+background: linear-gradient(90deg, var(--emerald), #55ad9e, #c7a873, #df907f, var(--coral));
+border-radius: 999px;
+box-shadow: 0 0 18px rgba(8, 123, 112, .10);
+}
+.method-step {
+position: relative;
+min-width: 0;
+text-align: center;
+padding: 0 5px;
+}
+.method-step:nth-child(even) {
+transform: translateY(34px)
+}
+.method-step:after {
+content: "";
+position: absolute;
+z-index: 0;
+top: 47px;
+left: 50%;
+width: calc(100% + 14px);
+height: 34px;
+border-top: 2px solid rgba(21, 21, 21, .10);
+border-radius: 50%;
+pointer-events: none;
+}
+.method-step:last-child:after {
+display: none
+}
+.step-node {
+width: 82px;
+height: 82px;
+border-radius: 50%;
+margin: 0 auto 20px;
+display: grid;
+place-items: center;
+background: linear-gradient(145deg, #fff, #f0eee8);
+border: 7px solid #fff;
+box-shadow: 0 0 0 1px rgba(21, 21, 21, .12), 0 14px 30px rgba(21, 21, 21, .13);
+position: relative;
+z-index: 3;
+font-size: 13px;
+font-weight: 950;
+transition: transform .35s var(--ease), box-shadow .35s, background .35s;
+}
+.method-step:hover .step-node {
+transform: translateY(-7px) scale(1.05);
+box-shadow: 0 0 0 1px rgba(21, 21, 21, .12), 0 20px 38px rgba(21, 21, 21, .18), 0 0 0 7px rgba(8, 123, 112, .06);
+}
+.method-step h3 {
+position: relative;
+z-index: 2;
+font-size: 16px;
+line-height: 1.1;
+margin: 0 0 9px;
+letter-spacing: -.025em;
+}
+.method-step p {
+position: relative;
+z-index: 2;
+margin: 0;
+color: #77736b;
+font-size: 11px;
+line-height: 1.55;
+}
+.method-step:nth-child(1) .step-node {
+color: #087b70
+}
+.method-step:nth-child(2) .step-node {
+color: #3d8f82
+}
+.method-step:nth-child(3) .step-node {
+color: #8f7a56
+}
+.method-step:nth-child(4) .step-node {
+color: #d47d6e
+}
+.method-step:nth-child(5) .step-node {
+color: #d46e5f
+}
+.method-step:nth-child(6) .step-node {
+color: #f26b5b
+}
+@keyframes methodPulse {
+0%,
+100% {
+box-shadow: 0 0 0 1px rgba(21, 21, 21, .12), 0 14px 30px rgba(21, 21, 21, .13)
+}
+50% {
+box-shadow: 0 0 0 1px rgba(21, 21, 21, .12), 0 17px 34px rgba(21, 21, 21, .15), 0 0 0 9px rgba(8, 123, 112, .035)
+}
+}
+.method-step .step-node {
+animation: methodPulse 4.8s ease-in-out infinite
+}
+.method-step:nth-child(2) .step-node {
+animation-delay: .35s
+}
+.method-step:nth-child(3) .step-node {
+animation-delay: .7s
+}
+.method-step:nth-child(4) .step-node {
+animation-delay: 1.05s
+}
+.method-step:nth-child(5) .step-node {
+animation-delay: 1.4s
+}
+.method-step:nth-child(6) .step-node {
+animation-delay: 1.75s
+}
+@media (min-width:601px) and (max-width:1080px) {
+.method-steps {
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 44px 12px
+}
+.method-steps:before {
+display: none
+}
+.method-step {
+display: grid;
+grid-template-columns: 76px 1fr;
+gap: 14px;
+text-align: left;
+align-items: center;
+transform: none !important
+}
+.method-step:after {
+display: block;
+top: 38px;
+left: 64px;
+width: calc(100% + 12px);
+height: 28px;
+border-top: 2px solid rgba(21, 21, 21, .11);
+border-radius: 50%;
+}
+.method-step:nth-child(3):after,
+.method-step:nth-child(6):after {
+display: none
+}
+}
+/* FOOTER (LIGHT THEME) */
+footer {
+background: #f8faf9;
+color: #1f2937;
+padding: 50px 0 28px;
+border-top: 1px solid var(--line);
+}
+.footer-top {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 30px;
+padding-bottom: 34px;
+border-bottom: 1px solid var(--line);
+}
+.footer-copy {
+color: #6b7280;
+max-width: 470px;
+font-size: 12px;
+line-height: 1.7
+}
+.footer-nav {
+display: flex;
+flex-wrap: wrap;
+gap: 18px;
+color: #4b5563;
+font-size: 12px;
+font-weight: 700
+}
+.footer-nav a:hover {
+color: #087b70
+}
+.footer-bottom {
+display: flex;
+justify-content: space-between;
+gap: 20px;
+padding-top: 20px;
+color: #6b7280;
+font-size: 10px
+}
+/* REVEAL */
+.reveal {
+opacity: 0;
+transform: translateY(25px);
+transition: opacity .75s ease, transform .8s var(--ease)
+}
+.reveal.visible {
+opacity: 1;
+transform: none
+}
+/* TABLET */
+@media(max-width:1080px) {
+.nav {
+gap: 14px
+}
+.nav a {
+font-size: 11px
+}
+.header-cta {
+padding: 11px 14px
+}
+.challenge-content {
+gap: 42px
+}
+}
+@media(max-width:900px) {
+.header-inner {
+width: calc(100% - 30px)
+}
+.nav,
+.header-cta {
+display: none
+}
+.menu-btn {
+display: block
+}
+.nav.open {
+display: flex;
+position: absolute;
+top: 76px;
+left: 12px;
+right: 12px;
+flex-direction: column;
+gap: 0;
+background: rgba(20, 20, 20, .98);
+border: 1px solid rgba(255, 255, 255, .13);
+border-radius: 18px;
+padding: 7px
+}
+.nav.open a {
+padding: 13px;
+font-size: 13px
+}
+.nav.open:after {
+content: "Book a Free Demo";
+margin: 7px;
+padding: 12px;
+background: var(--coral);
+border-radius: 999px;
+text-align: center;
+font-size: 12px;
+font-weight: 850
+}
+.solutions-intro {
+grid-template-columns: 1fr;
+padding: 88px 0 40px;
+gap: 15px
+}
+.solution-stage {
+height: auto;
+min-height: 0
+}
+.solution-panels {
+display: block
+}
+.solution-panel {
+height: 205px;
+min-height: 0;
+border-right: 0;
+border-bottom: 1px solid rgba(255, 255, 255, .14);
+transition: height .7s var(--ease)
+}
+.solution-panel.active {
+height: 490px
+}
+.solution-panel:before {
+filter: grayscale(.55) brightness(.5)
+}
+.solution-closed {
+writing-mode: initial;
+left: 20px;
+bottom: 20px;
+transform: none
+}
+.solution-panel.active .solution-closed {
+transform: translateY(10px)
+}
+.solution-copy {
+left: 20px;
+right: 30px;
+bottom: 22px
+}
+.solution-copy h3 {
+font-size: 37px
+}
+.solution-progress {
+right: 11px
+}
+.challenge-content {
+grid-template-columns: 1fr;
+gap: 38px
+}
+.industry-shell {
+grid-template-columns: 1fr
+}
+.industry-list {
+display: grid;
+grid-template-columns: repeat(3, 1fr)
+}
+.industry-title {
+grid-column: 1/-1
+}
+.industry-btn {
+padding: 15px
+}
+.industry-btn .arrow {
+display: none
+}
+.industry-visual {
+min-height: 610px
+}
+.method-steps {
+grid-template-columns: repeat(3, 1fr);
+gap: 38px 16px
+}
+.method-steps:before {
+left: 10%;
+right: 10%;
+top: 43px;
+width: auto;
+height: 2px;
+background: linear-gradient(90deg, var(--emerald), var(--sand), var(--coral))
+}
+.method-step {
+display: grid;
+grid-template-columns: 76px 1fr;
+gap: 15px;
+text-align: left;
+align-items: start
+}
+.method-step:nth-child(even) {
+transform: none
+}
+.step-node {
+margin: 0
+}
+}
+/* MOBILE */
+@media(max-width:600px) {
+.container {
+width: calc(100% - 30px)
+}
+.site-header {
+height: 68px
+}
+.nav.open {
+top: 68px
+}
+.brand-word {
+font-size: 24px
+}
+.brand-mark {
+width: 32px;
+height: 32px
+}
+.hero {
+min-height: 100svh;
+align-items: center;
+justify-content: center
+}
+.hero video {
+object-position: 52% center
+}
+.hero:after {
+background: linear-gradient(90deg, rgba(247, 250, 249, .95), rgba(247, 250, 249, .75)), linear-gradient(0deg, rgba(247, 250, 249, .95) 0%, rgba(247, 250, 249, .2) 72%)
+}
+.hero-content {
+width: calc(100% - 30px);
+padding: 84px 0 40px
+}
+.hero h1 {
+font-size: clamp(28px, 8.5vw, 40px);
+line-height: 1.05;
+margin: 16px 0 18px
+}
+.hero-lead {
+font-size: 15px;
+line-height: 1.58;
+margin-bottom: 25px
+}
+.hero .actions {
+flex-direction: column;
+gap: 12px;
+margin-top: 28px
+}
+.hero .actions .btn {
+width: calc(100% - 48px);
+max-width: 420px;
+align-self: center;
+min-height: 53px;
+padding: 0 21px;
+font-size: 13px;
+}
+.hero-note {
+font-size: 9px;
+line-height: 1.5;
+margin-top: 23px
+}
+.section-head {
+margin-bottom: 32px;
+max-width: 100%;
+min-width: 0
+}
+.section-head h2 {
+font-size: clamp(26px, 7.5vw, 36px);
+line-height: 1.05;
+overflow-wrap: anywhere;
+word-break: normal;
+max-width: 100%;
+min-width: 0
+}
+.section-head p {
+font-size: 14px;
+overflow-wrap: anywhere;
+word-break: normal;
+max-width: 100%;
+min-width: 0
+}
+.solutions {
+padding-bottom: 55px
+}
+.solutions-intro {
+width: calc(100% - 30px);
+padding: 78px 0 32px
+}
+.solutions-intro h2 {
+font-size: clamp(28px, 8vw, 42px);
+overflow-wrap: break-word
+}
+.solutions-intro p {
+font-size: 14px
+}
+.solution-panel {
+height: 170px
+}
+.solution-panel.active {
+height: 420px
+}
+.solution-copy h3 {
+font-size: 34px
+}
+.solution-copy p {
+font-size: 13px;
+line-height: 1.55
+}
+.solution-copy a {
+font-size: 11px
+}
+.trust {
+padding: 82px 0
+}
+.trust-grid {
+width: calc(100% - 30px);
+grid-template-columns: repeat(2, 1fr);
+border-radius: 18px
+}
+.logo-cell {
+min-height: 100px;
+padding: 13px;
+border-right: 1px solid var(--line)
+}
+.logo-cell:nth-child(2n) {
+border-right: 0
+}
+.logo-cell:nth-child(4n) {
+border-right: 0
+}
+.logo-cell img {
+height: 48px
+}
+.challenges {
+padding: 82px 0;
+max-width: 100%;
+overflow: hidden
+}
+.challenges .section-head {
+width: 100%;
+max-width: 100%;
+min-width: 0;
+padding-inline: 0
+}
+.challenges .section-head h2 {
+font-size: clamp(26px, 7.5vw, 36px);
+max-width: 100%;
+overflow-wrap: anywhere
+}
+.challenges .section-head p {
+max-width: 100%;
+overflow-wrap: anywhere
+}
+.challenge-tabs {
+width: 100%;
+max-width: 100%;
+min-width: 0;
+display: grid;
+grid-template-columns: 1fr;
+border: 1px solid var(--line);
+border-radius: 14px;
+overflow: hidden
+}
+.challenge-tab {
+padding: 13px 10px;
+font-size: 12px;
+border-bottom: 1px solid var(--line)
+}
+.challenge-tab:last-child {
+border-bottom: 0
+}
+.challenge-tab.active:after {
+display: none
+}
+.challenge-tab {
+display: flex;
+align-items: center;
+justify-content: space-between;
+text-align: left;
+padding: 14px 15px
+}
+.challenge-tab:after {
+content: "→";
+display: block;
+position: static;
+width: auto;
+height: auto;
+background: none;
+color: #a74236;
+font-size: 15px
+}
+.challenge-tab:before {
+display: block;
+opacity: 1;
+height: auto;
+margin: 0;
+color: #a74236;
+content: "Explore ·"
+}
+.challenge-tab.active {
+background: #fff0ed;
+color: #a74236
+}
+.challenge-media {
+height: 285px;
+max-width: 100%;
+border-radius: 20px
+}
+.challenge-copy h3 {
+font-size: clamp(24px, 7vw, 36px);
+overflow-wrap: break-word
+}
+.challenge-copy p {
+font-size: 15px
+}
+.industries {
+padding: 82px 0
+}
+.industry-shell {
+width: calc(100% - 30px);
+border-radius: 20px
+}
+.industry-list {
+display: flex;
+flex-wrap: nowrap;
+overflow-x: auto;
+overflow-y: hidden;
+gap: 8px;
+padding: 10px 12px 12px;
+background: #f6f4ee;
+-webkit-overflow-scrolling: touch;
+scroll-snap-type: x proximity;
+scrollbar-width: none;
+}
+.industry-list::-webkit-scrollbar {
+display: none
+}
+.industry-title {
+flex: 0 0 100%;
+padding: 16px 10px 6px;
+border: 0;
+scroll-snap-align: start;
+}
+.industry-title h3 {
+font-size: 21px
+}
+.industry-btn {
+flex: 0 0 auto;
+width: auto;
+min-width: max-content;
+padding: 11px 15px;
+border: 1px solid var(--line);
+border-radius: 999px;
+background: #fff;
+scroll-snap-align: start;
+box-shadow: 0 2px 8px rgba(21, 21, 21, .04);
+}
+.industry-btn span:first-child {
+font-size: 11px
+}
+.industry-btn .num {
+display: none
+}
+.industry-btn.active {
+background: var(--emerald);
+color: #fff;
+border-color: var(--emerald)
+}
+.industry-list:after {
+content: "Swipe to explore all industries →";
+flex: 0 0 auto;
+align-self: center;
+color: #77736b;
+font-size: 9px;
+font-weight: 800;
+letter-spacing: .04em;
+padding: 0 8px;
+white-space: nowrap;
+}
+.industry-visual {
+min-height: 555px
+}
+.industry-card {
+left: 15px;
+right: 15px;
+bottom: 15px;
+padding: 20px;
+border-radius: 18px
+}
+.industry-card h4 {
+font-size: 30px
+}
+.industry-card p {
+font-size: 13px
+}
+.tag {
+font-size: 9px
+}
+.final-cta {
+padding: 100px 18px;
+max-width: 100%;
+overflow: hidden
+}
+.final-cta h2 {
+font-size: clamp(32px, 8.5vw, 46px);
+overflow-wrap: break-word
+}
+.final-cta p {
+font-size: 14px
+}
+.method {
+padding: 85px 0
+}
+.method-steps {
+margin-top: 48px;
+gap: 22px;
+display: flex;
+flex-direction: column;
+position: relative;
+padding-left: 3px;
+}
+.method-steps:before {
+content: "";
+position: absolute;
+left: 34px;
+top: 34px;
+bottom: 34px;
+width: 3px;
+height: auto;
+right: auto;
+background: linear-gradient(180deg, var(--emerald), #55ad9e, #c7a873, #df907f, var(--coral));
+border-radius: 999px;
+}
+.method-step {
+width: 100%;
+display: grid;
+grid-template-columns: 68px 1fr;
+gap: 17px;
+text-align: left;
+align-items: center;
+position: relative;
+z-index: 2;
+transform: none !important;
+}
+.method-step:after {
+display: none
+}
+.step-node {
+width: 68px;
+height: 68px;
+margin: 0
+}
+.method-step h3 {
+font-size: 17px
+}
+.method-step p {
+font-size: 11px
+}
+.method-note {
+margin-top: 48px;
+font-size: 12px;
+padding: 18px
+}
+.footer-top,
+.footer-bottom {
+flex-direction: column;
+align-items: flex-start
+}
+.footer-nav {
+gap: 12px
+}
+}
+@media(prefers-reduced-motion:reduce) {
+html {
+scroll-behavior: auto
+}
+*,
+*:before,
+*:after {
+animation: none !important;
+transition: none !important
+}
+}
+/* V3 refinements: distinct, polished and mobile-first */
+.desktop-solution-title {
+display: inline
+}
+.mobile-solution-title {
+display: none
+}
+.industry-eyebrow {
+background: #fff;
+border: 1px solid rgba(8, 123, 112, .2);
+border-radius: 999px;
+padding: 8px 13px;
+box-shadow: 0 7px 20px rgba(8, 123, 112, .07)
+}
+.industry-eyebrow:before {
+width: 7px;
+height: 7px;
+border-radius: 50%;
+background: var(--coral)
+}
+.logo-marquee {
+width: 100%;
+overflow: hidden;
+position: relative;
+border-top: 1px solid var(--line);
+border-bottom: 1px solid var(--line);
+padding: 12px 0;
+background:
+radial-gradient(circle at 10% 50%, rgba(8, 123, 112, .07), transparent 24%),
+radial-gradient(circle at 90% 50%, rgba(242, 107, 91, .07), transparent 24%), #fff
+}
+.logo-marquee:before,
+.logo-marquee:after {
+content: "";
+position: absolute;
+z-index: 3;
+top: 0;
+bottom: 0;
+width: 12%;
+pointer-events: none
+}
+.logo-marquee:before {
+left: 0;
+background: linear-gradient(90deg, #fff, transparent)
+}
+.logo-marquee:after {
+right: 0;
+background: linear-gradient(270deg, #fff, transparent)
+}
+.logo-marquee-track {
+display: flex;
+width: max-content;
+animation: logoRun 34s linear infinite;
+will-change: transform
+}
+.logo-set {
+display: flex;
+align-items: center;
+gap: 15px;
+padding-right: 15px
+}
+.logo-cell {
+width: 185px;
+height: 105px;
+min-height: 0;
+border: 1px solid rgba(21, 21, 21, .08) !important;
+border-radius: 18px;
+background: linear-gradient(145deg, #fff, #f4f0e7);
+display: grid;
+place-items: center;
+padding: 18px;
+box-shadow: 0 8px 22px rgba(21, 21, 21, .045)
+}
+.logo-cell:nth-child(3n) {
+background: linear-gradient(145deg, #eef7f3, #fff)
+}
+.logo-cell:nth-child(4n) {
+background: linear-gradient(145deg, #fff0ed, #fff)
+}
+.logo-cell img {
+height: 55px;
+filter: none !important;
+opacity: 1 !important;
+transform: none !important;
+object-fit: contain
+}
+.logo-marquee:hover .logo-marquee-track {
+animation-play-state: paused
+}
+@keyframes logoRun {
+from {
+transform: translateX(0)
+}
+to {
+transform: translateX(-50%)
+}
+}
+/* Medium image presentation for challenges */
+.challenge-media {
+height: 390px;
+max-width: 575px;
+width: 100%;
+justify-self: center;
+padding: 8px;
+border: 1px solid rgba(8, 123, 112, .16);
+border-radius: 30px;
+background: #fff;
+box-shadow: 0 22px 60px rgba(21, 21, 21, .10)
+}
+.challenge-media img {
+border-radius: 22px
+}
+.challenge-copy .mini-label {
+display: inline-flex;
+padding: 7px 11px;
+border-radius: 999px;
+background: #fff0ed;
+color: #a94c3f;
+font-size: 10px;
+font-weight: 850;
+letter-spacing: .12em;
+text-transform: uppercase;
+margin-bottom: 14px
+}
+/* New industry explorer */
+.industries {
+background: linear-gradient(180deg, #e8eee9 0%, #f5efe5 100%)
+}
+.industry-explorer {
+width: min(1160px, calc(100% - 48px));
+margin: auto;
+padding: 30px;
+border-radius: 32px;
+background: #151a18;
+color: #fff;
+box-shadow: 0 30px 80px rgba(21, 21, 21, .16);
+overflow: hidden
+}
+.industry-topline {
+display: flex;
+justify-content: space-between;
+gap: 30px;
+align-items: flex-end;
+margin-bottom: 24px
+}
+.industry-overline {
+display: inline-block;
+color: #88d8ca;
+font-size: 9px;
+font-weight: 850;
+letter-spacing: .15em;
+text-transform: uppercase
+}
+.industry-topline h3 {
+font-size: 27px;
+letter-spacing: -.035em;
+margin: 7px 0 0
+}
+.industry-count {
+font-size: 11px;
+color: #a8b1ad;
+font-weight: 800;
+letter-spacing: .08em
+}
+.industry-count span {
+color: #fff;
+font-size: 20px
+}
+.industry-tabs {
+display: grid;
+grid-template-columns: repeat(6, minmax(0, 1fr));
+gap: 7px;
+padding: 7px;
+border: 1px solid rgba(255, 255, 255, .12);
+background: rgba(255, 255, 255, .045);
+border-radius: 17px;
+margin-bottom: 22px
+}
+.industry-btn {
+border: 1px solid transparent;
+border-radius: 12px;
+background: transparent;
+color: #adb5b0;
+min-height: 56px;
+padding: 8px 9px;
+cursor: pointer;
+text-align: left;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+gap: 7px;
+transition: .3s var(--ease)
+}
+.industry-btn span {
+font-size: 11px;
+font-weight: 800;
+line-height: 1.2
+}
+.industry-btn i {
+font-style: normal;
+font-size: 9px;
+color: #69746e
+}
+.industry-btn.active {
+background: #fff;
+color: #151515;
+box-shadow: 0 8px 25px rgba(0, 0, 0, .18)
+}
+.industry-btn.active i {
+color: var(--coral)
+}
+.industry-feature {
+display: grid;
+grid-template-columns: 1.08fr .92fr;
+min-height: 480px;
+border-radius: 25px;
+overflow: hidden;
+background: #f8f6f0;
+color: var(--ink)
+}
+.industry-photo-frame {
+position: relative;
+min-height: 480px;
+overflow: hidden;
+background: #ddd
+}
+.industry-photo-frame img {
+position: absolute;
+inset: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: opacity .45s, transform .8s var(--ease)
+}
+.industry-photo-badge {
+position: absolute;
+left: 18px;
+top: 18px;
+padding: 8px 11px;
+border-radius: 999px;
+background: rgba(21, 21, 21, .72);
+backdrop-filter: blur(8px);
+color: #fff;
+font-size: 9px;
+font-weight: 800
+}
+.industry-photo-badge span {
+display: inline-block;
+width: 6px;
+height: 6px;
+border-radius: 50%;
+background: var(--coral);
+margin-right: 6px
+}
+.industry-info {
+padding: 44px;
+display: flex;
+flex-direction: column;
+justify-content: center
+}
+.industry-info-top {
+display: flex;
+justify-content: space-between;
+align-items: center
+}
+.industry-index {
+font-size: 11px;
+color: #9a958c;
+font-weight: 850
+}
+.industry-info h4 {
+font-size: clamp(40px, 4.5vw, 62px);
+line-height: .95;
+letter-spacing: -.055em;
+margin: 14px 0 18px
+}
+.industry-info p {
+color: #68655e;
+line-height: 1.75;
+font-size: 15px;
+max-width: 480px;
+margin: 0 0 20px
+}
+.industry-info .tags {
+margin-bottom: 24px
+}
+/* Methodology: no central line; connected cards and animated gradient spine */
+.method {
+background: linear-gradient(180deg, #fff, #f7f8f3)
+}
+.method-steps {
+grid-template-columns: repeat(5, 1fr);
+gap: 12px;
+max-width: 1160px
+}
+.method-steps:before {
+top: 34px;
+left: 5%;
+right: 5%;
+height: 3px;
+border-radius: 99px;
+background: linear-gradient(90deg, var(--emerald), #56b6a8, #c6b28e, #e99484, var(--coral));
+background-size: 200% 100%;
+animation: methodFlow 4s linear infinite
+}
+@keyframes methodFlow {
+0% {
+background-position: 0% 50%
+}
+100% {
+background-position: 200% 50%
+}
+}
+.method-step {
+padding: 0 10px;
+position: relative;
+transition: transform .45s var(--ease)
+}
+.method-step:hover {
+transform: translateY(-8px)
+}
+.step-node {
+width: 70px;
+height: 70px;
+border: 5px solid #fff;
+background: #151a18;
+color: #fff;
+box-shadow: 0 0 0 1px rgba(21, 21, 21, .1), 0 13px 30px rgba(21, 21, 21, .13), inset 0 0 0 7px rgba(255, 255, 255, .05)
+}
+.method-step:nth-child(1) .step-node {
+background: linear-gradient(145deg, #087b70, #45bca9)
+}
+.method-step:nth-child(2) .step-node {
+background: linear-gradient(145deg, #227f73, #82cfc2)
+}
+.method-step:nth-child(3) .step-node {
+background: linear-gradient(145deg, #8f7a56, #cdbb98)
+}
+.method-step:nth-child(4) .step-node {
+background: linear-gradient(145deg, #c96c60, #ef9a8d)
+}
+.method-step:nth-child(5) .step-node {
+background: linear-gradient(145deg, #e34f3e, #ff907f)
+}
+.method-step h3 {
+margin-bottom: 10px
+}
+.method-step p {
+max-width: 190px;
+margin: auto
+}
+.method-note {
+background: #fff;
+border-radius: 20px
+}
+/* Tablet */
+@media(max-width:900px) and (min-width:601px) {
+.desktop-solution-title {
+display: inline
+}
+.mobile-solution-title {
+display: none
+}
+.logo-cell {
+width: 175px
+}
+.challenge-media {
+height: 360px
+}
+.industry-tabs {
+grid-template-columns: repeat(3, 1fr)
+}
+.industry-feature {
+grid-template-columns: 1fr 1fr
+}
+.industry-photo-frame {
+min-height: 420px
+}
+.industry-info {
+padding: 30px
+}
+.industry-info h4 {
+font-size: 44px
+}
+.method-steps {
+grid-template-columns: repeat(2, 1fr);
+gap: 28px;
+padding-left: 0
+}
+.method-steps:before {
+top: 35px;
+left: 17%;
+right: 17%;
+width: auto;
+height: 2px;
+bottom: auto;
+background: linear-gradient(90deg, var(--emerald), var(--sand), var(--coral))
+}
+.method-step {
+display: block;
+text-align: center
+}
+.method-step:nth-child(n+3) {
+margin-top: 15px
+}
+.method-step p {
+max-width: 260px
+}
+}
+/* Phone */
+@media(max-width:600px) {
+.desktop-solution-title {
+display: none
+}
+.mobile-solution-title {
+display: inline
+}
+.logo-marquee {
+padding: 9px 0
+}
+.logo-cell {
+width: 148px;
+height: 88px;
+padding: 13px;
+border-radius: 15px
+}
+.logo-cell img {
+height: 43px
+}
+.logo-marquee-track {
+animation-duration: 28s
+}
+.challenge-media {
+height: 275px;
+max-width: 100%;
+padding: 6px;
+border-radius: 24px
+}
+.challenge-media img {
+border-radius: 18px
+}
+.industry-explorer {
+width: calc(100% - 30px);
+padding: 17px;
+border-radius: 24px
+}
+.industry-topline {
+align-items: flex-start;
+margin-bottom: 17px
+}
+.industry-topline h3 {
+font-size: 22px
+}
+.industry-count {
+font-size: 9px
+}
+.industry-count span {
+font-size: 16px
+}
+.industry-tabs {
+display: flex;
+overflow-x: auto;
+scroll-snap-type: x mandatory;
+scrollbar-width: none;
+margin: 0 -2px 17px;
+padding: 5px
+}
+.industry-tabs::-webkit-scrollbar {
+display: none
+}
+.industry-btn {
+flex: 0 0 142px;
+min-height: 57px;
+scroll-snap-align: start
+}
+.industry-feature {
+grid-template-columns: 1fr;
+min-height: 0;
+border-radius: 19px
+}
+.industry-photo-frame {
+height: 245px;
+min-height: 245px
+}
+.industry-info {
+padding: 25px 21px 27px
+}
+.industry-info h4 {
+font-size: 42px;
+margin: 11px 0 14px
+}
+.industry-info p {
+font-size: 13px;
+line-height: 1.65
+}
+.industry-info .tags {
+gap: 6px
+}
+.method-steps {
+display: flex;
+flex-direction: column;
+gap: 13px;
+margin-top: 48px
+}
+.method-steps:before {
+display: none
+}
+.method-step {
+display: grid;
+grid-template-columns: 58px 1fr;
+gap: 14px;
+text-align: left;
+padding: 15px;
+border: 1px solid var(--line);
+border-radius: 18px;
+background: #fff;
+box-shadow: 0 8px 25px rgba(21, 21, 21, .05);
+overflow: hidden;
+position: relative
+}
+.method-step:before {
+content: "";
+position: absolute;
+left: 0;
+top: 0;
+bottom: 0;
+width: 4px;
+background: linear-gradient(180deg, var(--emerald), var(--coral))
+}
+.method-step:hover {
+transform: none
+}
+.step-node {
+width: 58px;
+height: 58px;
+border-width: 4px;
+margin: 0;
+font-size: 10px
+}
+.method-step h3 {
+font-size: 17px;
+margin: 4px 0 5px
+}
+.method-step p {
+max-width: none;
+font-size: 11px;
+margin: 0
+}
+.method-note {
+margin-top: 32px
+}
+}
+@media(prefers-reduced-motion:reduce) {
+.logo-marquee-track,
+.method-steps:before {
+animation: none !important
+}
+}
+/* FINAL V4 performance + alignment refinements */
+.hero-title {
+max-width: 1100px
+}
+@media(min-width:601px) {
+.hero-title {
+font-size: clamp(32px, 4vw, 54px);
+max-width: 980px
+}
+.solutions-intro {
+grid-template-columns: 1fr;
+gap: 16px
+}
+.solutions-intro h2 {
+white-space: nowrap;
+font-size: clamp(28px, 3.65vw, 54px);
+line-height: 1.02;
+max-width: none
+}
+.solutions-intro p {
+max-width: 760px
+}
+}
+.challenge-copy {
+transition: opacity .22s ease, transform .32s var(--ease)
+}
+.challenge-copy.is-changing {
+opacity: 0;
+transform: translateY(8px)
+}
+.industry-info {
+transition: opacity .22s ease, transform .32s var(--ease)
+}
+.industry-info.is-changing {
+opacity: 0;
+transform: translateY(8px)
+}
+.industry-photo-frame img {
+transition: opacity .26s ease, transform .48s var(--ease)
+}
+.challenge-media img {
+transition: opacity .26s ease, transform .48s var(--ease)
+}
+.method .step-node {
+position: relative;
+z-index: 4;
+color: #fff !important;
+font-weight: 950;
+font-size: 12px;
+text-shadow: 0 1px 8px rgba(0, 0, 0, .32);
+opacity: 1 !important;
+visibility: visible !important
+}
+.method-step:nth-child(4) .step-node,
+.method-step:nth-child(5) .step-node {
+box-shadow: 0 0 0 1px rgba(21, 21, 21, .12), 0 13px 30px rgba(21, 21, 21, .16), 0 0 26px rgba(227, 79, 62, .16), inset 0 0 0 7px rgba(255, 255, 255, .08)
+}
+.method-step .step-node {
+animation: methodNodeFloat 3.8s ease-in-out infinite
+}
+.method-step:nth-child(2) .step-node {
+animation-delay: .35s
+}
+.method-step:nth-child(3) .step-node {
+animation-delay: .7s
+}
+.method-step:nth-child(4) .step-node {
+animation-delay: 1.05s
+}
+.method-step:nth-child(5) .step-node {
+animation-delay: 1.4s
+}
+@keyframes methodNodeFloat {
+0%,
+100% {
+transform: translateY(0);
+box-shadow: 0 0 0 1px rgba(21, 21, 21, .1), 0 13px 30px rgba(21, 21, 21, .13), inset 0 0 0 7px rgba(255, 255, 255, .05)
+}
+50% {
+transform: translateY(-4px);
+box-shadow: 0 0 0 1px rgba(21, 21, 21, .1), 0 18px 36px rgba(21, 21, 21, .17), 0 0 24px rgba(8, 123, 112, .12), inset 0 0 0 7px rgba(255, 255, 255, .07)
+}
+}
+@media(max-width:900px) and (min-width:601px) {
+.solutions-intro h2 {
+font-size: clamp(28px, 3.4vw, 42px)
+}
+}
+@media(max-width:600px) {
+.solutions-intro {
+grid-template-columns: 1fr
+}
+.solutions-intro h2 {
+white-space: normal
+}
+.hero-title {
+font-size: clamp(28px, 8.5vw, 40px)
+}
+.method .step-node {
+font-size: 10px
+}
+}
+@media(prefers-reduced-motion:reduce) {
+.method-step .step-node {
+animation: none !important
+}
+}
+/* ===== VICO METHODOLOGY JOURNEY — CONNECTED CURVE SYSTEM ===== */
+.method {
+background: #fbfaf6;
+overflow: hidden;
+position: relative
+}
+.method .section-head {
+position: relative;
+z-index: 2
+}
+.method .section-head h2 {
+max-width: 920px;
+margin-left: auto;
+margin-right: auto
+}
+.method-journey {
+width: min(1480px, calc(100% - 48px));
+margin: 64px auto 0;
+position: relative
+}
+.method-cards {
+position: relative;
+z-index: 3;
+display: grid;
+grid-template-columns: repeat(6, minmax(0, 1fr));
+gap: 28px;
+align-items: start
+}
+.method-card {
+position: relative;
+min-height: 270px;
+padding: 82px 20px 26px;
+border-radius: 24px;
+background: rgba(255, 255, 255, .82);
+border: 1px solid rgba(21, 21, 21, .08);
+box-shadow: 0 18px 48px rgba(21, 21, 21, .07);
+backdrop-filter: blur(8px);
+transition: transform .45s var(--ease), box-shadow .45s, background .45s
+}
+.method-card:nth-child(even) {
+margin-top: 26px
+}
+.method-card:hover {
+transform: translateY(-9px);
+box-shadow: 0 27px 58px rgba(21, 21, 21, .12);
+background: #fff
+}
+.method-node {
+position: absolute;
+z-index: 5;
+top: -31px;
+left: 22px;
+width: 72px;
+height: 72px;
+border-radius: 50%;
+display: grid;
+place-items: center;
+color: #fff;
+font-size: 12px;
+font-weight: 950;
+letter-spacing: .04em;
+border: 6px solid #fff;
+box-shadow: 0 0 0 1px rgba(21, 21, 21, .10), 0 12px 28px rgba(21, 21, 21, .16);
+background: linear-gradient(145deg, #18a594, #087b70);
+transition: transform .35s var(--ease), box-shadow .35s
+}
+.method-card:hover .method-node {
+transform: scale(1.08);
+box-shadow: 0 0 0 1px rgba(21, 21, 21, .10), 0 16px 32px rgba(21, 21, 21, .18), 0 0 0 8px rgba(8, 123, 112, .05)
+}
+.method-card.c2 .method-node {
+background: linear-gradient(145deg, #63c1b4, #238c80)
+}
+.method-card.c3 .method-node {
+background: linear-gradient(145deg, #d7bd8a, #a48755)
+}
+.method-card.c4 .method-node {
+background: linear-gradient(145deg, #ef9b8d, #dc7365)
+}
+.method-card.c5 .method-node {
+background: linear-gradient(145deg, #ff7869, #e95040)
+}
+.method-card.c6 .method-node {
+background: linear-gradient(145deg, #303a37, #151b19)
+}
+.method-card-icon {
+font-size: 25px;
+line-height: 1;
+margin-bottom: 13px;
+color: #087b70;
+font-weight: 700
+}
+.method-card.c2 .method-card-icon {
+color: #2c9486
+}
+.method-card.c3 .method-card-icon {
+color: #9b7c48
+}
+.method-card.c4 .method-card-icon {
+color: #d87466
+}
+.method-card.c5 .method-card-icon {
+color: #e55041
+}
+.method-card.c6 .method-card-icon {
+color: #202a27
+}
+.method-card h3 {
+font-size: 21px;
+line-height: 1.1;
+letter-spacing: -.035em;
+margin: 0 0 11px
+}
+.method-card p {
+font-size: 12px;
+line-height: 1.65;
+color: #6e6a63;
+margin: 0
+}
+.method-track {
+position: absolute;
+z-index: 1;
+left: 4%;
+right: 4%;
+top: 2px;
+height: 145px;
+pointer-events: none
+}
+.method-track .track-segment {
+position: absolute;
+top: 34px;
+height: 3px;
+border-radius: 999px;
+background: linear-gradient(90deg, #27a695, #68b9ad);
+box-shadow: 0 0 14px rgba(8, 123, 112, .12)
+}
+.method-track .track-arrow {
+position: absolute;
+z-index: 2;
+top: 15px;
+width: 38px;
+height: 38px;
+border-radius: 50%;
+display: grid;
+place-items: center;
+color: #fff;
+font-size: 25px;
+font-weight: 300;
+border: 4px solid #fff;
+box-shadow: 0 8px 18px rgba(21, 21, 21, .13);
+background: #087b70
+}
+.method-track .s1 {
+left: 7%;
+width: 10%
+}
+.method-track .a1 {
+left: 17%;
+background: #3da99b
+}
+.method-track .s2 {
+left: 24%;
+width: 10%;
+background: linear-gradient(90deg, #63b8ac, #c3a56f)
+}
+.method-track .a2 {
+left: 34%;
+background: #c29b58
+}
+.method-track .s3 {
+left: 41%;
+width: 10%;
+background: linear-gradient(90deg, #c4a26a, #e77c65)
+}
+.method-track .a3 {
+left: 51%;
+background: #e77c65
+}
+.method-track .s4 {
+left: 58%;
+width: 10%;
+background: linear-gradient(90deg, #e87f6c, #ed5546)
+}
+.method-track .a4 {
+left: 68%;
+background: #ed5a4a
+}
+.method-track .s5 {
+left: 75%;
+width: 10%;
+background: linear-gradient(90deg, #ed5a4a, #26302d)
+}
+.method-track .a5 {
+left: 85%;
+background: #26302d
+}
+.method-track .a1,
+.method-track .a2,
+.method-track .a3,
+.method-track .a4,
+.method-track .a5 {
+transform: translateX(-50%)
+}
+.method-track .track-segment {
+animation: flowLine 4.8s ease-in-out infinite
+}
+.method-track .a1 {
+animation: flowNode 4.8s .2s ease-in-out infinite
+}
+.method-track .a2 {
+animation: flowNode 4.8s .7s ease-in-out infinite
+}
+.method-track .a3 {
+animation: flowNode 4.8s 1.2s ease-in-out infinite
+}
+.method-track .a4 {
+animation: flowNode 4.8s 1.7s ease-in-out infinite
+}
+.method-track .a5 {
+animation: flowNode 4.8s 2.2s ease-in-out infinite
+}
+@keyframes flowLine {
+0%,
+100% {
+opacity: .72
+}
+50% {
+opacity: 1;
+filter: brightness(1.08)
+}
+}
+@keyframes flowNode {
+0%,
+100% {
+transform: translateX(-50%) scale(1)
+}
+50% {
+transform: translateX(-50%) scale(1.08)
+}
+}
+.method-value-line {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 14px;
+margin: 42px auto 0;
+color: #858077;
+font-size: 9px;
+font-weight: 850;
+letter-spacing: .28em
+}
+.method-value-line span {
+width: 58px;
+height: 1px;
+background: #d4d0c7
+}
+.method-mobile-journey {
+display: none
+}
+/* Tablet: compact 3-by-2 connected flow */
+@media (min-width:601px) and (max-width:1080px) {
+.method-journey {
+width: calc(100% - 36px);
+margin-top: 58px
+}
+.method-cards {
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 52px 16px
+}
+.method-card {
+min-height: 245px;
+padding: 76px 17px 22px
+}
+.method-card:nth-child(even) {
+margin-top: 0
+}
+.method-track {
+display: none
+}
+.method-cards .method-card:nth-child(1):after,
+.method-cards .method-card:nth-child(2):after,
+.method-cards .method-card:nth-child(4):after,
+.method-cards .method-card:nth-child(5):after {
+content: "";
+position: absolute;
+z-index: 0;
+right: -31px;
+top: 38px;
+width: 48px;
+height: 48px;
+border-top: 3px solid rgba(8, 123, 112, .55);
+border-radius: 50%;
+transform: rotate(10deg)
+}
+.method-cards .method-card:nth-child(3):after {
+content: "";
+position: absolute;
+z-index: 0;
+left: 50%;
+bottom: -54px;
+width: 3px;
+height: 56px;
+background: linear-gradient(180deg, #e66c5c, #26302d);
+border-radius: 99px
+}
+.method-cards .method-card:nth-child(4) {
+grid-column: 3
+}
+.method-cards .method-card:nth-child(5) {
+grid-column: 2
+}
+.method-cards .method-card:nth-child(6) {
+grid-column: 1
+}
+}
+/* Mobile: a compact serpentine journey in the same visual space */
+@media(max-width:600px) {
+.method {
+padding-bottom: 78px
+}
+.method-journey {
+width: calc(100% - 24px);
+margin-top: 46px
+}
+.method-cards,
+.method-track {
+display: none
+}
+.method-mobile-journey {
+display: flex;
+flex-direction: column;
+gap: 20px;
+position: relative;
+padding: 16px 6px 10px;
+border-radius: 28px;
+background: linear-gradient(145deg, rgba(255, 255, 255, .72), rgba(246, 243, 235, .75));
+border: 1px solid rgba(21, 21, 21, .07);
+box-shadow: 0 18px 55px rgba(21, 21, 21, .06)
+}
+.mobile-method-row {
+display: grid;
+grid-template-columns: 1fr 30px 1fr;
+align-items: center;
+gap: 7px;
+position: relative
+}
+.mobile-method-row.r2 {
+grid-template-columns: 1fr 30px 1fr
+}
+.mobile-method-row .method-card {
+min-height: 148px;
+padding: 22px 14px 17px 62px;
+border-radius: 20px;
+display: block;
+background: rgba(255, 255, 255, .93)
+}
+.mobile-method-row .method-card .method-node {
+top: 50%;
+left: 12px;
+transform: translateY(-50%);
+width: 49px;
+height: 49px;
+border-width: 4px;
+font-size: 9px
+}
+.mobile-method-row .method-card:hover .method-node {
+transform: translateY(-50%) scale(1.04)
+}
+.mobile-method-row .method-card-icon {
+font-size: 17px;
+margin-bottom: 5px
+}
+.mobile-method-row .method-card h3 {
+font-size: 15px;
+margin-bottom: 5px
+}
+.mobile-method-row .method-card p {
+font-size: 9.5px;
+line-height: 1.45
+}
+.mobile-connector {
+width: 30px;
+height: 30px;
+border-radius: 50%;
+display: grid;
+place-items: center;
+z-index: 4;
+background: #087b70;
+color: #fff;
+border: 3px solid #fff;
+box-shadow: 0 7px 16px rgba(21, 21, 21, .15);
+font-size: 20px
+}
+.r1 .mc2 {
+background: #d39852
+}
+.r2 .mc4 {
+background: #e75e4d
+}
+.r2 .mc5 {
+background: #26302d
+}
+.mobile-method-row.r1:after {
+content: "";
+position: absolute;
+right: 15%;
+bottom: -27px;
+width: 58%;
+height: 38px;
+border-right: 3px solid #ed6a58;
+border-bottom: 3px solid #ed6a58;
+border-radius: 0 0 30px 0;
+z-index: 1
+}
+.mobile-method-row.r2:before {
+content: "";
+position: absolute;
+left: 15%;
+top: -27px;
+width: 58%;
+height: 38px;
+border-left: 3px solid #26302d;
+border-top: 3px solid #26302d;
+border-radius: 30px 0 0 0;
+z-index: 1
+}
+.method-value-line {
+margin-top: 25px;
+font-size: 8px;
+letter-spacing: .19em
+}
+.method-value-line span {
+width: 32px
+}
+}
+</style>
+<style id="vico-methodology-final-fix">
+/* FINAL METHODOLOGY LAYOUT — only affects #methodology */
+#methodology {
+position: relative;
+overflow: hidden;
+background: #fbfaf6;
+padding-top: clamp(88px, 9vw, 132px);
+padding-bottom: clamp(80px, 8vw, 120px);
+}
+#methodology .section-head {
+position: relative;
+z-index: 4;
+max-width: 980px;
+margin: 0 auto;
+text-align: center;
+}
+#methodology .section-head h2 {
+max-width: 920px;
+margin: 16px auto 0;
+}
+#methodology .section-head p {
+max-width: 760px;
+margin: 22px auto 0;
+}
+#methodology .method-flow {
+width: min(1220px, calc(100% - 56px));
+margin: 92px auto 0;
+position: relative;
+}
+#methodology .method-grid {
+position: relative;
+z-index: 3;
+display: grid;
+grid-template-columns: repeat(6, minmax(0, 1fr));
+gap: clamp(24px, 2.5vw, 42px);
+align-items: start;
+}
+#methodology .method-card {
+position: relative;
+min-width: 0;
+min-height: 310px;
+padding: 82px 20px 28px;
+border-radius: 25px;
+background: rgba(255, 255, 255, .96);
+border: 1px solid rgba(21, 21, 21, .09);
+box-shadow: 0 18px 45px rgba(21, 21, 21, .075);
+text-align: center;
+transition: transform .45s cubic-bezier(.2, .8, .2, 1), box-shadow .45s ease;
+}
+#methodology .method-card:hover {
+transform: translateY(-8px);
+box-shadow: 0 26px 58px rgba(21, 21, 21, .12);
+}
+#methodology .method-node {
+position: absolute;
+z-index: 6;
+top: -38px;
+left: 50%;
+transform: translateX(-50%);
+width: 78px;
+height: 78px;
+border-radius: 50%;
+display: grid;
+place-items: center;
+color: #fff;
+font-size: 12px;
+font-weight: 950;
+letter-spacing: .04em;
+border: 6px solid #fff;
+box-shadow: 0 0 0 1px rgba(21, 21, 21, .10), 0 13px 30px rgba(21, 21, 21, .15);
+background: linear-gradient(145deg, #18a594, #087b70);
+transition: transform .35s ease, box-shadow .35s ease;
+}
+#methodology .method-card:hover .method-node {
+transform: translateX(-50%) scale(1.06);
+box-shadow: 0 0 0 1px rgba(21, 21, 21, .10), 0 17px 34px rgba(21, 21, 21, .18), 0 0 0 8px rgba(8, 123, 112, .05);
+}
+#methodology .c2 .method-node {
+background: linear-gradient(145deg, #63c1b4, #238c80)
+}
+#methodology .c3 .method-node {
+background: linear-gradient(145deg, #d7bd8a, #a48755)
+}
+#methodology .c4 .method-node {
+background: linear-gradient(145deg, #ef9b8d, #dc7365)
+}
+#methodology .c5 .method-node {
+background: linear-gradient(145deg, #ff7869, #e95040)
+}
+#methodology .c6 .method-node {
+background: linear-gradient(145deg, #303a37, #151b19)
+}
+#methodology .method-card-icon {
+font-size: 25px;
+line-height: 1;
+margin-bottom: 16px;
+color: #087b70;
+}
+#methodology .c2 .method-card-icon {
+color: #2c9486
+}
+#methodology .c3 .method-card-icon {
+color: #9b7c48
+}
+#methodology .c4 .method-card-icon {
+color: #d87466
+}
+#methodology .c5 .method-card-icon {
+color: #e55041
+}
+#methodology .c6 .method-card-icon {
+color: #202a27
+}
+#methodology .method-card h3 {
+margin: 0 0 12px;
+font-size: 20px;
+line-height: 1.1;
+letter-spacing: -.035em;
+}
+#methodology .method-card p {
+margin: 0;
+color: #716d65;
+font-size: 11.5px;
+line-height: 1.62;
+}
+#methodology .method-flow-svg {
+position: absolute;
+z-index: 1;
+left: 0;
+top: -8px;
+width: 100%;
+height: 165px;
+overflow: visible;
+pointer-events: none;
+}
+#methodology .method-main-line {
+fill: none;
+stroke: rgba(38, 48, 45, .12);
+stroke-width: 2.2;
+vector-effect: non-scaling-stroke;
+}
+#methodology .method-progress-line {
+fill: none;
+stroke: url(#methodLineGradient);
+stroke-width: 2.2;
+stroke-linecap: round;
+stroke-dasharray: 5 9;
+vector-effect: non-scaling-stroke;
+animation: methodFlow 7s linear infinite;
+}
+@keyframes methodFlow {
+to {
+stroke-dashoffset: -70
+}
+}
+#methodology .method-value-line {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 14px;
+margin: 54px auto 0;
+color: #827d73;
+font-size: 9px;
+font-weight: 850;
+letter-spacing: .27em;
+}
+#methodology .method-value-line span {
+width: 62px;
+height: 1px;
+background: #d4d0c7;
+}
+#methodology .mobile-flow {
+display: none
+}
+/* Tablet: two balanced rows, with connector paths between node centers. */
+@media (min-width:601px) and (max-width:1100px) {
+#methodology .method-flow {
+width: calc(100% - 40px);
+margin-top: 78px;
+}
+#methodology .method-grid {
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 68px 22px;
+}
+#methodology .method-card {
+min-height: 265px;
+padding: 76px 18px 24px;
+}
+#methodology .method-flow-svg {
+display: none
+}
+#methodology .method-card:nth-child(1)::after,
+#methodology .method-card:nth-child(2)::after {
+content: "";
+position: absolute;
+z-index: 1;
+right: -47px;
+top: -1px;
+width: 58px;
+height: 72px;
+border-top: 2px solid #159b8c;
+border-right: 2px solid #159b8c;
+border-radius: 0 28px 0 0;
+pointer-events: none;
+}
+#methodology .method-card:nth-child(4)::after,
+#methodology .method-card:nth-child(5)::after {
+content: "";
+position: absolute;
+z-index: 1;
+right: -47px;
+top: -1px;
+width: 58px;
+height: 72px;
+border-top: 2px solid #e47b6d;
+border-right: 2px solid #e47b6d;
+border-radius: 0 28px 0 0;
+pointer-events: none;
+}
+#methodology .method-card:nth-child(3)::before {
+content: "";
+position: absolute;
+z-index: 1;
+left: 50%;
+bottom: -70px;
+width: 2px;
+height: 70px;
+background: linear-gradient(180deg, #b99a64, #e47b6d);
+}
+#methodology .method-card:nth-child(6)::after {
+display: none
+}
+}
+/* Mobile: six equal, alternating cards around one continuous central curved path. */
+@media (max-width:600px) {
+#methodology {
+padding-top: 76px;
+padding-bottom: 76px;
+position: relative;
+overflow: hidden;
+}
+#methodology .section-head {
+padding: 0 8px;
+}
+#methodology .section-head h2 {
+font-size: clamp(32px, 9.5vw, 46px);
+line-height: .98;
+}
+#methodology .section-head p {
+font-size: 13px;
+line-height: 1.65;
+margin-top: 18px;
+}
+#methodology .method-flow {
+width: calc(100% - 18px);
+margin: 64px auto 0;
+}
+#methodology .method-grid,
+#methodology .desktop-flow-svg {
+display: none
+}
+#methodology .mobile-flow {
+display: block;
+position: relative;
+width: 100%;
+max-width: 100%;
+min-height: 1140px;
+padding: 4px 0;
+overflow: visible;
+}
+#methodology .mobile-flow-svg {
+position: absolute;
+z-index: 1;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: hidden;
+pointer-events: none;
+}
+#methodology .mobile-main-line {
+fill: none;
+stroke: rgba(38, 48, 45, .13);
+stroke-width: 2.4;
+vector-effect: non-scaling-stroke;
+}
+#methodology .mobile-progress-line {
+fill: none;
+stroke: url(#mobileMethodGradient);
+stroke-width: 2.4;
+stroke-linecap: round;
+stroke-dasharray: 5 8;
+vector-effect: non-scaling-stroke;
+animation: methodFlow 7s linear infinite;
+}
+#methodology .mobile-card {
+position: absolute;
+z-index: 3;
+width: calc(50% - 30px);
+min-height: 245px;
+padding: 70px 18px 22px;
+border-radius: 22px;
+background: rgba(255, 255, 255, .97);
+border: 1px solid rgba(21, 21, 21, .09);
+box-shadow: 0 15px 38px rgba(21, 21, 21, .08);
+text-align: center;
+transition: transform .4s ease, box-shadow .4s ease;
+}
+#methodology .mobile-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 23px 48px rgba(21, 21, 21, .12);
+}
+#methodology .mobile-card .method-node {
+width: 62px;
+height: 62px;
+top: -31px;
+font-size: 10px;
+border-width: 5px;
+}
+#methodology .mobile-card .method-card-icon {
+font-size: 21px;
+margin-bottom: 11px;
+}
+#methodology .mobile-card h3 {
+font-size: 18px;
+margin-bottom: 9px;
+}
+#methodology .mobile-card p {
+font-size: 10.5px;
+line-height: 1.55;
+}
+/* Exact alternating positions: node centers line up with the SVG's central path. */
+#methodology .mc01 {
+left: 0;
+top: 34px
+}
+#methodology .mc02 {
+right: 0;
+top: 188px
+}
+#methodology .mc03 {
+left: 0;
+top: 342px
+}
+#methodology .mc04 {
+right: 0;
+top: 496px
+}
+#methodology .mc05 {
+left: 0;
+top: 650px
+}
+#methodology .mc06 {
+right: 0;
+top: 804px
+}
+#methodology .mc01 .method-node,
+#methodology .mc03 .method-node,
+#methodology .mc05 .method-node {
+right: -31px;
+left: auto;
+transform: none
+}
+#methodology .mc02 .method-node,
+#methodology .mc04 .method-node,
+#methodology .mc06 .method-node {
+left: -31px;
+transform: none
+}
+#methodology .mc01 .method-card-icon,
+#methodology .mc03 .method-card-icon,
+#methodology .mc05 .method-card-icon {
+color: #087b70
+}
+#methodology .mc02 .method-card-icon {
+color: #2c9486
+}
+#methodology .mc03 .method-card-icon {
+color: #9b7c48
+}
+#methodology .mc04 .method-card-icon {
+color: #d87466
+}
+#methodology .mc05 .method-card-icon {
+color: #e55041
+}
+#methodology .mc06 .method-card-icon {
+color: #202a27
+}
+#methodology .method-value-line {
+margin-top: 36px;
+padding-inline: 8px;
+max-width: 100%;
+font-size: 8px;
+letter-spacing: .18em;
+overflow-wrap: anywhere;
+text-align: center;
+}
+#methodology .method-value-line span {
+width: 28px
+}
+}
+@media (max-width:380px) {
+#methodology .mobile-flow {
+min-height: 1110px
+}
+#methodology .method-value-line {
+margin-top: 36px;
+padding-inline: 6px
+}
+#methodology .mobile-card {
+width: calc(50% - 25px);
+min-height: 236px;
+padding: 66px 13px 20px;
+}
+#methodology .mc01 {
+top: 30px
+}
+#methodology .mc02 {
+top: 180px
+}
+#methodology .mc03 {
+top: 330px
+}
+#methodology .mc04 {
+top: 480px
+}
+#methodology .mc05 {
+top: 630px
+}
+#methodology .mc06 {
+top: 780px
+}
+#methodology .mobile-card h3 {
+font-size: 16px
+}
+#methodology .mobile-card p {
+font-size: 9.7px
+}
+}
+/* Defensive overflow safeguard applied after resolving all underlying element overflows */
+html,
+body {
+width: 100%;
+max-width: 100%;
+overflow-x: hidden;
+}
+</style>
+<link rel="preconnect" href="https://peachpuff-chamois-105831.hostingersite.com" crossorigin>
+<link rel="dns-prefetch" href="//peachpuff-chamois-105831.hostingersite.com">
+<link rel="preconnect" href="https://godietech.ujwalabookhouse.com" crossorigin>
+<link rel="dns-prefetch" href="//godietech.ujwalabookhouse.com">
+</head>
+<body>
+<header class="site-header" id="siteHeader">
+<div class="header-inner">
+<a class="brand" href="index.html" aria-label="Vico — Vision Course home">
+<span class="brand-mark"></span><span class="brand-word">Vico</span>
+</a>
+<nav class="nav" id="mainNav" aria-label="Primary navigation">
+<a href="index.html">Home</a>
+<a class="drop" href="1-vico-solutions.html">Solutions</a>
+<a class="drop" href="services.html">Services</a>
+<a class="drop" href="our-products.html">Our Products</a>
+<a class="drop" href="industries.html">Industries</a>
+<a href="contact.html">Contact Us</a>
+</nav>
+<a class="header-cta" href="contact.html">BOOK A FREE DEMO</a>
+<button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false"
+aria-controls="mainNav">☰</button>
+</div>
+</header>
+<main>
+<section class="hero">
+<video id="heroVideo" muted loop playsinline autoplay preload="auto"
+poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1'%3E%3Cstop stop-color='%23111212'/%3E%3Cstop offset='1' stop-color='%231d332f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1600' height='900' fill='url(%23g)'/%3E%3C/svg%3E"
+aria-hidden="true" src="https://peachpuff-chamois-105831.hostingersite.com/videos/1.mp4"></video>
+<div class="hero-grid" aria-hidden="true"></div>
+<div class="hero-side" aria-hidden="true"></div>
+<div class="wrap hero-content reveal visible">
+<span class="eyebrow">SAP TRANSFORMATION &amp; ENTERPRISE TECHNOLOGY</span>
+<h1 class="hero-title">Build an enterprise that is <span>ready for what changes next.</span></h1>
+<p class="hero-lead">Connect strategy, technology and day-to-day operations with SAP expertise shaped around the way your business actually works.</p>
+<div class="actions">
+<a class="btn btn-green" href="contact.html">Start Your Transformation <span>→</span></a>
+<a class="btn btn-outline" href="1-vico-solutions.html">Explore SAP Solutions</a>
+</div>
+<div class="hero-chips">
+<span>S/4HANA Cloud</span><span>SAP BTP</span><span>Analytics Cloud</span>
+<span>Business Suite</span><span>SuccessFactors</span><span>SAP CRM &amp; CX</span><span>Business One</span>
+</div>
+</div>
+</section>
+<section class="solutions" id="solutions">
+<div class="solutions-intro reveal">
+<div class="eyebrow">SAP capabilities</div>
+<h2>
+<span class="desktop-solution-title">One enterprise. Many moving parts. One connected view.</span>
+<span class="mobile-solution-title">One enterprise. Many moving parts. One connected view.</span>
+</h2>
+<p>Move from disconnected systems to a more coherent operating foundation with solutions designed for clarity,
+control and scale.</p>
+</div>
+<div class="solution-stage" id="solutionStage">
+<div class="solution-panels">
+<article class="solution-panel active" data-index="0"
+style="--bg:url('https://peachpuff-chamois-105831.hostingersite.com/images/1.gif')">
+<div class="solution-closed">
+<span class="closed-pill">01 • ERP</span>
+<span class="closed-title">S/4HANA Cloud</span>
+</div>
+<div class="solution-copy">
+<div class="mini">Core Enterprise Transformation</div>
+<h3>SAP S/4HANA Cloud</h3>
+<p>Modernize your core enterprise with intelligent cloud ERP, real-time analytics, and automated finance built for agile growth.</p><a href="1-vico-solutions.html">Explore solution <span>→</span></a>
+</div>
+</article>
+<article class="solution-panel" data-index="1"
+style="--bg:url('https://peachpuff-chamois-105831.hostingersite.com/images/2.gif')"
+data-bg="https://peachpuff-chamois-105831.hostingersite.com/images/2.gif">
+<div class="solution-closed">
+<span class="closed-pill">02 • PROCESS</span>
+<span class="closed-title">Business Suite</span>
+</div>
+<div class="solution-copy">
+<div class="mini">Connected Enterprise Processes</div>
+<h3>SAP Business Suite</h3>
+<p>Unify mission-critical operations and streamline end-to-end workflows across supply chain, manufacturing, and procurement.</p><a href="1-vico-solutions.html">Explore solution <span>→</span></a>
+</div>
+</article>
+<article class="solution-panel" data-index="2"
+style="--bg:url('https://peachpuff-chamois-105831.hostingersite.com/images/3.gif')"
+data-bg="https://peachpuff-chamois-105831.hostingersite.com/images/3.gif">
+<div class="solution-closed">
+<span class="closed-pill">03 • DATA & AI</span>
+<span class="closed-title">Analytics Cloud</span>
+</div>
+<div class="solution-copy">
+<div class="mini">Data Intelligence & Analytics</div>
+<h3>SAP Analytics Cloud</h3>
+<p>Turn enterprise data into live predictive insights, interactive reporting, and executive clarity for faster decisions.</p><a href="1-vico-solutions.html">Explore solution <span>→</span></a>
+</div>
+</article>
+<article class="solution-panel" data-index="3"
+style="--bg:url('https://peachpuff-chamois-105831.hostingersite.com/images/4.gif')"
+data-bg="https://peachpuff-chamois-105831.hostingersite.com/images/4.gif">
+<div class="solution-closed">
+<span class="closed-pill">04 • PEOPLE</span>
+<span class="closed-title">SuccessFactors</span>
+</div>
+<div class="solution-copy">
+<div class="mini">Human Experience Management</div>
+<h3>SAP SuccessFactors</h3>
+<p>Elevate workforce potential with connected HR processes, modern talent development, payroll agility, and employee engagement.</p><a href="1-vico-solutions.html">Explore solution <span>→</span></a>
+</div>
+</article>
+<article class="solution-panel" data-index="4"
+style="--bg:url('https://peachpuff-chamois-105831.hostingersite.com/images/5.gif')"
+data-bg="https://peachpuff-chamois-105831.hostingersite.com/images/5.gif">
+<div class="solution-closed">
+<span class="closed-pill">05 • CX & SALES</span>
+<span class="closed-title">SAP CRM & CX</span>
+</div>
+<div class="solution-copy">
+<div class="mini">Customer Journey & Experience</div>
+<h3>SAP CRM &amp; CX Solutions</h3>
+<p>Deliver seamless omni-channel customer journeys, dynamic sales execution, and personalized service across every touchpoint.</p><a href="1-vico-solutions.html">Explore solution <span>→</span></a>
+</div>
+</article>
+<article class="solution-panel" data-index="5"
+style="--bg:url('https://peachpuff-chamois-105831.hostingersite.com/images/6.gif')"
+data-bg="https://peachpuff-chamois-105831.hostingersite.com/images/6.gif">
+<div class="solution-closed">
+<span class="closed-pill">06 • SME ERP</span>
+<span class="closed-title">Business One</span>
+</div>
+<div class="solution-copy">
+<div class="mini">Complete Business Control</div>
+<h3>SAP Business One</h3>
+<p>A single, integrated management solution designed for growing businesses to seamlessly manage financials, sales, and operations.</p><a href="1-vico-solutions.html">Explore solution <span>→</span></a>
+</div>
+</article>
+</div>
+<div class="solution-progress" aria-label="Solution navigation">
+<button class="active" data-go="0" aria-label="S/4HANA Cloud"></button>
+<button data-go="1" aria-label="Business Suite"></button>
+<button data-go="2" aria-label="Analytics Cloud"></button>
+<button data-go="3" aria-label="SuccessFactors"></button>
+<button data-go="4" aria-label="CRM and CX"></button>
+<button data-go="5" aria-label="Business One"></button>
+</div>
+</div>
+</section>
+<section class="trust" id="trust">
+<div class="section-head reveal">
+<div class="eyebrow">Enterprise experience</div>
+<h2>Enterprise thinking, grounded in real-world work.</h2>
+<p>A visual showcase of organizations represented in the supplied reference assets. Replace or confirm these
+relationships before using this section in the final client-facing site.</p>
+</div>
+<div class="logo-marquee reveal" aria-label="Enterprise brands">
+<div class="logo-marquee-track">
+<div class="logo-set">
+<div class="logo-cell"><img
+src="https://godietech.ujwalabookhouse.com/wp-content/uploads/2025/12/Screenshot-2025-12-27-194836.png"
+alt="Enterprise logo" loading="lazy" decoding="async" fetchpriority="low"></div>
+<div class="logo-cell"><img
+src="https://godietech.ujwalabookhouse.com/wp-content/uploads/2025/12/Accenture-Logo.wine_-scaled.png"
+alt="Accenture" loading="lazy" decoding="async" fetchpriority="low"></div>
+<div class="logo-cell"><img
+src="https://godietech.ujwalabookhouse.com/wp-content/uploads/2025/12/Schneider_Electric-Logo.wine_-scaled.png"
+alt="Schneider Electric" loading="lazy" decoding="async" fetchpriority="low"></div>
+<div class="logo-cell"><img
+src="https://godietech.ujwalabookhouse.com/wp-content/uploads/2025/12/ABB_Group-Logo.wine_-scaled.png"
+alt="ABB" loading="lazy" decoding="async" fetchpriority="low"></div>
+<div class="logo-cell"><img
+src="https://godietech.ujwalabookhouse.com/wp-content/uploads/2025/12/bristlecone_logo_600.png"
+alt="Bristlecone" loading="lazy" decoding="async" fetchpriority="low"></div>
+<div class="logo-cell"><img
+src="https://godietech.ujwalabookhouse.com/wp-content/uploads/2025/12/Cognizant-Logo.wine_-scaled.png"
+alt="Cognizant" loading="lazy" decoding="async" fetchpriority="low"></div>
+<div class="logo-cell"><img
+src="https://godietech.ujwalabookhouse.com/wp-content/uploads/2025/11/imgi_30_Wipro-logo-removebg-preview-1-300x214-1.png"
+alt="Wipro" loading="lazy" decoding="async" fetchpriority="low"></div>
+<div class="logo-cell"><img
+src="https://godietech.ujwalabookhouse.com/wp-content/uploads/2025/11/imgi_10_20220927102358_hcltech-copy-CUS-removebg-preview-300x200-1.png"
+alt="HCLTech" loading="lazy" decoding="async" fetchpriority="low"></div>
+<div class="logo-cell"><img
+src="https://godietech.ujwalabookhouse.com/wp-content/uploads/2025/11/imgi_15_Capgemini-Logo-1-300x189-1.webp"
+alt="Capgemini" loading="lazy" decoding="async" fetchpriority="low"></div>
+</div>
+<div class="logo-set" aria-hidden="true">
+<div class="logo-cell"><img
+src="https://godietech.ujwalabookhouse.com/wp-content/uploads/2025/12/Screenshot-2025-12-27-194836.png"
+alt="" loading="lazy" decoding="async" fetchpriority="low"></div>
+<div class="logo-cell"><img
+src="https://godietech.ujwalabookhouse.com/wp-content/uploads/2025/12/Accenture-Logo.wine_-scaled.png"
+alt="" loading="lazy" decoding="async" fetchpriority="low"></div>
+<div class="logo-cell"><img
+src="https://godietech.ujwalabookhouse.com/wp-content/uploads/2025/12/Schneider_Electric-Logo.wine_-scaled.png"
+alt="" loading="lazy" decoding="async" fetchpriority="low"></div>
+<div class="logo-cell"><img
+src="https://godietech.ujwalabookhouse.com/wp-content/uploads/2025/12/ABB_Group-Logo.wine_-scaled.png"
+alt="" loading="lazy" decoding="async" fetchpriority="low"></div>
+<div class="logo-cell"><img
+src="https://godietech.ujwalabookhouse.com/wp-content/uploads/2025/12/bristlecone_logo_600.png" alt=""
+loading="lazy" decoding="async" fetchpriority="low"></div>
+<div class="logo-cell"><img
+src="https://godietech.ujwalabookhouse.com/wp-content/uploads/2025/12/Cognizant-Logo.wine_-scaled.png"
+alt="" loading="lazy" decoding="async" fetchpriority="low"></div>
+<div class="logo-cell"><img
+src="https://godietech.ujwalabookhouse.com/wp-content/uploads/2025/11/imgi_30_Wipro-logo-removebg-preview-1-300x214-1.png"
+alt="" loading="lazy" decoding="async" fetchpriority="low"></div>
+<div class="logo-cell"><img
+src="https://godietech.ujwalabookhouse.com/wp-content/uploads/2025/11/imgi_10_20220927102358_hcltech-copy-CUS-removebg-preview-300x200-1.png"
+alt="" loading="lazy" decoding="async" fetchpriority="low"></div>
+<div class="logo-cell"><img
+src="https://godietech.ujwalabookhouse.com/wp-content/uploads/2025/11/imgi_15_Capgemini-Logo-1-300x189-1.webp"
+alt="" loading="lazy" decoding="async" fetchpriority="low"></div>
+</div>
+</div>
+</div>
+<p class="trust-note">Demo note: confirm customer, partner or client relationships before publishing these brand
+marks as endorsements.</p>
+</section>
+<section class="challenges" id="challenges">
+<div class="container">
+<div class="section-head reveal">
+<div class="eyebrow">Business outcomes</div>
+<h2>Where business pressure meets practical transformation.</h2>
+<p>Explore how SAP transformation can address business challenges, improve processes and unlock practical
+capabilities.</p>
+</div>
+<div class="challenge-tabs reveal">
+<button class="challenge-tab active" data-challenge="0">Business Challenges</button>
+<button class="challenge-tab" data-challenge="1">Processes We Improve</button>
+<button class="challenge-tab" data-challenge="2">Capabilities We Bring</button>
+</div>
+<div class="challenge-content reveal">
+<div class="challenge-media"><img id="challengeImage"
+src="https://peachpuff-chamois-105831.hostingersite.com/images/1challenge.jpg"
+alt="Business transformation" loading="lazy" decoding="async" fetchpriority="low"></div>
+<div class="challenge-copy">
+<div class="challenge-metrics" id="challengeMetrics">
+<div class="metric"><span class="metric-icon">◉</span><span>Visibility</span></div>
+<div class="metric"><span class="metric-icon">✦</span><span>Resilience</span></div>
+<div class="metric"><span class="metric-icon">◒</span><span>Efficiency</span></div>
+</div>
+<h3 id="challengeTitle">Solve the issues that slow the enterprise down.</h3>
+<p id="challengeText">Create a clearer view across operations, strengthen the ability to respond to change
+and reduce the friction that gets in the way of better business performance.</p>
+<a class="challenge-link" href="services.html">Discover our approach <span>→</span></a>
+</div>
+</div>
+</div>
+</section>
+<section class="industries" id="industries">
+<div class="section-head reveal">
+<div class="eyebrow industry-eyebrow">Industry expertise</div>
+<h2>Business context changes everything.</h2>
+<p>Explore how an SAP transformation can be shaped around the operating reality of each industry.</p>
+</div>
+<div class="industry-explorer reveal">
+<div class="industry-topline">
+<div>
+<span class="industry-overline">Explore by sector</span>
+<h3>Where your business operates matters.</h3>
+</div>
+<div class="industry-count"><span id="industryCount">01</span> / 06</div>
+</div>
+<div class="industry-tabs" role="tablist">
+<button class="industry-btn active" data-industry="0"><span>Manufacturing</span><i>01</i></button>
+<button class="industry-btn" data-industry="1"><span>Healthcare</span><i>02</i></button>
+<button class="industry-btn" data-industry="2"><span>Retail</span><i>03</i></button>
+<button class="industry-btn" data-industry="3"><span>Distribution</span><i>04</i></button>
+<button class="industry-btn" data-industry="4"><span>Engineering</span><i>05</i></button>
+<button class="industry-btn" data-industry="5"><span>Professional Services</span><i>06</i></button>
+</div>
+<div class="industry-feature">
+<div class="industry-photo-frame">
+<img id="industryImage" src="https://peachpuff-chamois-105831.hostingersite.com/images/manufacturing.jpg"
+alt="Manufacturing industry" loading="lazy" decoding="async" fetchpriority="low">
+<div class="industry-photo-badge"><span></span> Industry view</div>
+</div>
+<div class="industry-info">
+<div class="industry-info-top">
+<span class="industry-overline">SAP in context</span>
+<span class="industry-index" id="industryIndex">01</span>
+</div>
+<h4 id="industryTitle">Manufacturing</h4>
+<p id="industryText">Connect planning, production, supply chain and financial operations with a clearer
+enterprise view.</p>
+<div class="tags" id="industryTags">
+<span class="tag">SAP S/4HANA Cloud</span><span class="tag">SAP Analytics Cloud</span><span
+class="tag">Business Suite</span>
+</div>
+<a class="challenge-link" href="industries.html">Explore this industry <span>↗</span></a>
+</div>
+</div>
+</div>
+</section>
+<section class="final-cta" id="contact">
+<div class="cta-inner reveal">
+<div class="cta-pill">Ready to move forward?</div>
+<h2>The next chapter of your enterprise should feel <span>deliberate.</span></h2>
+<p>Bring strategy, SAP expertise and business priorities into one transformation conversation.</p>
+<div class="actions" style="justify-content:center">
+<a class="btn btn-primary" href="contact.html">Start a Conversation <span>→</span></a>
+<a class="btn btn-ghost" href="services.html">Explore Capabilities</a>
+</div>
+</div>
+</section>
+<section class="method" id="methodology">
+<div class="container">
+<div class="section-head reveal">
+<div class="eyebrow">How we work</div>
+<h2>Turn SAP transformation into a sequence of clear decisions.</h2>
+<p>A structured transformation approach connecting discovery, delivery, adoption and continuous improvement.
+</p>
+</div>
+<div class="method-flow" aria-label="Vico transformation methodology">
+<svg class="method-flow-svg desktop-flow-svg" viewBox="0 0 1200 170" preserveAspectRatio="none"
+aria-hidden="true">
+<defs>
+<linearGradient id="methodLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" stop-color="#159b8c" />
+<stop offset="42%" stop-color="#b99a64" />
+<stop offset="72%" stop-color="#e47b6d" />
+<stop offset="100%" stop-color="#25302d" />
+</linearGradient>
+</defs>
+<path class="method-main-line" d="M 100 74 C 135 44, 165 44, 200 74
+S 265 104, 300 74
+S 365 44, 400 74
+S 465 104, 500 74
+S 565 44, 600 74
+S 665 104, 700 74
+S 765 44, 800 74
+S 865 104, 900 74
+S 965 44, 1000 74
+S 1065 104, 1100 74" />
+<path class="method-progress-line" d="M 100 74 C 135 44, 165 44, 200 74
+S 265 104, 300 74
+S 365 44, 400 74
+S 465 104, 500 74
+S 565 44, 600 74
+S 665 104, 700 74
+S 765 44, 800 74
+S 865 104, 900 74
+S 965 44, 1000 74
+S 1065 104, 1100 74" />
+</svg>
+<div class="method-grid">
+<article class="method-card c1">
+<div class="method-node">01</div>
+<div class="method-card-icon">⌕</div>
+<h3>Discover</h3>
+<p>Understand priorities, processes and the current technology landscape.</p>
+</article>
+<article class="method-card c2">
+<div class="method-node">02</div>
+<div class="method-card-icon">♧</div>
+<h3>Design</h3>
+<p>Shape a practical SAP roadmap around business requirements and value.</p>
+</article>
+<article class="method-card c3">
+<div class="method-node">03</div>
+<div class="method-card-icon">⚙</div>
+<h3>Deliver</h3>
+<p>Implement and integrate with quality, continuity and adoption in mind.</p>
+</article>
+<article class="method-card c4">
+<div class="method-node">04</div>
+<div class="method-card-icon">♧</div>
+<h3>Enable</h3>
+<p>Help teams adopt new processes and turn technology into everyday capability.</p>
+</article>
+<article class="method-card c5">
+<div class="method-node">05</div>
+<div class="method-card-icon">↗</div>
+<h3>Evolve</h3>
+<p>Continuously optimize performance as the business and its priorities change.</p>
+</article>
+<article class="method-card c6">
+<div class="method-node">06</div>
+<div class="method-card-icon">◎</div>
+<h3>Scale</h3>
+<p>Unlock new opportunities with measurable impact and long-term value.</p>
+</article>
+</div>
+<div class="mobile-flow" aria-label="Mobile transformation journey">
+<svg class="mobile-flow-svg" viewBox="0 0 100 620" preserveAspectRatio="none" aria-hidden="true">
+<defs>
+<linearGradient id="mobileMethodGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#159b8c" />
+<stop offset="45%" stop-color="#b99a64" />
+<stop offset="76%" stop-color="#e47b6d" />
+<stop offset="100%" stop-color="#25302d" />
+</linearGradient>
+</defs>
+<path class="mobile-main-line" d="M 50 42
+C 86 70, 86 95, 50 112
+C 14 129, 14 154, 50 180
+C 86 205, 86 230, 50 248
+C 14 266, 14 292, 50 314
+C 86 337, 86 362, 50 382
+C 14 402, 14 430, 50 452
+C 86 474, 86 502, 50 532" />
+<path class="mobile-progress-line" d="M 50 42
+C 86 70, 86 95, 50 112
+C 14 129, 14 154, 50 180
+C 86 205, 86 230, 50 248
+C 14 266, 14 292, 50 314
+C 86 337, 86 362, 50 382
+C 14 402, 14 430, 50 452
+C 86 474, 86 502, 50 532" />
+</svg>
+<div class="mobile-card mc01">
+<div class="method-node">01</div>
+<div class="method-card-icon">⌕</div>
+<h3>Discover</h3>
+<p>Understand priorities, processes and the current technology landscape.</p>
+</div>
+<div class="mobile-card mc02">
+<div class="method-node">02</div>
+<div class="method-card-icon">♧</div>
+<h3>Design</h3>
+<p>Shape a practical SAP roadmap around business requirements and value.</p>
+</div>
+<div class="mobile-card mc03">
+<div class="method-node">03</div>
+<div class="method-card-icon">⚙</div>
+<h3>Deliver</h3>
+<p>Implement and integrate with quality, continuity and adoption in mind.</p>
+</div>
+<div class="mobile-card mc04">
+<div class="method-node">04</div>
+<div class="method-card-icon">♧</div>
+<h3>Enable</h3>
+<p>Help teams adopt new processes and turn technology into everyday capability.</p>
+</div>
+<div class="mobile-card mc05">
+<div class="method-node">05</div>
+<div class="method-card-icon">↗</div>
+<h3>Evolve</h3>
+<p>Continuously optimize performance as the business and its priorities change.</p>
+</div>
+<div class="mobile-card mc06">
+<div class="method-node">06</div>
+<div class="method-card-icon">◎</div>
+<h3>Scale</h3>
+<p>Unlock new opportunities with measurable impact and long-term value.</p>
+</div>
+</div>
+</div>
+<div class="method-value-line"><span></span>FROM INSIGHT TO IMPACT<span></span></div>
+</div>
+</section>
+</main>
+<footer>
+<div class="container">
+<div class="footer-top">
+<div>
+<a class="brand" href="index.html" aria-label="Vico — Vision Course home"><span
+class="brand-mark"></span><span class="brand-word">Vico</span></a>
+<p class="footer-copy">SAP services and enterprise transformation designed around practical business outcomes.
+</p>
+</div>
+<div class="footer-nav">
+<a href="index.html">Home</a>
+<a href="1-vico-solutions.html">Solutions</a>
+<a href="services.html">Services</a>
+<a href="our-products.html">Our Products</a>
+<a href="industries.html">Industries</a>
+<a href="careers.html">SAP Careers</a>
+<a href="contact.html">Contact Us</a>
+</div>
+</div>
+<div class="footer-bottom"><span>© 2026 Vico — Vision Course. All rights reserved.</span><span>Enterprise
+transformation • SAP services • Digital operations</span></div>
+</div>
+</footer>
+<script>
+(() => {
+// Reveal-on-scroll
+const revealObserver = new IntersectionObserver(entries => {
+entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); } });
+}, { threshold: .12 });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+document.querySelectorAll('.hero-content').forEach(el => el.classList.add('visible'));
+// Hero video: load and play immediately. It remains muted/inline for autoplay compatibility.
+const heroVideo = document.getElementById('heroVideo');
+if (heroVideo) {
+heroVideo.preload = 'auto';
+const playHeroVideo = () => {
+const playPromise = heroVideo.play();
+if (playPromise && playPromise.catch) playPromise.catch(() => { });
+};
+if (heroVideo.readyState >= 2) {
+playHeroVideo();
+} else {
+heroVideo.addEventListener('loadeddata', playHeroVideo, { once: true });
+heroVideo.load();
+}
+}
+// Solution panels setup
+const panels = [...document.querySelectorAll('.solution-panel')];
+// Keep initial CSS background ready for active card
+panels.forEach(panel => {
+const bgUrl = panel.dataset.bg;
+if (bgUrl) panel.style.setProperty('--bg', `url('${bgUrl}')`);
+});
+// Warm remaining GIFs asynchronously during browser idle time so main thread & video stay fast
+const solutionGifUrls = [...new Set(panels.map(p => p.dataset.bg || '').filter(Boolean))];
+const warmGifs = () => {
+solutionGifUrls.forEach((url) => {
+const preloader = new Image();
+preloader.decoding = 'async';
+preloader.fetchPriority = 'low';
+preloader.src = url;
+});
+};
+if ('requestIdleCallback' in window) {
+requestIdleCallback(warmGifs, { timeout: 1500 });
+} else {
+setTimeout(warmGifs, 600);
+}
+const progress = [...document.querySelectorAll('.solution-progress button')];
+function loadPanelBg(p) {
+if (!p) return;
+const bgUrl = p.dataset.bg;
+if (bgUrl) {
+p.style.setProperty('--bg', `url('${bgUrl}')`);
+p.removeAttribute('data-bg');
+}
+}
+function activateSolution(i) {
+panels.forEach((p, n) => p.classList.toggle('active', n === i));
+progress.forEach((b, n) => b.classList.toggle('active', n === i));
+loadPanelBg(panels[i]);
+if (panels[i + 1]) loadPanelBg(panels[i + 1]);
+if (panels[i - 1]) loadPanelBg(panels[i - 1]);
+}
+panels.forEach((p, i) => p.addEventListener('mouseenter', () => activateSolution(i)));
+panels.forEach((p, i) => p.addEventListener('click', () => activateSolution(i)));
+progress.forEach(b => b.addEventListener('click', () => activateSolution(+b.dataset.go)));
+// Scroll-driven solution activation on desktop/tablet.
+const stage = document.getElementById('solutionStage');
+if (stage && 'IntersectionObserver' in window) {
+const stageObserver = new IntersectionObserver((entries, obs) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+loadPanelBg(panels[0]);
+loadPanelBg(panels[1]);
+obs.unobserve(entry.target);
+}
+});
+}, { rootMargin: '350px 0px' });
+stageObserver.observe(stage);
+}
+// On touch devices the solution panels behave as tap-to-expand cards; desktop keeps the cinematic scroll/hover behavior.
+const mq = window.matchMedia('(min-width:901px)');
+function updateSolutionFromScroll() {
+if (!mq.matches) return;
+const r = stage.getBoundingClientRect();
+const progressValue = Math.max(0, Math.min(0.999, (window.innerHeight / 2 - r.top) / (r.height)));
+const i = Math.min(panels.length - 1, Math.floor(progressValue * panels.length));
+activateSolution(i);
+}
+window.addEventListener('scroll', updateSolutionFromScroll, { passive: true });
+window.addEventListener('resize', updateSolutionFromScroll);
+updateSolutionFromScroll();
+// Challenges tabs
+const challengeData = [
+{
+image: 'https://peachpuff-chamois-105831.hostingersite.com/images/1challenge.jpg',
+title: 'Solve the issues that slow the enterprise down.',
+text: 'Create a clearer view across operations, strengthen the ability to respond to change and reduce the friction that gets in the way of better business performance.',
+metrics: ['Visibility', 'Resilience', 'Efficiency']
+},
+{
+image: 'https://peachpuff-chamois-105831.hostingersite.com/images/process.webp',
+title: 'Make critical processes easier to run.',
+text: 'Connect fragmented workflows, simplify handoffs and build more consistent processes across the functions that matter most to the business.',
+metrics: ['Connected', 'Simplified', 'Scalable']
+},
+{
+image: 'https://peachpuff-chamois-105831.hostingersite.com/images/1capability.jpg',
+title: 'Build capabilities that keep creating value.',
+text: 'Combine SAP platforms, data, integration and domain expertise to give teams the capabilities they need to operate with greater confidence.',
+metrics: ['Insight', 'Integration', 'Adaptability']
+}
+];
+const cTabs = [...document.querySelectorAll('.challenge-tab')], cImg = document.getElementById('challengeImage'), cTitle = document.getElementById('challengeTitle'), cText = document.getElementById('challengeText'), cMetrics = document.getElementById('challengeMetrics');
+// Preload challenge images so the heading, copy and image can change together.
+challengeData.forEach(d => { const im = new Image(); im.decoding = 'async'; im.src = d.image; });
+function setChallenge(i) {
+const d = challengeData[i];
+cTabs.forEach((b, n) => b.classList.toggle('active', n === i));
+const copy = cTitle.closest('.challenge-copy');
+copy.classList.add('is-changing');
+cImg.style.opacity = '0'; cImg.style.transform = 'scale(1.025)';
+cTitle.textContent = d.title; cText.textContent = d.text;
+cMetrics.innerHTML = d.metrics.map((m, n) => `<div class="metric"><span class="metric-icon">${['◉', '✦', '◒'][n]}</span><span>${m}</span></div>`).join('');
+const reveal = () => { cImg.style.opacity = '1'; cImg.style.transform = 'scale(1)'; copy.classList.remove('is-changing'); };
+cImg.onload = reveal; cImg.src = d.image;
+if (cImg.complete) requestAnimationFrame(reveal);
+}
+cTabs.forEach((b, i) => b.addEventListener('click', () => setChallenge(i)));
+// Industries
+const industryData = [
+{ name: 'Manufacturing', img: 'https://peachpuff-chamois-105831.hostingersite.com/images/manufacturing.jpg', text: 'Connect planning, production, supply chain and financial operations with a clearer enterprise view.', tags: ['SAP S/4HANA Cloud', 'SAP Analytics Cloud', 'Business Suite'] },
+{ name: 'Healthcare', img: 'https://peachpuff-chamois-105831.hostingersite.com/images/healthcare.jpg', text: 'Support connected operations, better information flow and more efficient processes across complex care environments.', tags: ['SAP S/4HANA Cloud', 'SAP Analytics Cloud', 'Business Suite'] },
+{ name: 'Retail', img: 'https://peachpuff-chamois-105831.hostingersite.com/images/retail.jpg', text: 'Create connected customer, inventory and operational processes for a faster-changing retail environment.', tags: ['SAP S/4HANA Cloud', 'SAP CRM & CX', 'SAP Analytics Cloud'] },
+{ name: 'Distribution', img: 'https://peachpuff-chamois-105831.hostingersite.com/images/distribution.avif', text: 'Improve visibility across inventory, purchasing, fulfillment and financial operations across the distribution network.', tags: ['SAP Business One', 'SAP S/4HANA Cloud', 'SAP Analytics Cloud'] },
+{ name: 'Engineering', img: 'https://peachpuff-chamois-105831.hostingersite.com/images/engineering.jpg', text: 'Coordinate complex projects, resources and enterprise processes with a more connected digital foundation.', tags: ['SAP S/4HANA Cloud', 'SAP Business Suite', 'SAP Analytics Cloud'] },
+{ name: 'Professional Services', img: 'https://peachpuff-chamois-105831.hostingersite.com/images/services.jpg', text: 'Bring people, projects, finance and customer operations together to improve visibility and delivery control.', tags: ['SAP S/4HANA Cloud', 'SAP SuccessFactors', 'SAP Analytics Cloud'] }
+];
+const iBtns = [...document.querySelectorAll('.industry-btn')], iImg = document.getElementById('industryImage'), iTitle = document.getElementById('industryTitle'), iText = document.getElementById('industryText'), iTags = document.getElementById('industryTags'), iCount = document.getElementById('industryCount'), iIndex = document.getElementById('industryIndex');
+// Preload industry images so the selected image and heading never drift apart.
+// Images are loaded on demand; the active image is warmed immediately before a switch.
+function setIndustry(i) {
+const d = industryData[i];
+iBtns.forEach((b, n) => b.classList.toggle('active', n === i));
+iCount.textContent = String(i + 1).padStart(2, '0'); iIndex.textContent = String(i + 1).padStart(2, '0');
+const info = iTitle.closest('.industry-info');
+info.classList.add('is-changing');
+iImg.style.opacity = '0'; iImg.style.transform = 'scale(1.035)';
+iTitle.textContent = d.name; iText.textContent = d.text; iTags.innerHTML = d.tags.map(t => `<span class="tag">${t}</span>`).join('');
+const reveal = () => { iImg.style.opacity = '1'; iImg.style.transform = 'scale(1)'; info.classList.remove('is-changing'); };
+const url = d.img;
+// Warm the exact requested image first, then display that same URL.
+// This keeps the heading/copy/image transition synchronized and avoids
+// the broken double-path URL from the previous implementation.
+if (window.vicoWarmIndustryImage) {
+window.vicoWarmIndustryImage(url);
+}
+iImg.onload = reveal;
+iImg.onerror = () => { iImg.style.opacity = '1'; iImg.style.transform = 'scale(1)'; info.classList.remove('is-changing'); };
+iImg.src = url;
+iImg.alt = d.name + ' industry';
+if (iImg.complete) requestAnimationFrame(reveal);
+}
+iBtns.forEach((b, i) => b.addEventListener('click', () => setIndustry(i)));
+})();
+</script>
+<script>
+(() => {
+'use strict';
+const INDUSTRY_IMAGES = { "manufacturing": "https://peachpuff-chamois-105831.hostingersite.com/images/manufacturing.jpg", "healthcare": "https://peachpuff-chamois-105831.hostingersite.com/images/healthcare.jpg", "retail": "https://peachpuff-chamois-105831.hostingersite.com/images/retail.jpg", "distribution": "https://peachpuff-chamois-105831.hostingersite.com/images/distribution.avif", "engineering": "https://peachpuff-chamois-105831.hostingersite.com/images/engineering.jpg", "services": "https://peachpuff-chamois-105831.hostingersite.com/images/services.jpg" };
+const cache = new Map();
+function preloadImage(url) {
+if (!url || cache.has(url)) return cache.get(url);
+const img = new Image();
+img.decoding = 'async';
+img.src = url;
+const promise = img.decode ? img.decode().catch(() => undefined) : Promise.resolve();
+cache.set(url, promise);
+return promise;
+}
+// Warm only the active/first industry after the page becomes interactive.
+function warmActiveIndustry() {
+const active = document.querySelector(
+'#industries [aria-selected="true"], #industries .active, #industries .is-active'
+);
+const index = active && Number(active.dataset.industry);
+const keys = ['manufacturing', 'healthcare', 'retail', 'distribution', 'engineering', 'services'];
+const key = Number.isInteger(index) ? keys[index] : null;
+if (key && INDUSTRY_IMAGES[key]) preloadImage(INDUSTRY_IMAGES[key]);
+}
+// Allow the existing industry switcher to warm its next image before swapping it.
+window.vicoWarmIndustryImage = function (nameOrUrl) {
+const url = INDUSTRY_IMAGES[nameOrUrl] || nameOrUrl;
+return (typeof url === 'string' && /^https:\/\//.test(url))
+? preloadImage(url)
+: Promise.resolve();
+};
+if ('requestIdleCallback' in window) {
+requestIdleCallback(warmActiveIndustry, { timeout: 1200 });
+} else {
+setTimeout(warmActiveIndustry, 350);
+}
+// Decode images as they approach the viewport, without downloading all
+// below-the-fold assets during the initial refresh.
+if ('IntersectionObserver' in window) {
+const observer = new IntersectionObserver((entries, obs) => {
+entries.forEach(entry => {
+if (!entry.isIntersecting) return;
+const img = entry.target;
+if (img.dataset.src) {
+img.src = img.dataset.src;
+img.removeAttribute('data-src');
+}
+obs.unobserve(img);
+});
+}, { rootMargin: '350px 0px' });
+document.querySelectorAll('img[loading="lazy"][data-src]').forEach(img => observer.observe(img));
+}
+})();
+</script>
+<script id="vico-mobile-menu-controller">
+(() => {
+'use strict';
+const header = document.getElementById('siteHeader');
+const menuBtn = document.getElementById('menuBtn');
+const mainNav = document.getElementById('mainNav');
+if (!menuBtn || !mainNav) return;
+const mobileQuery = window.matchMedia('(max-width: 900px)');
+function isOpen() {
+return mainNav.classList.contains('open');
+}
+function setMenu(open) {
+if (!mobileQuery.matches) {
+mainNav.classList.remove('open');
+menuBtn.setAttribute('aria-expanded', 'false');
+menuBtn.setAttribute('aria-label', 'Open menu');
+document.body.style.overflow = '';
+return;
+}
+mainNav.classList.toggle('open', open);
+menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+// Prevent the page behind the open mobile navigation from scrolling.
+document.body.style.overflow = open ? 'hidden' : '';
+}
+menuBtn.addEventListener('click', (event) => {
+event.preventDefault();
+event.stopPropagation();
+setMenu(!isOpen());
+});
+// Close after selecting any navigation destination.
+mainNav.querySelectorAll('a').forEach(link => {
+link.addEventListener('click', () => {
+setMenu(false);
+});
+});
+// Escape closes the menu.
+document.addEventListener('keydown', (event) => {
+if (event.key === 'Escape' && isOpen()) {
+setMenu(false);
+menuBtn.focus();
+}
+});
+// Clicking outside the open navigation closes it.
+document.addEventListener('click', (event) => {
+if (!isOpen()) return;
+if (header && header.contains(event.target)) return;
+setMenu(false);
+});
+// Restore the desktop state when crossing the breakpoint.
+const handleBreakpointChange = () => {
+if (!mobileQuery.matches) setMenu(false);
+};
+if (mobileQuery.addEventListener) {
+mobileQuery.addEventListener('change', handleBreakpointChange);
+} else {
+mobileQuery.addListener(handleBreakpointChange);
+}
+// Correct initial state on page load.
+setMenu(false);
+})();
+</script>
+<script>
+(() => {
+'use strict';
+document.addEventListener('contextmenu', e => e.preventDefault(), false);
+document.addEventListener('keydown', e => {
+if (e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.keyCode === 85)) { e.preventDefault(); return false; }
+if (e.key === 'F12' || e.keyCode === 123) { e.preventDefault(); return false; }
+if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c')) { e.preventDefault(); return false; }
+if (e.ctrlKey && (e.key === 's' || e.key === 'S' || e.keyCode === 83)) { e.preventDefault(); return false; }
+}, false);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Careers at Vico — Build what comes next at the intersection of SAP transformation, business strategy, cloud technology, and real-world impact.">
+<title>SAP Careers — Vico | Vision Course</title>
+<style>
+:root{
+--ink:#151515;
+--paper:#f5f2ea;
+--white:#fff;
+--green:#087b70;
+--mint:#dcefe8;
+--coral:#f26b5b;
+--gold:#e7bd68;
+--muted:#66717d;
+--dark:#111817;
+--line:rgba(21,21,21,.12);
+--wrap:min(1320px,calc(100% - 64px));
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+margin:0;background:var(--paper);color:var(--ink);
+font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+-webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+.wrap{width:var(--wrap);margin:auto}
+.section{padding:120px 0}
+.eyebrow{
+display:inline-flex;align-items:center;gap:10px;
+padding:8px 16px;background:rgba(255,255,255,.88);
+border:1px solid rgba(8,123,112,.22);border-radius:999px;
+backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+box-shadow:0 4px 16px rgba(0,0,0,.04);
+font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;
+color:var(--green);transition:transform .25s ease,box-shadow .25s ease;
+}
+.eyebrow:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(8,123,112,.12)}
+.eyebrow:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--coral);box-shadow:0 0 10px rgba(242,107,91,.7);animation:dotPulse 2s infinite ease-in-out}
+@keyframes dotPulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.35);opacity:.6}}
+h1,h2,h3{letter-spacing:-.055em}
+h1{font-size:clamp(52px,7vw,106px);line-height:.88;margin:25px 0 28px}
+h2{font-size:clamp(40px,5.2vw,74px);line-height:.95;margin:18px 0 24px}
+h3{font-size:24px;line-height:1.08;margin:0 0 12px}
+p{line-height:1.65}
+.lead{font-size:clamp(18px,1.5vw,21px);line-height:1.6;color:var(--muted);max-width:700px}
+.btn{
+display:inline-flex;align-items:center;justify-content:center;
+min-height:50px;padding:0 24px;border-radius:999px;
+font-size:13px;font-weight:850;border:1px solid transparent;
+transition:transform .25s ease,box-shadow .25s ease,background .25s ease;
+}
+.btn:hover{transform:translateY(-3px)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-green{background:var(--green);color:#fff}
+.btn-outline{
+background:rgba(255,255,255,.8);
+color:var(--ink);
+border-color:rgba(21,21,21,.18);
+backdrop-filter:blur(8px);
+}
+.btn-outline:hover{
+background:#fff;
+border-color:var(--green);
+color:var(--green);
+}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+/* SECTION 1 — HUMAN HERO (LIGHT THEME) */
+.hero{
+min-height:calc(100svh - 70px);position:relative;overflow:hidden;
+background:#f6f8f7;color:var(--ink);display:flex;align-items:flex-end;
+}
+.hero-media{position:absolute;inset:0}
+.hero-media img{width:100%;height:100%;object-fit:cover;opacity:.65;filter:saturate(1.1) contrast(1.04);display:block}
+.hero-media:after{
+content:"";position:absolute;inset:0;
+background:
+radial-gradient(circle at 85% 20%,rgba(8,123,112,.14),transparent 45%),
+linear-gradient(90deg,rgba(246,248,247,.88) 0%,rgba(246,248,247,.62) 55%,rgba(246,248,247,.20) 100%),
+linear-gradient(0deg,rgba(246,248,247,.85) 0%,transparent 60%);
+pointer-events:none;
+}
+.hero-grid{
+position:absolute;inset:0;opacity:.12;
+background-image:linear-gradient(rgba(8,123,112,.18) 1px,transparent 1px),linear-gradient(90deg,rgba(8,123,112,.18) 1px,transparent 1px);
+background-size:80px 80px;
+transform:translateY(var(--parallax,0px));
+}
+.hero-content{position:relative;z-index:2;padding:130px 0 82px}
+.hero .eyebrow{color:var(--green)}
+.hero h1{max-width:980px}
+.hero h1 span{color:var(--green)}
+.hero p{max-width:720px;color:var(--muted);font-size:20px}
+.hero-chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:40px}
+.hero-chips span{
+padding:9px 16px;border:1px solid rgba(0,0,0,.1);border-radius:999px;
+background:rgba(255,255,255,.75);backdrop-filter:blur(8px);
+color:#374151;font-size:10px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;
+transition:.25s ease;
+box-shadow:0 4px 15px rgba(0,0,0,.04);
+}
+.hero-chips span:hover{border-color:var(--green);color:var(--green);background:#fff;transform:translateY(-2px);box-shadow:0 8px 25px rgba(8,123,112,.2)}
+/* SECTION 2 — CAREER PATHWAYS & PRACTICE AREAS */
+.pathways{background:var(--paper);overflow:hidden}
+.pathways-head{text-align:center;max-width:860px;margin:0 auto 60px}
+/* Horizontal Career Journey Timeline */
+.journey-track{
+display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:60px;
+}
+.journey-step{
+padding:28px 20px;border:1px solid var(--line);border-radius:24px;
+background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.04);text-align:center;
+transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;
+display:flex;flex-direction:column;align-items:center;
+}
+.journey-step:hover{transform:translateY(-6px);border-color:var(--green);box-shadow:0 15px 35px rgba(0,0,0,.08)}
+.journey-num{
+width:46px;height:46px;border-radius:50%;
+display:grid;place-items:center;margin:0 auto 16px;
+color:#ffffff!important;font-size:15px;font-weight:950;
+transition:transform .3s ease,box-shadow .3s ease;
+}
+.journey-step:hover .journey-num{transform:scale(1.12)}
+.journey-step:nth-child(1) .journey-num{background:#087b70;color:#ffffff!important;box-shadow:0 8px 20px rgba(8,123,112,.35)}
+.journey-step:nth-child(2) .journey-num{background:#0f52ba;color:#ffffff!important;box-shadow:0 8px 20px rgba(15,82,186,.35)}
+.journey-step:nth-child(3) .journey-num{background:#f26b5b;color:#ffffff!important;box-shadow:0 8px 20px rgba(242,107,91,.35)}
+.journey-step:nth-child(4) .journey-num{background:#7b2cbf;color:#ffffff!important;box-shadow:0 8px 20px rgba(123,44,191,.35)}
+.journey-step:nth-child(5) .journey-num{background:#151515;color:#ffffff!important;box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.journey-step strong{display:block;font-size:17px;letter-spacing:-.03em;color:var(--ink);margin-bottom:6px}
+.journey-step span{font-size:12.5px;color:var(--muted);line-height:1.5}
+/* Interactive Practice Track Selector */
+.practice-stage{
+border:1px solid var(--line);border-radius:32px;background:#fff;
+box-shadow:0 20px 60px rgba(21,21,21,.06);padding:48px;overflow:hidden;
+}
+.practice-tabs{
+display:flex;gap:10px;flex-wrap:wrap;margin-bottom:36px;
+border-bottom:1px solid var(--line);padding-bottom:20px;
+}
+.practice-tab{
+padding:12px 22px;border-radius:999px;border:1px solid var(--line);
+background:var(--paper);font-size:12px;font-weight:850;letter-spacing:.06em;
+text-transform:uppercase;color:var(--muted);cursor:pointer;transition:.25s ease;
+}
+.practice-tab:hover,.practice-tab.active{
+background:var(--ink);color:#fff;border-color:var(--ink);box-shadow:0 10px 25px rgba(21,21,21,.15);
+}
+.practice-content{
+display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;
+}
+.practice-info small{font-size:10px;font-weight:900;letter-spacing:.16em;color:var(--coral);text-transform:uppercase}
+.practice-info h3{font-size:34px;margin:12px 0 16px;color:var(--ink)}
+.practice-info p{color:var(--muted);font-size:15px;line-height:1.65;margin:0 0 24px}
+.practice-list{list-style:none;padding:0;margin:0 0 32px}
+.practice-list li{
+position:relative;padding-left:26px;margin-bottom:12px;font-size:14px;color:var(--ink);line-height:1.5;
+}
+.practice-list li:before{content:"✓";position:absolute;left:0;top:0;color:var(--green);font-weight:900}
+.practice-card{
+padding:32px;border-radius:24px;background:var(--paper);border:1px solid var(--line);
+}
+.practice-card small{font-size:9px;font-weight:900;letter-spacing:.16em;color:var(--green);text-transform:uppercase;display:block;margin-bottom:8px}
+.practice-card strong{display:block;font-size:20px;margin-bottom:12px;letter-spacing:-.03em}
+.practice-card p{font-size:13.5px;color:var(--muted);line-height:1.6;margin:0 0 20px}
+/* SECTION 3 — RECRUITMENT & OPEN ROLES CTA */
+.cta{padding:120px 0;background:linear-gradient(135deg,#121919,#181328);color:#fff;position:relative;overflow:hidden}
+.cta:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:70px 70px}
+.cta-inner{position:relative;z-index:2;max-width:900px}
+.cta .eyebrow{color:#bfe9de}
+.cta h2{max-width:850px}
+.cta p{max-width:640px;color:rgba(255,255,255,.58);font-size:18px}
+/* RESPONSIVE MEDIA QUERIES */
+@media(max-width:1050px){
+:root{--wrap:min(100% - 42px,900px)}
+.section{padding:90px 0}
+.journey-track{grid-template-columns:repeat(3,1fr)}
+.practice-content{grid-template-columns:1fr;gap:40px}
+.practice-stage{padding:32px}
+.actions .btn{width:100%}
+}
+@media(max-width:700px){
+:root{--wrap:calc(100% - 30px)}
+.section{padding:72px 0}
+h1{font-size:clamp(44px,12vw,68px)}
+h2{font-size:clamp(34px,9.5vw,52px)}
+.hero{min-height:760px}
+.hero-content{padding:120px 0 52px}
+.hero p{font-size:17px}
+.journey-track{grid-template-columns:repeat(2,1fr)}
+.practice-tabs{justify-content:flex-start;overflow-x:auto;padding-bottom:10px}
+.practice-tab{flex-shrink:0;font-size:10px;padding:10px 16px}
+.practice-stage{padding:22px;border-radius:24px}
+.practice-info h3{font-size:28px}
+.cta{padding:85px 0}
+}
+@media(prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*,*:before,*:after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+<main>
+<section class="hero">
+<div class="hero-media">
+<img src="https://peachpuff-chamois-105831.hostingersite.com/images/corporate.avif" alt="Vico SAP enterprise consulting team collaboration">
+</div>
+<div class="hero-grid" aria-hidden="true"></div>
+<div class="wrap hero-content reveal">
+<span class="eyebrow">CAREERS AT VICO</span>
+<h1>Build what <span>comes next.</span></h1>
+<p>Work at the intersection of SAP transformation, business strategy, cloud technology, and real-world enterprise impact.</p>
+<div class="actions">
+<a class="btn btn-green" href="#pathways">Explore Pathways</a>
+<a class="btn btn-outline" href="contact.html">Send Your Profile</a>
+</div>
+<div class="hero-chips">
+<span>SAP Consulting</span><span>S/4HANA Core</span><span>BTP Architecture</span>
+<span>Data &amp; Analytics</span><span>AI &amp; Automation</span><span>Delivery Leadership</span>
+</div>
+</div>
+</section>
+<section class="section pathways" id="pathways">
+<div class="wrap">
+<div class="pathways-head reveal">
+<span class="eyebrow">GROWTH &amp; PRACTICE AREAS</span>
+<h2>Designed for long-term impact.</h2>
+<p class="lead" style="margin:0 auto">We combine continuous learning, hands-on enterprise delivery, and clear career progression across core SAP disciplines.</p>
+</div>
+<div class="journey-track reveal">
+<div class="journey-step">
+<span class="journey-num">01</span>
+<strong>Learn</strong>
+<span>Absorb methodology, business context &amp; SAP core</span>
+</div>
+<div class="journey-step">
+<span class="journey-num">02</span>
+<strong>Specialize</strong>
+<span>Master BTP, S/4HANA, Data or AI integration</span>
+</div>
+<div class="journey-step">
+<span class="journey-num">03</span>
+<strong>Deliver</strong>
+<span>Lead client transformation workstreams</span>
+</div>
+<div class="journey-step">
+<span class="journey-num">04</span>
+<strong>Lead</strong>
+<span>Shape solution architecture &amp; mentor teams</span>
+</div>
+<div class="journey-step">
+<span class="journey-num">05</span>
+<strong>Innovate</strong>
+<span>Build new SAP capabilities &amp; practice assets</span>
+</div>
+</div>
+<div class="practice-stage reveal">
+<div class="practice-tabs" role="tablist">
+<button class="practice-tab active" onclick="switchPractice(0)">SAP Consulting &amp; Core</button>
+<button class="practice-tab" onclick="switchPractice(1)">BTP &amp; Integration</button>
+<button class="practice-tab" onclick="switchPractice(2)">Data &amp; Analytics</button>
+<button class="practice-tab" onclick="switchPractice(3)">Automation &amp; AI</button>
+<button class="practice-tab" onclick="switchPractice(4)">Delivery Leadership</button>
+</div>
+<div class="practice-content" id="practiceContent">
+<div class="practice-info">
+<small id="practiceKicker">PRACTICE AREA 01</small>
+<h3 id="practiceTitle">SAP Consulting &amp; S/4HANA Core</h3>
+<p id="practiceDesc">Lead core ERP modernization across finance, operations, procurement, and clean-core architecture for major enterprise clients.</p>
+<ul class="practice-list" id="practiceList">
+<li>S/4HANA Cloud process design &amp; migration strategy</li>
+<li>Clean-core governance eliminating legacy custom code</li>
+<li>Cross-functional business workflow alignment</li>
+<li>Direct collaboration with C-suite stakeholders</li>
+</ul>
+<a class="btn btn-dark" href="contact.html" id="practiceCta">Join SAP Consulting Practice</a>
+</div>
+<div class="practice-card">
+<small>ROLE PROFILE &amp; IMPACT</small>
+<strong id="practiceRole">Senior Solution Architect / Consultant</strong>
+<p id="practiceImpact">You will bridge the gap between complex enterprise business requirements and modern SAP digital core capabilities, ensuring high-value outcomes.</p>
+<div style="font-size:12px;font-weight:850;color:var(--green);letter-spacing:.06em;text-transform:uppercase">
+Key Focus: S/4HANA · Clean Core · Process Design
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="cta">
+<div class="wrap cta-inner reveal">
+<span class="eyebrow">JOIN THE VICO TEAM</span>
+<h2>Your next chapter starts with a conversation.</h2>
+<p>Whether you are an experienced SAP architect, S/4HANA consultant, BTP specialist, or transformation leader, discover where your capabilities can create lasting impact.</p>
+<div class="actions">
+<a class="btn btn-green" href="contact.html">Send Your Profile</a>
+<a class="btn btn-outline" href="mailto:careers@vico-visioncourse.com">Email Talent Team</a>
+</div>
+</div>
+</section>
+</main>
+<div id="site-footer"></div>
+<script src="site-config.js"></script>
+<script src="site-components.js"></script>
+<script>
+(() => {
+// Intersection Observer for reveal animations
+const reveals = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if(entry.isIntersecting){
+entry.target.classList.add('visible');
+io.unobserve(entry.target);
+}
+});
+}, {threshold:.12});
+reveals.forEach(el => io.observe(el));
+// Practice Track Interactive Showcase Data
+const practiceData = [
+{
+kicker: "PRACTICE AREA 01",
+title: "SAP Consulting & S/4HANA Core",
+desc: "Lead core ERP modernization across finance, operations, procurement, and clean-core architecture for major enterprise clients.",
+list: [
+"S/4HANA Cloud process design & migration strategy",
+"Clean-core governance eliminating legacy custom code",
+"Cross-functional business workflow alignment",
+"Direct collaboration with C-suite stakeholders"
+],
+role: "Senior Solution Architect / Consultant",
+impact: "You will bridge the gap between complex enterprise business requirements and modern SAP digital core capabilities, ensuring high-value outcomes.",
+cta: "Join SAP Consulting Practice"
+},
+{
+kicker: "PRACTICE AREA 02",
+title: "BTP & Integration Architecture",
+desc: "Architect seamless enterprise connectivity between SAP core, third-party applications, APIs, and cloud extension suites.",
+list: [
+"SAP BTP Integration Suite setup & API management",
+"Side-by-side extension building with SAP Build",
+"Event-driven architecture and cloud workflows",
+"Hybrid landscape security & data synchronization"
+],
+role: "Integration Specialist / BTP Architect",
+impact: "You will design connective layers that enable enterprise systems to work together without cluttering standard SAP code.",
+cta: "Join BTP Practice"
+},
+{
+kicker: "PRACTICE AREA 03",
+title: "Data, Analytics & Planning",
+desc: "Build trusted data foundations and real-time executive dashboards using SAP Datasphere and SAP Analytics Cloud (SAC).",
+list: [
+"SAP Datasphere data modeling & HANA Cloud foundation",
+"SAC dashboard creation & executive KPI frameworks",
+"Integrated business planning (IBP) forecasting models",
+"Contextualized analytics linking data to operational action"
+],
+role: "Analytics Lead / Data Architect",
+impact: "You will turn raw enterprise information into real-time decision clarity for senior executives and operational leaders.",
+cta: "Join Analytics Practice"
+},
+{
+kicker: "PRACTICE AREA 04",
+title: "Automation & AI Integration",
+desc: "Embed intelligent process loops and automated execution directly into enterprise SAP workflows.",
+list: [
+"SAP Build Process Automation & RPA deployment",
+"AI-driven document processing & invoice matching",
+"Automated master data validation & exception routing",
+"Predictive operational alerts and intelligent bots"
+],
+role: "AI & Automation Engineer",
+impact: "You will eliminate routine manual work across enterprise operations, making business processes faster and smarter.",
+cta: "Join AI & Automation Practice"
+},
+{
+kicker: "PRACTICE AREA 05",
+title: "Delivery Leadership & Account Management",
+desc: "Drive end-to-end transformation programs, manage client partnerships, and guide multidisciplinary delivery teams.",
+list: [
+"Program governance, SLA oversight & risk management",
+"Organizational change enablement & user adoption",
+"Strategic account development & solution shaping",
+"Team mentorship and practice asset development"
+],
+role: "Delivery Manager / Engagement Lead",
+impact: "You will ensure complex SAP transformations are executed on schedule, within scope, and aligned with client business value.",
+cta: "Join Delivery Leadership"
+}
+];
+window.switchPractice = function(index) {
+const data = practiceData[index];
+if(!data) return;
+const tabs = document.querySelectorAll('.practice-tab');
+tabs.forEach((t, i) => {
+if(i === index) t.classList.add('active');
+else t.classList.remove('active');
+});
+const kicker = document.getElementById('practiceKicker');
+const title = document.getElementById('practiceTitle');
+const desc = document.getElementById('practiceDesc');
+const list = document.getElementById('practiceList');
+const role = document.getElementById('practiceRole');
+const impact = document.getElementById('practiceImpact');
+const cta = document.getElementById('practiceCta');
+if(kicker) kicker.textContent = data.kicker;
+if(title) title.textContent = data.title;
+if(desc) desc.textContent = data.desc;
+if(role) role.textContent = data.role;
+if(impact) impact.textContent = data.impact;
+if(cta) cta.textContent = data.cta;
+if(list) {
+list.innerHTML = '';
+data.list.forEach(item => {
+const li = document.createElement('li');
+li.textContent = item;
+list.appendChild(li);
+});
+}
+};
+// Parallax Hero
+let ticking = false;
+const heroGrid = document.querySelector('.hero-grid');
+const parallax = () => {
+if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+const y = Math.min(window.scrollY * .12, 70);
+if(heroGrid) heroGrid.style.setProperty('--parallax', `${y}px`);
+ticking = false;
+};
+window.addEventListener('scroll', () => {
+if(!ticking){ requestAnimationFrame(parallax); ticking = true; }
+}, {passive:true});
+})();
+</script>
+</body>
+</html>

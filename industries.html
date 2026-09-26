@@ -1,0 +1,1002 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description"
+content="Vico Industry SAP Solutions — Manufacturing, Healthcare & Life Sciences, Retail, Distribution, Engineering, and High Tech transformation.">
+<title>Industries — Vico | Vision Course</title>
+<style>
+:root {
+--ink: #151515;
+--paper: #f5f2ea;
+--white: #fff;
+--green: #087b70;
+--mint: #dcefe8;
+--coral: #f26b5b;
+--gold: #e7bd68;
+--muted: #66717d;
+--dark: #111817;
+--line: rgba(21, 21, 21, .12);
+--wrap: min(1320px, calc(100% - 64px));
+}
+* {
+box-sizing: border-box
+}
+html {
+scroll-behavior: smooth
+}
+body {
+margin: 0;
+background: var(--paper);
+color: var(--ink);
+font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+-webkit-font-smoothing: antialiased;
+overflow-x: hidden;
+}
+a {
+text-decoration: none;
+color: inherit
+}
+button {
+font: inherit
+}
+.wrap {
+width: var(--wrap);
+margin: auto
+}
+.section {
+padding: 120px 0
+}
+.eyebrow {
+display: inline-flex;
+align-items: center;
+gap: 10px;
+padding: 8px 16px;
+background: rgba(255, 255, 255, .88);
+border: 1px solid rgba(8, 123, 112, .22);
+border-radius: 999px;
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+box-shadow: 0 4px 16px rgba(0, 0, 0, .04);
+font-size: 11px;
+font-weight: 900;
+letter-spacing: .16em;
+text-transform: uppercase;
+color: var(--green);
+transition: transform .25s ease, box-shadow .25s ease;
+}
+.eyebrow:hover {
+transform: translateY(-2px);
+box-shadow: 0 6px 20px rgba(8, 123, 112, .12);
+}
+.eyebrow:before {
+content: "";
+width: 8px;
+height: 8px;
+border-radius: 50%;
+background: var(--coral);
+box-shadow: 0 0 10px rgba(242, 107, 91, .7);
+animation: dotPulse 2s infinite ease-in-out;
+}
+@keyframes dotPulse {
+0%, 100% { transform: scale(1); opacity: 1; }
+50% { transform: scale(1.35); opacity: .6; }
+}
+h1,
+h2,
+h3 {
+letter-spacing: -.055em
+}
+h1 {
+font-size: clamp(52px, 7vw, 106px);
+line-height: .88;
+margin: 25px 0 28px
+}
+h2 {
+font-size: clamp(40px, 5.2vw, 74px);
+line-height: .95;
+margin: 18px 0 24px
+}
+h3 {
+font-size: 24px;
+line-height: 1.08;
+margin: 0 0 12px
+}
+p {
+line-height: 1.65
+}
+.lead {
+font-size: clamp(18px, 1.5vw, 21px);
+line-height: 1.6;
+color: var(--muted);
+max-width: 700px
+}
+.btn {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+min-height: 50px;
+padding: 0 24px;
+border-radius: 999px;
+font-size: 13px;
+font-weight: 850;
+border: 1px solid transparent;
+transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+.btn:hover {
+transform: translateY(-3px)
+}
+.btn-dark {
+background: var(--ink);
+color: #fff
+}
+.btn-green {
+background: var(--green);
+color: #fff
+}
+.btn-outline {
+background: rgba(255, 255, 255, .8);
+color: var(--ink);
+border-color: rgba(21, 21, 21, .18);
+backdrop-filter: blur(8px);
+}
+.btn-outline:hover {
+background: #fff;
+border-color: var(--green);
+color: var(--green);
+}
+.actions {
+display: flex;
+gap: 12px;
+flex-wrap: wrap;
+margin-top: 34px
+}
+.reveal {
+opacity: 0;
+transform: translateY(22px);
+transition: opacity .7s ease, transform .7s ease
+}
+.reveal.visible {
+opacity: 1;
+transform: none
+}
+/* SECTION 1 — INDUSTRY HERO (LIGHT THEME) */
+.hero {
+min-height: calc(100svh - 70px);
+position: relative;
+overflow: hidden;
+background: #f6f8f7;
+color: var(--ink);
+display: flex;
+align-items: flex-end;
+}
+.hero-media {
+position: absolute;
+inset: 0
+}
+.hero-media video {
+width: 100%;
+height: 100%;
+object-fit: cover;
+opacity: .66;
+filter: saturate(1.15) contrast(1.05);
+}
+.hero-media:after {
+content: "";
+position: absolute;
+inset: 0;
+background:
+radial-gradient(circle at 85% 20%, rgba(8, 123, 112, .14), transparent 45%),
+linear-gradient(90deg, rgba(246, 248, 247, .88) 0%, rgba(246, 248, 247, .62) 55%, rgba(246, 248, 247, .20) 100%),
+linear-gradient(0deg, rgba(246, 248, 247, .85) 0%, transparent 60%);
+pointer-events: none;
+}
+.hero-grid {
+position: absolute;
+inset: 0;
+opacity: .12;
+background-image: linear-gradient(rgba(8, 123, 112, .18) 1px, transparent 1px), linear-gradient(90deg, rgba(8, 123, 112, .18) 1px, transparent 1px);
+background-size: 80px 80px;
+transform: translateY(var(--parallax, 0px));
+}
+.hero-content {
+position: relative;
+z-index: 2;
+padding: 130px 0 82px
+}
+.hero .eyebrow {
+color: var(--green)
+}
+.hero h1 {
+max-width: 1020px
+}
+.hero h1 span {
+color: var(--green)
+}
+.hero p {
+max-width: 720px;
+color: var(--muted);
+font-size: 20px
+}
+.hero-chips {
+display: flex;
+gap: 10px;
+flex-wrap: wrap;
+margin-top: 40px
+}
+.hero-chips span {
+padding: 9px 16px;
+border: 1px solid rgba(0, 0, 0, .1);
+border-radius: 999px;
+background: rgba(255, 255, 255, .75);
+backdrop-filter: blur(8px);
+color: #374151;
+font-size: 10px;
+font-weight: 800;
+letter-spacing: .09em;
+text-transform: uppercase;
+transition: .25s ease;
+box-shadow: 0 4px 15px rgba(0, 0, 0, .04);
+}
+.hero-chips span:hover {
+border-color: var(--green);
+color: var(--green);
+background: #fff;
+transform: translateY(-2px);
+box-shadow: 0 8px 25px rgba(8, 123, 112, .2);
+}
+/* SECTION 2 — EDITORIAL INDUSTRY MOSAIC */
+.mosaic {
+background: var(--paper);
+overflow: hidden
+}
+.mosaic-head {
+text-align: center;
+max-width: 860px;
+margin: 0 auto 60px
+}
+.mosaic-grid {
+display: grid;
+grid-template-columns: repeat(12, 1fr);
+gap: 20px;
+}
+.mosaic-card {
+position: relative;
+border-radius: 28px;
+overflow: hidden;
+border: 1px solid var(--line);
+box-shadow: 0 15px 45px rgba(21, 21, 21, .06);
+background: var(--dark);
+color: #fff;
+min-height: 360px;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+padding: 32px;
+transition: transform .35s ease, box-shadow .35s ease;
+}
+.mosaic-card:hover {
+transform: translateY(-6px);
+box-shadow: 0 22px 55px rgba(21, 21, 21, .14)
+}
+.mosaic-card img {
+position: absolute;
+inset: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+opacity: .62;
+transition: transform .5s ease, opacity .5s ease;
+}
+.mosaic-card:hover img {
+transform: scale(1.05);
+opacity: .72
+}
+.mosaic-overlay {
+position: absolute;
+inset: 0;
+background: linear-gradient(0deg, rgba(17, 24, 23, .92) 0%, rgba(17, 24, 23, .3) 60%, transparent 100%);
+pointer-events: none;
+}
+.mosaic-body {
+position: relative;
+z-index: 2
+}
+.mosaic-body small {
+color: #8de2d3;
+font-size: 10px;
+font-weight: 900;
+letter-spacing: .16em;
+text-transform: uppercase;
+display: block;
+margin-bottom: 8px;
+}
+.mosaic-body h3 {
+font-size: 28px;
+margin: 0 0 10px;
+letter-spacing: -.04em
+}
+.mosaic-body p {
+margin: 0 0 16px;
+color: rgba(255, 255, 255, .7);
+font-size: 13px;
+line-height: 1.55
+}
+.mosaic-tag {
+display: inline-flex;
+padding: 6px 12px;
+border-radius: 999px;
+background: rgba(255, 255, 255, .12);
+backdrop-filter: blur(8px);
+border: 1px solid rgba(255, 255, 255, .18);
+font-size: 10px;
+font-weight: 800;
+letter-spacing: .06em;
+color: #fff;
+}
+/* Mosaic Span Variants for Editorial Rhythm */
+.mc-large {
+grid-column: span 7;
+min-height: 440px
+}
+.mc-medium {
+grid-column: span 5;
+min-height: 440px
+}
+.mc-third {
+grid-column: span 4;
+min-height: 380px
+}
+/* SECTION 3 — INDUSTRY DEEP DIVE INTERACTIVE SELECTOR (LIGHT THEME) */
+.deepdive {
+background: #f0f4f3;
+color: var(--ink);
+overflow: hidden;
+border-top: 1px solid var(--line);
+}
+.deepdive-head {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 48px;
+align-items: end;
+margin-bottom: 50px
+}
+.deepdive-head .lead {
+color: var(--muted);
+margin: 0
+}
+.deepdive-tabs {
+display: flex;
+gap: 10px;
+flex-wrap: wrap;
+margin-bottom: 45px;
+border-bottom: 1px solid var(--line);
+padding-bottom: 20px;
+}
+.deepdive-tab {
+padding: 12px 22px;
+border-radius: 999px;
+border: 1px solid var(--line);
+background: #fff;
+font-size: 12px;
+font-weight: 850;
+letter-spacing: .06em;
+text-transform: uppercase;
+color: var(--muted);
+cursor: pointer;
+transition: .25s ease;
+box-shadow: 0 4px 15px rgba(0, 0, 0, .04);
+}
+.deepdive-tab:hover,
+.deepdive-tab.active {
+background: var(--green);
+color: #fff;
+border-color: var(--green);
+box-shadow: 0 10px 25px rgba(8, 123, 112, .3);
+}
+.deepdive-stage {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 60px;
+align-items: center;
+border: 1px solid var(--line);
+border-radius: 32px;
+background: #fff;
+padding: 48px;
+min-height: 520px;
+box-shadow: 0 20px 60px rgba(0, 0, 0, .06);
+}
+.deepdive-vis {
+position: relative;
+border-radius: 24px;
+overflow: hidden;
+aspect-ratio: 16/10;
+box-shadow: 0 20px 50px rgba(0, 0, 0, .12);
+background: #000;
+}
+.deepdive-vis img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: opacity .4s ease, transform .4s ease;
+}
+.deepdive-vis:hover img {
+transform: scale(1.04)
+}
+.deepdive-badge {
+position: absolute;
+top: 20px;
+left: 20px;
+padding: 8px 14px;
+border-radius: 999px;
+background: rgba(17, 24, 23, .85);
+backdrop-filter: blur(10px);
+color: #8de2d3;
+font-size: 10px;
+font-weight: 900;
+letter-spacing: .14em;
+text-transform: uppercase;
+border: 1px solid rgba(255, 255, 255, .15);
+}
+.deepdive-info small {
+font-size: 10px;
+font-weight: 900;
+letter-spacing: .16em;
+color: var(--coral);
+text-transform: uppercase
+}
+.deepdive-info h3 {
+font-size: 36px;
+margin: 12px 0 16px;
+color: var(--ink);
+}
+.deepdive-box {
+padding: 18px 22px;
+border-radius: 18px;
+background: var(--paper);
+border: 1px solid var(--line);
+margin-bottom: 18px;
+}
+.deepdive-box strong {
+display: block;
+font-size: 12px;
+letter-spacing: .08em;
+text-transform: uppercase;
+color: var(--green);
+margin-bottom: 4px
+}
+.deepdive-box p {
+margin: 0;
+font-size: 13.5px;
+color: var(--muted);
+line-height: 1.55
+}
+/* SECTION 4 — HORIZONTAL PROCESS PATHWAY */
+.pathway {
+background: #fff;
+overflow: hidden
+}
+.pathway-head {
+text-align: center;
+max-width: 840px;
+margin: 0 auto 60px
+}
+.pathway-track {
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+gap: 12px;
+position: relative;
+margin-bottom: 50px;
+}
+.pathway-step {
+padding: 22px 16px;
+border: 1px solid var(--line);
+border-radius: 20px;
+background: var(--paper);
+text-align: center;
+transition: transform .3s ease, border-color .3s ease;
+}
+.pathway-step:hover {
+transform: translateY(-4px);
+border-color: var(--green)
+}
+.pathway-step small {
+font-size: 9px;
+font-weight: 900;
+letter-spacing: .14em;
+color: var(--coral);
+display: block;
+margin-bottom: 6px
+}
+.pathway-step strong {
+display: block;
+font-size: 13px;
+letter-spacing: -.02em;
+color: var(--ink)
+}
+.pathway-banner {
+position: relative;
+border-radius: 28px;
+overflow: hidden;
+border: 1px solid var(--line);
+box-shadow: 0 20px 50px rgba(21, 21, 21, .08);
+min-height: 280px;
+display: flex;
+align-items: center;
+background: var(--paper);
+}
+.pathway-banner img {
+position: absolute;
+inset: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+opacity: .28
+}
+.pathway-banner-overlay {
+position: relative;
+z-index: 2;
+padding: 48px;
+max-width: 720px;
+color: var(--ink);
+}
+.pathway-banner-overlay small {
+color: var(--green);
+font-size: 10px;
+font-weight: 900;
+letter-spacing: .16em;
+text-transform: uppercase;
+margin-bottom: 8px;
+display: block
+}
+.pathway-banner-overlay h3 {
+font-size: 32px;
+margin: 0 0 12px;
+line-height: 1.15;
+color: var(--ink)
+}
+.pathway-banner-overlay p {
+margin: 0;
+color: var(--ink);
+font-size: 15px;
+line-height: 1.6;
+font-weight: 500
+}
+/* SECTION 5 — FINAL CTA */
+.cta {
+padding: 120px 0;
+background: linear-gradient(135deg, #121919, #181328);
+color: #fff;
+position: relative;
+overflow: hidden
+}
+.cta:before {
+content: "";
+position: absolute;
+inset: 0;
+background-image: linear-gradient(rgba(255, 255, 255, .035) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .035) 1px, transparent 1px);
+background-size: 70px 70px
+}
+.cta-inner {
+position: relative;
+z-index: 2;
+max-width: 900px
+}
+.cta .eyebrow {
+color: #bfe9de
+}
+.cta h2 {
+max-width: 850px
+}
+.cta p {
+max-width: 640px;
+color: rgba(255, 255, 255, .58);
+font-size: 18px
+}
+/* RESPONSIVE MEDIA QUERIES */
+@media(max-width:1050px) {
+:root {
+--wrap: min(100% - 42px, 900px)
+}
+.section {
+padding: 90px 0
+}
+.mosaic-card {
+grid-column: span 12 !important;
+min-height: 360px
+}
+.deepdive-head,
+.deepdive-stage {
+grid-template-columns: 1fr;
+gap: 45px
+}
+.deepdive-stage {
+padding: 32px
+}
+.pathway-track {
+grid-template-columns: repeat(3, 1fr)
+}
+.actions .btn {
+width: 100%
+}
+}
+@media(max-width:700px) {
+:root {
+--wrap: calc(100% - 30px)
+}
+.section {
+padding: 72px 0
+}
+h1 {
+font-size: clamp(44px, 12vw, 68px)
+}
+h2 {
+font-size: clamp(34px, 9.5vw, 52px)
+}
+.hero {
+min-height: 760px
+}
+.hero-content {
+padding: 120px 0 52px
+}
+.hero p {
+font-size: 17px
+}
+.deepdive-tabs {
+justify-content: flex-start;
+overflow-x: auto;
+padding-bottom: 10px
+}
+.deepdive-tab {
+flex-shrink: 0;
+font-size: 10px;
+padding: 10px 16px
+}
+.deepdive-stage {
+padding: 22px;
+border-radius: 24px
+}
+.deepdive-info h3 {
+font-size: 28px
+}
+.pathway-track {
+grid-template-columns: repeat(2, 1fr)
+}
+.pathway-banner-overlay {
+padding: 28px
+}
+.pathway-banner-overlay h3 {
+font-size: 24px
+}
+.cta {
+padding: 85px 0
+}
+}
+@media(prefers-reduced-motion:reduce) {
+html {
+scroll-behavior: auto
+}
+*,
+*:before,
+*:after {
+animation: none !important;
+transition: none !important
+}
+}
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+<main>
+<section class="hero">
+<div class="hero-media">
+<video autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+<source src="https://peachpuff-chamois-105831.hostingersite.com/videos/1industries.mp4" type="video/mp4">
+</video>
+</div>
+<div class="hero-grid" aria-hidden="true"></div>
+<div class="wrap hero-content reveal">
+<span class="eyebrow">VICO INDUSTRY SOLUTIONS</span>
+<h1>Technology changes by industry. <span>Business reality changes it first.</span></h1>
+<p>Vico brings SAP transformation closer to the processes, people, and operational pressures that make each
+industry unique.</p>
+<div class="actions">
+<a class="btn btn-green" href="contact.html">Talk to Vico</a>
+<a class="btn btn-outline" href="#mosaic">Explore Sectors</a>
+</div>
+<div class="hero-chips">
+<span>Manufacturing</span><span>Healthcare &amp; Life Sciences</span>
+<span>Retail &amp; CPG</span><span>Wholesale Distribution</span>
+<span>Engineering Services</span><span>High Tech</span>
+</div>
+</div>
+</section>
+<section class="section mosaic" id="mosaic">
+<div class="wrap">
+<div class="mosaic-head reveal">
+<span class="eyebrow">INDUSTRY PORTFOLIO</span>
+<h2>Built around operational reality.</h2>
+<p class="lead" style="margin:0 auto">We shape SAP capability around real-world industry challenges — from
+manufacturing shop floor visibility to life sciences compliance and retail fulfillment.</p>
+</div>
+<div class="mosaic-grid reveal">
+<article class="mosaic-card mc-large">
+<img src="https://peachpuff-chamois-105831.hostingersite.com/images/manufacturing.jpg"
+alt="Industrial Manufacturing SAP transformation" loading="lazy" decoding="async">
+<div class="mosaic-overlay"></div>
+<div class="mosaic-body">
+<small>SECTOR 01 / OPERATIONS</small>
+<h3>Manufacturing</h3>
+<p>Connecting shop-floor execution, production planning, and supply chain visibility directly with the
+digital core.</p>
+<span class="mosaic-tag">S/4HANA + Digital Supply Chain</span>
+</div>
+</article>
+<article class="mosaic-card mc-medium">
+<img src="https://peachpuff-chamois-105831.hostingersite.com/images/healthcare.jpg"
+alt="Healthcare and Life Sciences SAP solution" loading="lazy" decoding="async">
+<div class="mosaic-overlay"></div>
+<div class="mosaic-body">
+<small>SECTOR 02 / COMPLIANCE</small>
+<h3>Healthcare &amp; Life Sciences</h3>
+<p>Ensuring batch traceability, strict regulatory compliance, and validated data foundations across
+R&amp;D and supply chain.</p>
+<span class="mosaic-tag">Datasphere + Validated ERP</span>
+</div>
+</article>
+<article class="mosaic-card mc-third">
+<img src="https://peachpuff-chamois-105831.hostingersite.com/images/retail.jpg"
+alt="Retail and Consumer Goods SAP technology" loading="lazy" decoding="async">
+<div class="mosaic-overlay"></div>
+<div class="mosaic-body">
+<small>SECTOR 03 / COMMERCE</small>
+<h3>Retail &amp; Consumer</h3>
+<p>Harmonizing omnichannel demand, real-time inventory visibility, and customer experiences.</p>
+<span class="mosaic-tag">SAP CX + Analytics Cloud</span>
+</div>
+</article>
+<article class="mosaic-card mc-third">
+<img src="https://peachpuff-chamois-105831.hostingersite.com/images/distribution.avif"
+alt="Wholesale and Distribution SAP logistics" loading="lazy" decoding="async">
+<div class="mosaic-overlay"></div>
+<div class="mosaic-body">
+<small>SECTOR 04 / LOGISTICS</small>
+<h3>Wholesale &amp; Distribution</h3>
+<p>Accelerating order fulfillment, optimizing warehouse logistics, and managing supplier network flow.</p>
+<span class="mosaic-tag">EWM + Ariba Network</span>
+</div>
+</article>
+<article class="mosaic-card mc-third">
+<img src="https://peachpuff-chamois-105831.hostingersite.com/images/engineering.jpg"
+alt="Engineering and Professional Services SAP management" loading="lazy" decoding="async">
+<div class="mosaic-overlay"></div>
+<div class="mosaic-body">
+<small>SECTOR 05 / SERVICES</small>
+<h3>Engineering &amp; Services</h3>
+<p>Mastering project margin control, resource utilization, and billable time tracking.</p>
+<span class="mosaic-tag">Professional Services Cloud</span>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="section deepdive" id="deepdive">
+<div class="wrap">
+<div class="deepdive-head reveal">
+<div>
+<span class="eyebrow">INDUSTRY DEEP DIVE</span>
+<h2>Deep process insight per sector.</h2>
+</div>
+<p class="lead">Select an industry to explore the specific operational pressures, SAP capabilities, and Vico
+transformation approach.</p>
+</div>
+<div class="deepdive-tabs reveal" role="tablist">
+<button class="deepdive-tab active" onclick="switchIndustry(0)">Manufacturing</button>
+<button class="deepdive-tab" onclick="switchIndustry(1)">Healthcare &amp; Life Sciences</button>
+<button class="deepdive-tab" onclick="switchIndustry(2)">Retail &amp; Consumer</button>
+<button class="deepdive-tab" onclick="switchIndustry(3)">Wholesale &amp; Distribution</button>
+<button class="deepdive-tab" onclick="switchIndustry(4)">Engineering Services</button>
+<button class="deepdive-tab" onclick="switchIndustry(5)">High Tech</button>
+</div>
+<div class="deepdive-stage reveal" id="deepdiveStage">
+<div class="deepdive-vis">
+<span class="deepdive-badge" id="deepdiveBadge">MANUFACTURING</span>
+<img id="deepdiveImg" src="https://peachpuff-chamois-105831.hostingersite.com/images/manufacturing.jpg"
+alt="Manufacturing SAP transformation" loading="lazy" decoding="async">
+</div>
+<div class="deepdive-info">
+<small id="deepdiveKicker">SECTOR BREAKDOWN</small>
+<h3 id="deepdiveTitle">Manufacturing</h3>
+<div class="deepdive-box">
+<strong>Operational Business Pressure</strong>
+<p id="deepdivePressure">Volatile raw material costs, plant floor visibility gaps, and supply chain delays
+disrupting production schedules.</p>
+</div>
+<div class="deepdive-box">
+<strong>SAP Technology Opportunity</strong>
+<p id="deepdiveOpportunity">S/4HANA Manufacturing, Integrated Business Planning (IBP), and real-time
+shop-floor analytics.</p>
+</div>
+<div class="deepdive-box">
+<strong>Vico Transformation Value</strong>
+<p id="deepdiveVico">Connecting demand forecasting directly with plant scheduling and supplier procurement
+for end-to-end responsiveness.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section pathway">
+<div class="wrap">
+<div class="pathway-head reveal">
+<span class="eyebrow">OPERATIONAL FLOW</span>
+<h2>From industry pressure to outcome.</h2>
+<p class="lead" style="margin:0 auto">A structured, linear pathway connecting business challenges down to
+measurable operational results.</p>
+</div>
+<div class="pathway-track reveal">
+<div class="pathway-step">
+<small>STEP 01</small>
+<strong>Industry Pressure</strong>
+</div>
+<div class="pathway-step">
+<small>STEP 02</small>
+<strong>Process Re-Design</strong>
+</div>
+<div class="pathway-step">
+<small>STEP 03</small>
+<strong>SAP Core &amp; BTP</strong>
+</div>
+<div class="pathway-step">
+<small>STEP 04</small>
+<strong>Data Context</strong>
+</div>
+<div class="pathway-step">
+<small>STEP 05</small>
+<strong>Intelligent Action</strong>
+</div>
+<div class="pathway-step">
+<small>STEP 06</small>
+<strong>Business Outcome</strong>
+</div>
+</div>
+<div class="pathway-banner reveal">
+<img src="https://peachpuff-chamois-105831.hostingersite.com/images/services.jpg"
+alt="High Tech SAP enterprise connectivity" loading="lazy" decoding="async">
+<div class="pathway-banner-overlay">
+<small>HIGH TECH &amp; ENTERPRISE</small>
+<h3>Aligning enterprise technology with true industry speed.</h3>
+<p>Vico helps organizations build an SAP foundation that adapts as fast as their market shifts.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="cta">
+<div class="wrap cta-inner reveal">
+<span class="eyebrow">BUILT AROUND YOUR INDUSTRY</span>
+<h2>Let's build around how your business actually works.</h2>
+<p>Whether you operate in manufacturing, life sciences, retail, distribution, engineering, or high tech, Vico
+maps SAP capability to your operating reality.</p>
+<div class="actions">
+<a class="btn btn-green" href="contact.html">Talk to Vico</a>
+<a class="btn btn-outline" href="1-vico-solutions.html">Explore Solutions</a>
+</div>
+</div>
+</section>
+</main>
+<div id="site-footer"></div>
+<script src="site-config.js"></script>
+<script src="site-components.js"></script>
+<script>
+(() => {
+// Reveal Observer
+const reveals = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+io.unobserve(entry.target);
+}
+});
+}, { threshold: .12 });
+reveals.forEach(el => io.observe(el));
+// Industry Deep Dive Interactive Data
+const industryData = [
+{
+badge: "MANUFACTURING",
+img: "https://peachpuff-chamois-105831.hostingersite.com/images/manufacturing.jpg",
+kicker: "SECTOR BREAKDOWN",
+title: "Manufacturing",
+pressure: "Volatile raw material costs, plant floor visibility gaps, and supply chain delays disrupting production schedules.",
+opportunity: "S/4HANA Manufacturing, Integrated Business Planning (IBP), and real-time shop-floor analytics.",
+vico: "Connecting demand forecasting directly with plant scheduling and supplier procurement for end-to-end responsiveness."
+},
+{
+badge: "HEALTHCARE & LIFE SCIENCES",
+img: "https://peachpuff-chamois-105831.hostingersite.com/images/healthcare.jpg",
+kicker: "SECTOR BREAKDOWN",
+title: "Healthcare & Life Sciences",
+pressure: "Stringent regulatory compliance, batch traceability requirements, and complex clinical trial logistics.",
+opportunity: "SAP Datasphere, validated S/4HANA core, and automated quality management workflows.",
+vico: "Building audit-ready data foundations and end-to-end supply chain traceability for pharmaceutical & medical devices."
+},
+{
+badge: "RETAIL & CONSUMER",
+img: "https://peachpuff-chamois-105831.hostingersite.com/images/retail.jpg",
+kicker: "SECTOR BREAKDOWN",
+title: "Retail & Consumer Goods",
+pressure: "Omnichannel inventory mismatches, unpredictable consumer demand shifts, and store-fulfillment friction.",
+opportunity: "SAP Commerce Cloud, SAP CX, and SAP Analytics Cloud for real-time demand sensing.",
+vico: "Harmonizing customer-facing commerce directly with back-office inventory and supplier procurement networks."
+},
+{
+badge: "WHOLESALE & DISTRIBUTION",
+img: "https://peachpuff-chamois-105831.hostingersite.com/images/distribution.avif",
+kicker: "SECTOR BREAKDOWN",
+title: "Wholesale & Distribution",
+pressure: "Tight distribution margins, warehouse throughput bottlenecks, and complex rebate/pricing management.",
+opportunity: "SAP Extended Warehouse Management (EWM), Transportation Management (TM), and Ariba supplier integration.",
+vico: "Streamlining warehouse pick-pack-ship operations and automating supplier order workflows."
+},
+{
+badge: "ENGINEERING & SERVICES",
+img: "https://peachpuff-chamois-105831.hostingersite.com/images/engineering.jpg",
+kicker: "SECTOR BREAKDOWN",
+title: "Engineering & Professional Services",
+pressure: "Unpredictable project margins, low consultant utilization visibility, and complex milestone billing.",
+opportunity: "SAP S/4HANA Cloud for Professional Services, SuccessFactors resource planning, and SAC billing dashboards.",
+vico: "Aligning talent allocation and project execution directly with real-time profitability analytics."
+},
+{
+badge: "HIGH TECH & SOFTWARE",
+img: "https://peachpuff-chamois-105831.hostingersite.com/images/services.jpg",
+kicker: "SECTOR BREAKDOWN",
+title: "High Tech & Technology",
+pressure: "Rapid subscription business model transitions, hardware supply chain volatility, and complex revenue recognition.",
+opportunity: "SAP Subscription Billing, SAP BTP extension layer, and cloud ERP revenue compliance.",
+vico: "Enabling flexible recurring revenue models and side-by-side SaaS application integration."
+}
+];
+window.switchIndustry = function (index) {
+const data = industryData[index];
+if (!data) return;
+const tabs = document.querySelectorAll('.deepdive-tab');
+tabs.forEach((t, i) => {
+if (i === index) t.classList.add('active');
+else t.classList.remove('active');
+});
+const badge = document.getElementById('deepdiveBadge');
+const img = document.getElementById('deepdiveImg');
+const kicker = document.getElementById('deepdiveKicker');
+const title = document.getElementById('deepdiveTitle');
+const pressure = document.getElementById('deepdivePressure');
+const opportunity = document.getElementById('deepdiveOpportunity');
+const vico = document.getElementById('deepdiveVico');
+if (img) img.style.opacity = '0.3';
+setTimeout(() => {
+if (badge) badge.textContent = data.badge;
+if (img) { img.src = data.img; img.style.opacity = '1'; }
+if (kicker) kicker.textContent = data.kicker;
+if (title) title.textContent = data.title;
+if (pressure) pressure.textContent = data.pressure;
+if (opportunity) opportunity.textContent = data.opportunity;
+if (vico) vico.textContent = data.vico;
+}, 200);
+};
+// Parallax Hero
+let ticking = false;
+const heroGrid = document.querySelector('.hero-grid');
+const parallax = () => {
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+const y = Math.min(window.scrollY * .12, 70);
+if (heroGrid) heroGrid.style.setProperty('--parallax', `${y}px`);
+ticking = false;
+};
+window.addEventListener('scroll', () => {
+if (!ticking) { requestAnimationFrame(parallax); ticking = true; }
+}, { passive: true });
+})();
+</script>
+</body>
+</html>

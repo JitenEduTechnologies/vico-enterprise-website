@@ -1,0 +1,8 @@
+.vercel
+.git
+.agents
+.gemini
+node_modules
+*.log
+.env
+.env.*

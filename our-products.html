@@ -1,0 +1,989 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description"
+content="Vico SAP Product Ecosystem — S/4HANA Cloud, BTP Integration, Analytics Cloud, Datasphere, SuccessFactors, CX, and connected enterprise capabilities.">
+<title>Our Products — Vico | Vision Course</title>
+<style>
+:root {
+--ink: #151515;
+--paper: #f5f2ea;
+--white: #fff;
+--green: #087b70;
+--mint: #dcefe8;
+--coral: #f26b5b;
+--gold: #e7bd68;
+--muted: #66717d;
+--dark: #111817;
+--line: rgba(21, 21, 21, .12);
+--wrap: min(1320px, calc(100% - 64px));
+}
+* {
+box-sizing: border-box
+}
+html {
+scroll-behavior: smooth
+}
+body {
+margin: 0;
+background: var(--paper);
+color: var(--ink);
+font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+-webkit-font-smoothing: antialiased;
+overflow-x: hidden;
+}
+a {
+text-decoration: none;
+color: inherit
+}
+button {
+font: inherit
+}
+.wrap {
+width: var(--wrap);
+margin: auto
+}
+.section {
+padding: 120px 0
+}
+.eyebrow {
+display: inline-flex;
+align-items: center;
+gap: 10px;
+padding: 8px 16px;
+background: rgba(255, 255, 255, .88);
+border: 1px solid rgba(8, 123, 112, .22);
+border-radius: 999px;
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+box-shadow: 0 4px 16px rgba(0, 0, 0, .04);
+font-size: 11px;
+font-weight: 900;
+letter-spacing: .16em;
+text-transform: uppercase;
+color: var(--green);
+transition: transform .25s ease, box-shadow .25s ease;
+}
+.eyebrow:hover {
+transform: translateY(-2px);
+box-shadow: 0 6px 20px rgba(8, 123, 112, .12);
+}
+.eyebrow:before {
+content: "";
+width: 8px;
+height: 8px;
+border-radius: 50%;
+background: var(--coral);
+box-shadow: 0 0 10px rgba(242, 107, 91, .7);
+animation: dotPulse 2s infinite ease-in-out;
+}
+@keyframes dotPulse {
+0%, 100% { transform: scale(1); opacity: 1; }
+50% { transform: scale(1.35); opacity: .6; }
+}
+h1,
+h2,
+h3 {
+letter-spacing: -.055em
+}
+h1 {
+font-size: clamp(52px, 7vw, 106px);
+line-height: .88;
+margin: 25px 0 28px
+}
+h2 {
+font-size: clamp(40px, 5.2vw, 74px);
+line-height: .95;
+margin: 18px 0 24px
+}
+h3 {
+font-size: 24px;
+line-height: 1.08;
+margin: 0 0 12px
+}
+p {
+line-height: 1.65
+}
+.lead {
+font-size: clamp(18px, 1.5vw, 21px);
+line-height: 1.6;
+color: var(--muted);
+max-width: 700px
+}
+.btn {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+min-height: 50px;
+padding: 0 24px;
+border-radius: 999px;
+font-size: 13px;
+font-weight: 850;
+border: 1px solid transparent;
+transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+.btn:hover {
+transform: translateY(-3px)
+}
+.btn-dark {
+background: var(--ink);
+color: #fff
+}
+.btn-green {
+background: var(--green);
+color: #fff
+}
+.btn-outline {
+background: rgba(255, 255, 255, .8);
+color: var(--ink);
+border-color: rgba(21, 21, 21, .18);
+backdrop-filter: blur(8px);
+}
+.btn-outline:hover {
+background: #fff;
+border-color: var(--green);
+color: var(--green);
+}
+.actions {
+display: flex;
+gap: 12px;
+flex-wrap: wrap;
+margin-top: 34px
+}
+.reveal {
+opacity: 0;
+transform: translateY(22px);
+transition: opacity .7s ease, transform .7s ease
+}
+.reveal.visible {
+opacity: 1;
+transform: none
+}
+/* SECTION 1 — CINEMATIC PRODUCT HERO (LIGHT THEME) */
+.hero {
+min-height: calc(100svh - 70px);
+position: relative;
+overflow: hidden;
+background: #f6f8f7;
+color: var(--ink);
+display: flex;
+align-items: flex-end;
+}
+.hero-media {
+position: absolute;
+inset: 0
+}
+.hero-media video {
+width: 100%;
+height: 100%;
+object-fit: cover;
+opacity: .66;
+filter: saturate(1.15) contrast(1.05);
+}
+.hero-media:after {
+content: "";
+position: absolute;
+inset: 0;
+background:
+radial-gradient(circle at 85% 20%, rgba(8, 123, 112, .14), transparent 45%),
+linear-gradient(90deg, rgba(246, 248, 247, .88) 0%, rgba(246, 248, 247, .62) 55%, rgba(246, 248, 247, .20) 100%),
+linear-gradient(0deg, rgba(246, 248, 247, .85) 0%, transparent 60%);
+pointer-events: none;
+}
+.hero-grid {
+position: absolute;
+inset: 0;
+opacity: .12;
+background-image: linear-gradient(rgba(8, 123, 112, .18) 1px, transparent 1px), linear-gradient(90deg, rgba(8, 123, 112, .18) 1px, transparent 1px);
+background-size: 80px 80px;
+transform: translateY(var(--parallax, 0px));
+}
+.hero-content {
+position: relative;
+z-index: 2;
+padding: 130px 0 82px
+}
+.hero .eyebrow {
+color: var(--green)
+}
+.hero h1 {
+max-width: 980px
+}
+.hero h1 span {
+color: var(--green)
+}
+.hero p {
+max-width: 720px;
+color: var(--muted);
+font-size: 20px
+}
+.hero-chips {
+display: flex;
+gap: 10px;
+flex-wrap: wrap;
+margin-top: 40px
+}
+.hero-chips span {
+padding: 9px 16px;
+border: 1px solid rgba(0, 0, 0, .1);
+border-radius: 999px;
+background: rgba(255, 255, 255, .75);
+backdrop-filter: blur(8px);
+color: #374151;
+font-size: 10px;
+font-weight: 800;
+letter-spacing: .09em;
+text-transform: uppercase;
+transition: .25s ease;
+box-shadow: 0 4px 15px rgba(0, 0, 0, .04);
+}
+.hero-chips span:hover {
+border-color: var(--green);
+color: var(--green);
+background: #fff;
+transform: translateY(-2px);
+box-shadow: 0 8px 25px rgba(8, 123, 112, .2);
+}
+/* SECTION 2 — PRODUCT LANDSCAPE LAYERED SYSTEM (LIGHT THEME) */
+.landscape {
+background: #f0f4f3;
+color: var(--ink);
+overflow: hidden;
+border-top: 1px solid var(--line);
+}
+.landscape-head {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 48px;
+align-items: end;
+margin-bottom: 60px
+}
+.landscape-head .lead {
+color: var(--muted);
+margin: 0
+}
+.landscape-stack {
+display: flex;
+flex-direction: column;
+gap: 16px;
+position: relative
+}
+.landscape-layer {
+border: 1px solid var(--line);
+border-radius: 24px;
+background: #fff;
+padding: 28px 32px;
+display: grid;
+grid-template-columns: 200px 1fr 1.2fr;
+gap: 30px;
+align-items: center;
+box-shadow: 0 8px 30px rgba(0, 0, 0, .04);
+transition: transform .35s ease, border-color .35s ease, background .35s ease, box-shadow .35s ease;
+}
+.landscape-layer:hover {
+transform: translateX(8px);
+border-color: var(--green);
+background: #fdfdfd;
+box-shadow: 0 12px 35px rgba(8, 123, 112, .12);
+}
+.landscape-layer.core-highlight {
+border-color: rgba(8, 123, 112, .4);
+background: #edf7f5;
+}
+.landscape-tag {
+display: inline-flex;
+flex-direction: column;
+gap: 4px
+}
+.landscape-tag small {
+font-size: 9px;
+font-weight: 900;
+letter-spacing: .16em;
+color: var(--coral);
+text-transform: uppercase
+}
+.landscape-tag strong {
+font-size: 18px;
+letter-spacing: -.03em;
+color: var(--ink)
+}
+.landscape-products {
+display: flex;
+gap: 8px;
+flex-wrap: wrap
+}
+.landscape-pill {
+padding: 7px 13px;
+border-radius: 999px;
+background: var(--paper);
+border: 1px solid var(--line);
+font-size: 11px;
+font-weight: 800;
+letter-spacing: .05em;
+color: var(--green);
+}
+.landscape-desc {
+font-size: 13px;
+color: var(--muted);
+line-height: 1.55;
+margin: 0
+}
+/* SECTION 3 — PRODUCT SPOTLIGHT (INTERACTIVE SHOWCASE) */
+.spotlight {
+background: var(--paper);
+overflow: hidden
+}
+.spotlight-head {
+text-align: center;
+max-width: 840px;
+margin: 0 auto 55px
+}
+.spotlight-tabs {
+display: flex;
+justify-content: center;
+gap: 10px;
+flex-wrap: wrap;
+margin-bottom: 45px;
+}
+.spotlight-tab {
+padding: 12px 22px;
+border-radius: 999px;
+border: 1px solid var(--line);
+background: #fff;
+font-size: 12px;
+font-weight: 850;
+letter-spacing: .06em;
+text-transform: uppercase;
+color: var(--muted);
+cursor: pointer;
+transition: .25s ease;
+}
+.spotlight-tab:hover,
+.spotlight-tab.active {
+background: var(--ink);
+color: #fff;
+border-color: var(--ink);
+box-shadow: 0 10px 25px rgba(21, 21, 21, .15);
+}
+.spotlight-stage {
+display: grid;
+grid-template-columns: 1.1fr 0.9fr;
+gap: 60px;
+align-items: center;
+border: 1px solid var(--line);
+border-radius: 36px;
+background: #fff;
+padding: 48px;
+box-shadow: 0 20px 60px rgba(21, 21, 21, .06);
+min-height: 500px;
+}
+.spotlight-vis {
+position: relative;
+border-radius: 24px;
+overflow: hidden;
+box-shadow: 0 15px 40px rgba(0, 0, 0, .12);
+aspect-ratio: 16/10;
+background: var(--dark);
+}
+.spotlight-vis img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: opacity .4s ease, transform .4s ease;
+}
+.spotlight-vis:hover img {
+transform: scale(1.03)
+}
+.spotlight-badge {
+position: absolute;
+top: 20px;
+left: 20px;
+padding: 8px 14px;
+border-radius: 999px;
+background: rgba(21, 21, 21, .85);
+backdrop-filter: blur(10px);
+color: #8de2d3;
+font-size: 10px;
+font-weight: 900;
+letter-spacing: .14em;
+text-transform: uppercase;
+border: 1px solid rgba(255, 255, 255, .15);
+}
+.spotlight-info small {
+font-size: 10px;
+font-weight: 900;
+letter-spacing: .16em;
+color: var(--coral);
+text-transform: uppercase
+}
+.spotlight-info h3 {
+font-size: 36px;
+margin: 12px 0 16px
+}
+.spotlight-problem {
+padding: 16px 20px;
+border-radius: 16px;
+background: var(--paper);
+border: 1px solid var(--line);
+margin-bottom: 24px;
+font-size: 13px;
+color: var(--muted);
+line-height: 1.6;
+}
+.spotlight-problem strong {
+color: var(--ink);
+display: block;
+margin-bottom: 4px
+}
+.spotlight-caps {
+list-style: none;
+padding: 0;
+margin: 0 0 32px
+}
+.spotlight-caps li {
+position: relative;
+padding-left: 26px;
+margin-bottom: 12px;
+font-size: 14px;
+color: var(--ink);
+line-height: 1.5;
+}
+.spotlight-caps li:before {
+content: "✓";
+position: absolute;
+left: 0;
+top: 0;
+color: var(--green);
+font-weight: 900
+}
+/* SECTION 4 — HOW PRODUCTS WORK TOGETHER */
+.architecture {
+background: #fff;
+overflow: hidden
+}
+.arch-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 70px;
+align-items: center
+}
+.arch-flow {
+display: flex;
+flex-direction: column;
+gap: 14px;
+position: relative
+}
+.arch-step {
+display: grid;
+grid-template-columns: 48px 1fr;
+gap: 18px;
+align-items: center;
+padding: 18px 22px;
+border: 1px solid var(--line);
+border-radius: 20px;
+background: var(--paper);
+transition: transform .3s ease, box-shadow .3s ease;
+}
+.arch-step:hover {
+transform: translateX(6px);
+box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
+border-color: var(--green)
+}
+.arch-num {
+width: 42px;
+height: 42px;
+border-radius: 50%;
+background: #ffffff;
+color: var(--ink);
+display: grid;
+place-items: center;
+font-size: 11px;
+font-weight: 900;
+border: 1px solid var(--line);
+box-shadow: 0 4px 12px rgba(21, 21, 21, .06);
+}
+.arch-step:nth-child(2) .arch-num {
+background: var(--green);
+color: #fff;
+border: none;
+}
+.arch-step:nth-child(4) .arch-num {
+background: var(--coral);
+color: #fff;
+border: none;
+}
+.arch-step strong {
+display: block;
+font-size: 15px;
+margin-bottom: 2px
+}
+.arch-step span {
+font-size: 12px;
+color: var(--muted)
+}
+.arch-vis-card {
+border-radius: 28px;
+overflow: hidden;
+border: 1px solid var(--line);
+box-shadow: 0 20px 50px rgba(21, 21, 21, .08);
+position: relative;
+background: var(--dark);
+}
+.arch-vis-card img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+min-height: 420px
+}
+.arch-vis-overlay {
+position: absolute;
+inset: 0;
+background: linear-gradient(0deg, rgba(17, 24, 23, .92) 0%, rgba(17, 24, 23, .2) 60%, transparent 100%);
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+padding: 36px;
+color: #fff;
+}
+.arch-vis-overlay small {
+color: #8de2d3;
+font-size: 10px;
+font-weight: 900;
+letter-spacing: .16em;
+text-transform: uppercase;
+margin-bottom: 8px
+}
+.arch-vis-overlay strong {
+font-size: 22px;
+letter-spacing: -.03em;
+line-height: 1.25
+}
+/* SECTION 5 — FINAL CTA */
+.cta {
+padding: 120px 0;
+background: linear-gradient(135deg, #121919, #181328);
+color: #fff;
+position: relative;
+overflow: hidden
+}
+.cta:before {
+content: "";
+position: absolute;
+inset: 0;
+background-image: linear-gradient(rgba(255, 255, 255, .035) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .035) 1px, transparent 1px);
+background-size: 70px 70px
+}
+.cta-inner {
+position: relative;
+z-index: 2;
+max-width: 900px
+}
+.cta .eyebrow {
+color: #bfe9de
+}
+.cta h2 {
+max-width: 850px
+}
+.cta p {
+max-width: 640px;
+color: rgba(255, 255, 255, .58);
+font-size: 18px
+}
+/* RESPONSIVE MEDIA QUERIES */
+@media(max-width:1050px) {
+:root {
+--wrap: min(100% - 42px, 900px)
+}
+.section {
+padding: 90px 0
+}
+.landscape-head,
+.spotlight-stage,
+.arch-grid {
+grid-template-columns: 1fr;
+gap: 45px
+}
+.landscape-layer {
+grid-template-columns: 1fr;
+gap: 14px;
+padding: 24px
+}
+.spotlight-stage {
+padding: 32px
+}
+.actions .btn {
+width: 100%
+}
+}
+@media(max-width:700px) {
+:root {
+--wrap: calc(100% - 30px)
+}
+.section {
+padding: 72px 0
+}
+h1 {
+font-size: clamp(44px, 12vw, 68px)
+}
+h2 {
+font-size: clamp(34px, 9.5vw, 52px)
+}
+.hero {
+min-height: 760px
+}
+.hero-content {
+padding: 120px 0 52px
+}
+.hero p {
+font-size: 17px
+}
+.spotlight-tabs {
+justify-content: flex-start;
+overflow-x: auto;
+padding-bottom: 10px
+}
+.spotlight-tab {
+flex-shrink: 0;
+font-size: 10px;
+padding: 10px 16px
+}
+.spotlight-stage {
+padding: 22px;
+border-radius: 24px
+}
+.spotlight-info h3 {
+font-size: 28px
+}
+.arch-vis-card img {
+min-height: 300px
+}
+.cta {
+padding: 85px 0
+}
+}
+@media(prefers-reduced-motion:reduce) {
+html {
+scroll-behavior: auto
+}
+*,
+*:before,
+*:after {
+animation: none !important;
+transition: none !important
+}
+}
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+<main>
+<section class="hero">
+<div class="hero-media">
+<video autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+<source src="https://peachpuff-chamois-105831.hostingersite.com/videos/ourproducts.mp4" type="video/mp4">
+</video>
+</div>
+<div class="hero-grid" aria-hidden="true"></div>
+<div class="wrap hero-content reveal">
+<span class="eyebrow">VICO PRODUCT ECOSYSTEM</span>
+<h1>Technology that <span>works together.</span></h1>
+<p>From the digital core to analytics, workforce, customer experience, and intelligent operations — Vico brings
+the SAP landscape together around business outcomes.</p>
+<div class="actions">
+<a class="btn btn-green" href="contact.html">Talk to Vico</a>
+<a class="btn btn-outline" href="#spotlight">Explore Ecosystem</a>
+</div>
+<div class="hero-chips">
+<span>S/4HANA Cloud</span><span>SAP BTP</span><span>Analytics Cloud</span>
+<span>Datasphere</span><span>SuccessFactors</span><span>SAP CX</span><span>Ariba</span>
+</div>
+</div>
+</section>
+<section class="section landscape">
+<div class="wrap">
+<div class="landscape-head reveal">
+<div>
+<span class="eyebrow">THE ENTERPRISE LANDSCAPE</span>
+<h2>Integrated layers. One operating picture.</h2>
+</div>
+<p class="lead">Enterprise technology creates real value when capabilities fit naturally into an integrated
+landscape — rather than living as isolated applications.</p>
+</div>
+<div class="landscape-stack reveal">
+<div class="landscape-layer core-highlight">
+<div class="landscape-tag">
+<small>LAYER 01 / FOUNDATION</small>
+<strong>Digital Core</strong>
+</div>
+<div class="landscape-products">
+<span class="landscape-pill">S/4HANA Cloud</span>
+<span class="landscape-pill">SAP Business Suite</span>
+<span class="landscape-pill">SAP Business One</span>
+</div>
+<p class="landscape-desc">Modernizing enterprise processes around a clean, scalable core across finance,
+operations, and procurement.</p>
+</div>
+<div class="landscape-layer">
+<div class="landscape-tag">
+<small>LAYER 02 / CLARITY</small>
+<strong>Data &amp; Analytics</strong>
+</div>
+<div class="landscape-products">
+<span class="landscape-pill">SAP Analytics Cloud</span>
+<span class="landscape-pill">SAP Datasphere</span>
+<span class="landscape-pill">HANA Cloud</span>
+</div>
+<p class="landscape-desc">Unifying operational information for real-time executive visibility, forecasting,
+and integrated planning.</p>
+</div>
+<div class="landscape-layer">
+<div class="landscape-tag">
+<small>LAYER 03 / CONNECTIVITY</small>
+<strong>Extensions &amp; BTP</strong>
+</div>
+<div class="landscape-products">
+<span class="landscape-pill">SAP BTP</span>
+<span class="landscape-pill">Integration Suite</span>
+<span class="landscape-pill">SAP Build</span>
+</div>
+<p class="landscape-desc">Connecting SAP and third-party systems seamlessly while building side-by-side
+extensions.</p>
+</div>
+<div class="landscape-layer">
+<div class="landscape-tag">
+<small>LAYER 04 / EXPERIENCE</small>
+<strong>People &amp; Customer</strong>
+</div>
+<div class="landscape-products">
+<span class="landscape-pill">SuccessFactors</span>
+<span class="landscape-pill">SAP CX</span>
+<span class="landscape-pill">Ariba Network</span>
+</div>
+<p class="landscape-desc">Aligning workforce talent, supplier collaboration, and customer interactions
+directly with core operations.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section spotlight" id="spotlight">
+<div class="wrap">
+<div class="spotlight-head reveal">
+<span class="eyebrow">PRODUCT SPOTLIGHT</span>
+<h2>Explore core SAP capabilities.</h2>
+<p class="lead" style="margin:0 auto">Select a product area to see where it fits, the business problem it
+solves, and how Vico maximizes its value.</p>
+</div>
+<div class="spotlight-tabs reveal" role="tablist">
+<button class="spotlight-tab active" onclick="switchSpotlight(0)">S/4HANA Core</button>
+<button class="spotlight-tab" onclick="switchSpotlight(1)">Analytics &amp; Planning</button>
+<button class="spotlight-tab" onclick="switchSpotlight(2)">BTP &amp; Integration</button>
+<button class="spotlight-tab" onclick="switchSpotlight(3)">Operations &amp; Network</button>
+</div>
+<div class="spotlight-stage reveal" id="spotlightStage">
+<div class="spotlight-vis">
+<span class="spotlight-badge" id="spotlightBadge">S/4HANA CLOUD</span>
+<img id="spotlightImg"
+src="https://peachpuff-chamois-105831.hostingersite.com/images/ourproducts%20images/4.jpeg"
+alt="SAP S/4HANA Cloud digital core interface" loading="lazy" decoding="async">
+</div>
+<div class="spotlight-info">
+<small id="spotlightKicker">DIGITAL CORE</small>
+<h3 id="spotlightTitle">SAP S/4HANA Cloud</h3>
+<div class="spotlight-problem">
+<strong>The Business Challenge</strong>
+<span id="spotlightProblem">Legacy ERP environments with accumulated custom code drag slow down
+innovation, hinder real-time reporting, and create process bottlenecks.</span>
+</div>
+<ul class="spotlight-caps" id="spotlightCaps">
+<li>Clean-core architecture for simplified future upgrades</li>
+<li>Harmonized financial and operational workflows</li>
+<li>Real-time embedded analytics and process automation</li>
+<li>Cloud ERP flexibility tailored to enterprise scale</li>
+</ul>
+<a class="btn btn-dark" href="contact.html" id="spotlightCta">Discuss S/4HANA Core</a>
+</div>
+</div>
+</div>
+</section>
+<section class="section architecture">
+<div class="wrap">
+<div class="arch-grid">
+<div class="reveal">
+<span class="eyebrow">CONNECTED ARCHITECTURE</span>
+<h2>How products work together as one.</h2>
+<p class="lead">Technology investment pays off when every product layer flows naturally into the next — from
+initial business signals down to measurable business outcomes.</p>
+<div class="arch-flow" style="margin-top:32px">
+<div class="arch-step">
+<span class="arch-num">01</span>
+<div><strong>Business Priorities</strong><span>Process goals &amp; operating model targets</span></div>
+</div>
+<div class="arch-step">
+<span class="arch-num">02</span>
+<div><strong>Digital Core (S/4HANA)</strong><span>Clean foundation for enterprise processes</span></div>
+</div>
+<div class="arch-step">
+<span class="arch-num">03</span>
+<div><strong>Data &amp; BTP Connectivity</strong><span>Datasphere + SAP BTP APIs &amp; Workflows</span>
+</div>
+</div>
+<div class="arch-step">
+<span class="arch-num">04</span>
+<div><strong>Automation &amp; AI Actions</strong><span>Embedded intelligence &amp; business
+outcomes</span></div>
+</div>
+</div>
+</div>
+<div class="reveal">
+<div class="arch-vis-card">
+<img src="https://peachpuff-chamois-105831.hostingersite.com/images/ourproducts%20images/3.jpeg"
+alt="Vico SAP connected architecture screenshot" loading="lazy" decoding="async">
+<div class="arch-vis-overlay">
+<small>INTEGRATED OPERATING PICTURE</small>
+<strong>Connected capabilities drive continuous enterprise evolution.</strong>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="cta">
+<div class="wrap cta-inner reveal">
+<span class="eyebrow">READY TO ALIGN YOUR TECH LANDSCAPE?</span>
+<h2>Let's build the right SAP landscape for what's next.</h2>
+<p>From product evaluation and clean-core architecture to BTP integration, data foundations, and continuous
+evolution, Vico brings clarity to enterprise technology decisions.</p>
+<div class="actions">
+<a class="btn btn-green" href="contact.html">Talk to Vico</a>
+<a class="btn btn-outline" href="1-vico-solutions.html">Explore Solutions</a>
+</div>
+</div>
+</section>
+</main>
+<div id="site-footer"></div>
+<script src="site-config.js"></script>
+<script src="site-components.js"></script>
+<script>
+(() => {
+// Intersection Observer for reveal animations
+const reveals = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+io.unobserve(entry.target);
+}
+});
+}, { threshold: .12 });
+reveals.forEach(el => io.observe(el));
+// Product Spotlight Interactive Tabs Data
+const spotlightData = [
+{
+badge: "S/4HANA CLOUD",
+img: "https://peachpuff-chamois-105831.hostingersite.com/images/ourproducts%20images/4.jpeg",
+kicker: "DIGITAL CORE",
+title: "SAP S/4HANA Cloud",
+problem: "Legacy ERP environments with accumulated custom code drag slow down innovation, hinder real-time reporting, and create process bottlenecks.",
+caps: [
+"Clean-core architecture for simplified future upgrades",
+"Harmonized financial and operational workflows",
+"Real-time embedded analytics and process automation",
+"Cloud ERP flexibility tailored to enterprise scale"
+],
+ctaText: "Discuss S/4HANA Core"
+},
+{
+badge: "ANALYTICS & PLAN",
+img: "https://peachpuff-chamois-105831.hostingersite.com/images/ourproducts%20images/2.jpeg",
+kicker: "DATA & ANALYTICS",
+title: "SAP Analytics Cloud & Datasphere",
+problem: "Operational data trapped in disconnected silos makes forecasting inaccurate and delays executive decision-making.",
+caps: [
+"Unified data foundation with SAP Datasphere & HANA Cloud",
+"Real-time SAC dashboards and executive reporting",
+"Predictive integrated business planning (IBP)",
+"Contextualized KPIs directly linked to operational systems"
+],
+ctaText: "Explore Analytics Architecture"
+},
+{
+badge: "SAP BTP HUB",
+img: "https://peachpuff-chamois-105831.hostingersite.com/images/ourproducts%20images/1.jpeg",
+kicker: "CONNECTIVITY & EXTENSIONS",
+title: "SAP Business Technology Platform",
+problem: "Modifying core ERP code creates upgrade bottlenecks and breaks integrations with third-party cloud applications.",
+caps: [
+"SAP BTP Integration Suite for seamless API connectivity",
+"Side-by-side extension development using SAP Build",
+"Cross-application event mesh and automated workflows",
+"Clean core protection keeping future upgrades seamless"
+],
+ctaText: "Inspect BTP Integration"
+},
+{
+badge: "OPERATIONS & NETWORK",
+img: "https://peachpuff-chamois-105831.hostingersite.com/images/ourproducts%20images/3.jpeg",
+kicker: "SUPPLY NETWORK",
+title: "SAP Ariba & Business Network",
+problem: "Supply chain disruptions, supplier friction, and lack of inventory visibility lead to procurement delays.",
+caps: [
+"Automated procurement and supplier network integration",
+"End-to-end inventory tracking and warehouse visibility",
+"Demand planning aligned with procurement execution",
+"Real-time logistics tracking and compliance management"
+],
+ctaText: "Optimize Operations Network"
+}
+];
+window.switchSpotlight = function (index) {
+const data = spotlightData[index];
+if (!data) return;
+const tabs = document.querySelectorAll('.spotlight-tab');
+tabs.forEach((t, i) => {
+if (i === index) t.classList.add('active');
+else t.classList.remove('active');
+});
+const badge = document.getElementById('spotlightBadge');
+const img = document.getElementById('spotlightImg');
+const kicker = document.getElementById('spotlightKicker');
+const title = document.getElementById('spotlightTitle');
+const problem = document.getElementById('spotlightProblem');
+const caps = document.getElementById('spotlightCaps');
+const cta = document.getElementById('spotlightCta');
+if (img) img.style.opacity = '0.3';
+setTimeout(() => {
+if (badge) badge.textContent = data.badge;
+if (img) { img.src = data.img; img.style.opacity = '1'; }
+if (kicker) kicker.textContent = data.kicker;
+if (title) title.textContent = data.title;
+if (problem) problem.textContent = data.problem;
+if (cta) cta.textContent = data.ctaText;
+if (caps) {
+caps.innerHTML = '';
+data.caps.forEach(c => {
+const li = document.createElement('li');
+li.textContent = c;
+caps.appendChild(li);
+});
+}
+}, 200);
+};
+// Light Parallax for Hero
+let ticking = false;
+const heroGrid = document.querySelector('.hero-grid');
+const parallax = () => {
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+const y = Math.min(window.scrollY * .12, 70);
+if (heroGrid) heroGrid.style.setProperty('--parallax', `${y}px`);
+ticking = false;
+};
+window.addEventListener('scroll', () => {
+if (!ticking) { requestAnimationFrame(parallax); ticking = true; }
+}, { passive: true });
+})();
+</script>
+</body>
+</html>

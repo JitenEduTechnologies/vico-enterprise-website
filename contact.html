@@ -1,0 +1,980 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description"
+content="Contact Vico Vision — Get in touch for SAP courses, enterprise training, career guidance, and SAP digital transformation consulting.">
+<title>Contact Us — Vico | Vision Course</title>
+<style>
+:root {
+--ink: #151515;
+--paper: #f5f2ea;
+--white: #fff;
+--green: #087b70;
+--mint: #dcefe8;
+--coral: #f26b5b;
+--gold: #e7bd68;
+--muted: #66717d;
+--dark: #0b1211;
+--line: rgba(21, 21, 21, .12);
+--wrap: min(1280px, calc(100% - 48px));
+}
+* {
+box-sizing: border-box
+}
+html {
+scroll-behavior: smooth
+}
+body {
+margin: 0;
+background: var(--paper);
+color: var(--ink);
+font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+-webkit-font-smoothing: antialiased;
+overflow-x: hidden;
+}
+a {
+text-decoration: none;
+color: inherit
+}
+button {
+font: inherit
+}
+.wrap {
+width: var(--wrap);
+margin: auto
+}
+.section {
+padding: 90px 0
+}
+@media (max-width:768px) {
+.section {
+padding: 60px 0
+}
+}
+.eyebrow {
+display: inline-flex;
+align-items: center;
+gap: 10px;
+padding: 8px 16px;
+background: rgba(255, 255, 255, .88);
+border: 1px solid rgba(8, 123, 112, .22);
+border-radius: 999px;
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+box-shadow: 0 4px 16px rgba(0, 0, 0, .04);
+font-size: 11px;
+font-weight: 900;
+letter-spacing: .16em;
+text-transform: uppercase;
+color: var(--green);
+transition: transform .25s ease, box-shadow .25s ease;
+}
+.eyebrow:hover {
+transform: translateY(-2px);
+box-shadow: 0 6px 20px rgba(8, 123, 112, .12);
+}
+.eyebrow:before {
+content: "";
+width: 8px;
+height: 8px;
+border-radius: 50%;
+background: var(--coral);
+box-shadow: 0 0 10px rgba(242, 107, 91, .7);
+animation: dotPulse 2s infinite ease-in-out;
+}
+@keyframes dotPulse {
+0%, 100% { transform: scale(1); opacity: 1; }
+50% { transform: scale(1.35); opacity: .6; }
+}
+h1,
+h2,
+h3 {
+letter-spacing: -.055em
+}
+h1 {
+font-size: clamp(42px, 6.2vw, 90px);
+line-height: .92;
+margin: 22px 0 24px
+}
+h2 {
+font-size: clamp(32px, 4.5vw, 62px);
+line-height: .95;
+margin: 18px 0 24px
+}
+h3 {
+font-size: 22px;
+line-height: 1.1;
+margin: 0 0 10px
+}
+p {
+line-height: 1.65
+}
+.lead {
+font-size: clamp(17px, 1.4vw, 20px);
+line-height: 1.6;
+color: var(--muted);
+max-width: 700px
+}
+.btn {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+min-height: 54px;
+padding: 0 30px;
+border-radius: 999px;
+font-size: 14px;
+font-weight: 850;
+border: 1px solid transparent;
+cursor: pointer;
+transition: all .3s ease;
+touch-action: manipulation;
+}
+.btn-dark {
+background: var(--ink);
+color: #fff;
+box-shadow: 0 8px 25px rgba(21, 21, 21, .18)
+}
+.btn-dark:hover {
+transform: translateY(-3px);
+box-shadow: 0 14px 35px rgba(21, 21, 21, .28)
+}
+.btn-green {
+background: var(--green);
+color: #fff;
+box-shadow: 0 8px 25px rgba(8, 123, 112, .3)
+}
+.btn-green:hover {
+transform: translateY(-3px);
+background: #06665d;
+box-shadow: 0 14px 35px rgba(8, 123, 112, .45)
+}
+.reveal {
+opacity: 0;
+transform: translateY(22px);
+transition: opacity .7s ease, transform .7s ease
+}
+.reveal.visible {
+opacity: 1;
+transform: none
+}
+/* SECTION 1 — CONTACT HERO (LIGHT THEME) */
+.hero {
+min-height: 480px;
+position: relative;
+overflow: hidden;
+background: #f6f8f7;
+color: var(--ink);
+display: flex;
+align-items: center;
+padding: 140px 0 80px;
+}
+@media (max-width:768px) {
+.hero {
+min-height: 400px;
+padding: 120px 0 60px
+}
+}
+.hero-video {
+position: absolute;
+inset: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+opacity: .62;
+filter: saturate(1.12) contrast(1.05);
+pointer-events: none;
+transform: translateZ(0);
+will-change: transform;
+backface-visibility: hidden;
+}
+.hero-overlay {
+position: absolute;
+inset: 0;
+background: radial-gradient(circle at 75% 30%, rgba(8, 123, 112, .14), transparent 65%),
+linear-gradient(180deg, rgba(246, 248, 247, .72) 0%, rgba(246, 248, 247, .90) 100%);
+pointer-events: none;
+}
+.hero-content {
+position: relative;
+z-index: 2;
+max-width: 860px;
+text-shadow: none;
+}
+.hero .eyebrow {
+color: var(--green)
+}
+.hero h1 span {
+color: var(--green)
+}
+.hero p {
+color: var(--muted);
+font-size: clamp(16px, 1.3vw, 19px);
+max-width: 680px
+}
+/* SECTION 2 — CONTACT PANELS & FORM (2-COLUMN GRID) */
+.contact-section {
+padding: 90px 0;
+background: var(--paper)
+}
+@media (max-width:768px) {
+.contact-section {
+padding: 50px 0
+}
+}
+.contact-grid {
+display: grid;
+grid-template-columns: 1fr 1.05fr;
+gap: 64px;
+align-items: start;
+}
+@media (max-width:992px) {
+.contact-grid {
+grid-template-columns: 1fr;
+gap: 40px
+}
+}
+/* LEFT SIDE — ADVISORY HIGHLIGHTS */
+.advisory-info h2 {
+margin-top: 10px
+}
+.advisory-cards {
+margin-top: 36px;
+display: flex;
+flex-direction: column;
+gap: 18px
+}
+.adv-card {
+background: #fff;
+border: 1px solid var(--line);
+border-radius: 20px;
+padding: 22px 26px;
+display: flex;
+align-items: flex-start;
+gap: 18px;
+box-shadow: 0 8px 30px rgba(21, 21, 21, .03);
+transition: transform .25s ease;
+}
+.adv-card:hover {
+transform: translateY(-3px)
+}
+.adv-icon {
+width: 44px;
+height: 44px;
+border-radius: 14px;
+background: var(--mint);
+color: var(--green);
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 20px;
+flex-shrink: 0;
+font-weight: 900;
+}
+.adv-content h3 {
+font-size: 18px;
+margin: 0 0 4px;
+color: var(--ink)
+}
+.adv-content p {
+margin: 0;
+font-size: 14px;
+color: var(--muted);
+line-height: 1.5
+}
+.direct-contact-box {
+margin-top: 32px;
+padding: 26px;
+border-radius: 24px;
+background: linear-gradient(135deg, #087b70 0%, #0d9a8a 100%);
+color: #fff;
+box-shadow: 0 14px 35px rgba(8, 123, 112, .22);
+position: relative;
+overflow: hidden;
+}
+.direct-contact-box h3 {
+color: #fff;
+margin: 0 0 8px;
+font-size: 19px
+}
+.direct-contact-box p {
+color: rgba(255, 255, 255, .88);
+margin: 0 0 14px;
+font-size: 14px
+}
+.direct-contact-box a {
+color: #ffffff;
+font-weight: 850;
+font-size: 15px;
+word-break: break-all;
+text-decoration: underline;
+text-underline-offset: 3px;
+}
+/* RIGHT SIDE — CLEAN VICO FORM CARD */
+.form-card {
+background: #fff;
+border: 1px solid var(--line);
+border-radius: 32px;
+padding: 42px;
+box-shadow: 0 20px 60px rgba(21, 21, 21, .06);
+}
+@media (max-width:600px) {
+.form-card {
+padding: 26px 18px;
+border-radius: 24px
+}
+}
+.form-card h3 {
+font-size: 26px;
+margin: 0 0 6px
+}
+.form-card p {
+color: var(--muted);
+font-size: 15px;
+margin-bottom: 26px
+}
+.form-group {
+margin-bottom: 20px
+}
+.form-row {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 16px
+}
+@media (max-width:600px) {
+.form-row {
+grid-template-columns: 1fr
+}
+}
+label {
+display: block;
+font-size: 12px;
+font-weight: 850;
+letter-spacing: .06em;
+text-transform: uppercase;
+color: var(--ink);
+margin-bottom: 8px;
+}
+label span {
+color: var(--coral)
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+width: 100%;
+min-height: 52px;
+padding: 12px 18px;
+border-radius: 14px;
+border: 1.5px solid var(--line);
+background: var(--paper);
+font-family: inherit;
+font-size: 14px;
+color: var(--ink);
+transition: all .25s ease;
+outline: none;
+}
+input:focus,
+select:focus,
+textarea:focus {
+border-color: var(--green);
+background: #fff;
+box-shadow: 0 0 0 4px rgba(8, 123, 112, .12);
+}
+textarea {
+min-height: 120px;
+resize: vertical;
+padding: 16px 18px;
+line-height: 1.6
+}
+.consent-label {
+display: flex;
+align-items: flex-start;
+gap: 12px;
+margin-top: 16px;
+cursor: pointer;
+}
+.consent-label input[type="checkbox"] {
+width: 18px;
+height: 18px;
+accent-color: var(--green);
+margin-top: 2px;
+cursor: pointer;
+}
+.consent-text {
+font-size: 13px;
+color: var(--muted);
+line-height: 1.45
+}
+.form-alert {
+padding: 16px 20px;
+border-radius: 14px;
+margin-bottom: 20px;
+font-size: 14px;
+font-weight: 700;
+display: none;
+}
+.form-alert.error {
+background: #fde8e8;
+color: #c53030;
+border: 1px solid #f8b4b4
+}
+.form-alert.success {
+background: #def7ec;
+color: #03543f;
+border: 1px solid #84e1bc
+}
+/* SUCCESS STATE CARD */
+.success-card {
+display: none;
+background: var(--dark);
+color: #fff;
+border-radius: 32px;
+padding: 60px 32px;
+text-align: center;
+box-shadow: 0 20px 60px rgba(11, 18, 17, .3);
+}
+.success-badge {
+width: 70px;
+height: 70px;
+border-radius: 50%;
+background: rgba(8, 123, 112, .2);
+border: 2px solid var(--green);
+color: #8de2d3;
+font-size: 32px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 auto 24px;
+}
+.success-card h3 {
+color: #fff;
+font-size: 30px;
+margin-bottom: 12px
+}
+.success-card p {
+color: rgba(255, 255, 255, .75);
+max-width: 480px;
+margin: 0 auto 28px;
+font-size: 16px
+}
+.ticket-pill {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+padding: 10px 20px;
+border-radius: 999px;
+background: rgba(255, 255, 255, .08);
+border: 1px solid rgba(255, 255, 255, .15);
+font-size: 13px;
+font-weight: 800;
+color: #8de2d3;
+margin-bottom: 32px;
+}
+/* SECTION 3 — WHAT HAPPENS NEXT (VIBRANT COLORFUL ICONS) */
+.process-section {
+padding: 90px 0;
+background: #fff;
+border-top: 1px solid var(--line)
+}
+@media (max-width:768px) {
+.process-section {
+padding: 55px 0
+}
+}
+.process-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 28px;
+margin-top: 44px;
+}
+@media (max-width:992px) {
+.process-grid {
+grid-template-columns: repeat(3, 1fr);
+gap: 20px
+}
+}
+@media (max-width:768px) {
+.process-grid {
+grid-template-columns: 1fr;
+gap: 20px
+}
+}
+.process-item {
+padding: 32px 28px;
+border-radius: 24px;
+background: var(--paper);
+border: 1px solid var(--line);
+position: relative;
+transition: transform .3s ease, box-shadow .3s ease;
+}
+.process-item:hover {
+transform: translateY(-4px);
+box-shadow: 0 12px 35px rgba(21, 21, 21, .06);
+}
+/* VIBRANT GRADIENT ICON CONTAINERS */
+.process-icon-box {
+width: 58px;
+height: 58px;
+border-radius: 18px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 22px;
+transition: transform .3s cubic-bezier(.16, 1, .3, 1);
+}
+.process-item:hover .process-icon-box {
+transform: scale(1.08) rotate(-3deg);
+}
+.process-icon-box.discovery {
+background: linear-gradient(135deg, #f26b5b 0%, #ff9f1c 100%);
+color: #fff;
+box-shadow: 0 10px 25px rgba(242, 107, 91, .38);
+}
+.process-icon-box.alignment {
+background: linear-gradient(135deg, #087b70 0%, #00b4d8 100%);
+color: #fff;
+box-shadow: 0 10px 25px rgba(8, 123, 112, .38);
+}
+.process-icon-box.action {
+background: linear-gradient(135deg, #7b2cbf 0%, #3a86ff 100%);
+color: #fff;
+box-shadow: 0 10px 25px rgba(123, 44, 191, .38);
+}
+.process-num {
+font-size: 12px;
+font-weight: 900;
+color: var(--green);
+letter-spacing: .12em;
+margin-bottom: 12px;
+display: block;
+text-transform: uppercase;
+}
+.process-item h3 {
+font-size: 22px;
+margin-bottom: 10px;
+color: var(--ink)
+}
+.process-item p {
+font-size: 14px;
+color: var(--muted);
+margin: 0;
+line-height: 1.6
+}
+/* SECTION 4 — FAQ SECTION */
+.faq-section {
+padding: 90px 0;
+background: var(--paper);
+border-top: 1px solid var(--line)
+}
+@media (max-width:768px) {
+.faq-section {
+padding: 55px 0
+}
+}
+.faq-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 24px;
+margin-top: 44px;
+}
+@media (max-width:768px) {
+.faq-grid {
+grid-template-columns: 1fr
+}
+}
+.faq-item {
+background: #fff;
+border: 1px solid var(--line);
+border-radius: 20px;
+padding: 28px 30px;
+}
+.faq-item h3 {
+font-size: 18px;
+margin-bottom: 10px;
+color: var(--ink)
+}
+.faq-item p {
+font-size: 14px;
+color: var(--muted);
+margin: 0;
+line-height: 1.6
+}
+/* SECTION 5 — CTA BANNER */
+.cta-banner {
+padding: 90px 0;
+background: var(--dark);
+color: #fff;
+text-align: center;
+}
+@media (max-width:768px) {
+.cta-banner {
+padding: 60px 0
+}
+}
+.cta-banner h2 {
+color: #fff;
+max-width: 700px;
+margin: 16px auto 20px
+}
+.cta-banner p {
+color: rgba(255, 255, 255, .75);
+max-width: 580px;
+margin: 0 auto 36px;
+font-size: 17px
+}
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+<main>
+<section class="hero">
+<video class="hero-video" autoplay loop muted playsinline preload="metadata"
+poster="https://peachpuff-chamois-105831.hostingersite.com/images/services.jpg">
+<source src="https://peachpuff-chamois-105831.hostingersite.com/videos/ourproducts.mp4" type="video/mp4">
+</video>
+<div class="hero-overlay"></div>
+<div class="wrap hero-content reveal">
+<span class="eyebrow">Direct Engagement</span>
+<h1>Start a Direct Conversation <span>with Vico.</span></h1>
+<p class="lead">Whether you're exploring S/4HANA transformation, SAP Business One, enterprise analytics, or SAP
+career development, our solution leads are ready to guide you.</p>
+</div>
+</section>
+<section class="contact-section">
+<div class="wrap contact-grid">
+<div class="advisory-info reveal">
+<span class="eyebrow">Direct Advisory</span>
+<h2>We build solutions around your reality.</h2>
+<p class="lead" style="color:var(--muted);font-size:17px;margin-bottom:32px;">
+No generic sales pitches. You connect directly with experienced SAP advisors who understand enterprise
+architecture, SME operational needs, and career roadmaps.
+</p>
+<div class="advisory-cards">
+<div class="adv-card">
+<div class="adv-icon">⚡</div>
+<div class="adv-content">
+<h3>24-Hour SLA Response</h3>
+<p>Your enquiry is routed directly to a senior SAP solution lead for rapid evaluation.</p>
+</div>
+</div>
+<div class="adv-card">
+<div class="adv-icon">🎯</div>
+<div class="adv-content">
+<h3>Architectural Clarity</h3>
+<p>Receive honest guidance on target operating models, S/4HANA moves, and integration.</p>
+</div>
+</div>
+<div class="adv-card">
+<div class="adv-icon">🔒</div>
+<div class="adv-content">
+<h3>Enterprise Privacy</h3>
+<p>Your business data and contact details are handled with strict enterprise confidentiality.</p>
+</div>
+</div>
+</div>
+<div class="direct-contact-box">
+<h3>Direct Contact Enquiries</h3>
+<p>Prefer reaching out directly? Reach our team anytime at:</p>
+<div style="display:flex;flex-direction:column;gap:10px;margin-top:12px;">
+<div><span style="color:rgba(255,255,255,.7);font-size:14px;">Email: </span><a
+href="mailto:saip728@gmail.com">saip728@gmail.com</a></div>
+<div><span style="color:rgba(255,255,255,.7);font-size:14px;">Phone / WhatsApp: </span><a
+href="tel:+919876543210" style="color:#8de2d3;font-weight:800;font-size:15px;">+91 98765 43210</a>
+</div>
+</div>
+</div>
+</div>
+<div class="form-card reveal">
+<div id="formContainer">
+<h3>Send Us an Enquiry</h3>
+<p>Fill in your details below and we'll reach out to schedule your consultation.</p>
+<form id="vicoContactForm" novalidate>
+<input type="text" name="website_hp" style="display:none!important;" tabindex="-1" autocomplete="off">
+<div id="formAlert" class="form-alert"></div>
+<div class="form-group">
+<label for="fullName">Full Name <span>*</span></label>
+<input type="text" id="fullName" placeholder="e.g. Eleanor Vance" required>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label for="email">Work Email <span>*</span></label>
+<input type="email" id="email" placeholder="eleanor@company.com" required>
+</div>
+<div class="form-group">
+<label for="phone">Phone Number <span>*</span></label>
+<input type="tel" id="phone" placeholder="+91 98765 43210" required>
+</div>
+</div>
+<div class="form-group">
+<label for="interestedIn">Service / Solution Interested In <span>*</span></label>
+<select id="interestedIn" required>
+<option value="" disabled selected>Select an area of interest...</option>
+<option value="S/4HANA Transformation">S/4HANA Cloud & Enterprise Transformation</option>
+<option value="SAP Business One (B1)">SAP Business One (SME Solutions)</option>
+<option value="Analytics Cloud & BTP">Analytics Cloud, Datasphere & BTP Integration</option>
+<option value="SuccessFactors HXM">SuccessFactors HXM & Talent Management</option>
+<option value="SAP Career & Training">SAP Career Pathways & Enterprise Training</option>
+<option value="Other Advisory">General SAP Advisory / Other</option>
+</select>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label for="experienceLevel">Organization / Role Level</label>
+<select id="experienceLevel">
+<option value="Enterprise Executive">Enterprise Executive / C-Level</option>
+<option value="SAP / IT Manager">SAP / IT Manager</option>
+<option value="Business Operations Lead">Business Operations Lead</option>
+<option value="Individual Consultant / Student">Individual Consultant / Professional</option>
+</select>
+</div>
+<div class="form-group">
+<label for="preferredContact">Preferred Contact Method</label>
+<select id="preferredContact">
+<option value="Email">Email</option>
+<option value="Phone Call">Phone Call</option>
+<option value="Virtual Meeting">Virtual Meeting (Teams / Meet)</option>
+</select>
+</div>
+</div>
+<div class="form-group">
+<label for="message">How can we help you? <span>*</span></label>
+<textarea id="message"
+placeholder="Tell us about your current SAP landscape, challenges, timeline or goals..."
+required></textarea>
+</div>
+<div class="form-group">
+<label class="consent-label">
+<input type="checkbox" id="consent" checked>
+<span class="consent-text">I agree to Vico Vision storing and processing my details to connect me with
+an SAP advisor.</span>
+</label>
+</div>
+<button type="submit" id="submitBtn" class="btn btn-green" style="width:100%;margin-top:10px;">
+Start the Conversation →
+</button>
+</form>
+</div>
+<div id="successState" class="success-card">
+<div class="success-badge">✓</div>
+<h3>Enquiry Received</h3>
+<p>Thank you for reaching out to Vico Vision. An SAP solution lead will review your submission and contact
+you within 24 business hours.</p>
+<div class="ticket-pill">
+<span>Reference Ticket:</span>
+<strong id="displaySubId">VICO-RECEIVED</strong>
+</div>
+<div>
+<button class="btn btn-green" onclick="resetForm()">Send Another Message →</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="process-section">
+<div class="wrap">
+<div style="text-align:center;max-width:600px;margin:0 auto;" class="reveal">
+<span class="eyebrow">Engagement Process</span>
+<h2>What happens after you submit?</h2>
+</div>
+<div class="process-grid">
+<div class="process-item reveal">
+<div class="process-icon-box discovery">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+stroke-linecap="round" stroke-linejoin="round">
+<circle cx="12" cy="12" r="10"></circle>
+<polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+</svg>
+</div>
+<span class="process-num">01 / DISCOVERY</span>
+<h3>Requirements Review</h3>
+<p>We analyze your specified SAP domain, company size, and primary goals before our initial call.</p>
+</div>
+<div class="process-item reveal">
+<div class="process-icon-box alignment">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+stroke-linecap="round" stroke-linejoin="round">
+<path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+<circle cx="8.5" cy="7" r="4"></circle>
+<polyline points="17 11 19 13 23 9"></polyline>
+</svg>
+</div>
+<span class="process-num">02 / ALIGNMENT</span>
+<h3>Advisor Connection</h3>
+<p>We match you directly with a domain specialist (ERP, BTP, Data, or Enablement) rather than sales reps.
+</p>
+</div>
+<div class="process-item reveal">
+<div class="process-icon-box action">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+stroke-linecap="round" stroke-linejoin="round">
+<path
+d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.71 1.26-2 2-2.5l7.5-7.5c1.4-1.4 1.4-3.6 0-5s-3.6-1.4-5 0l-7.5 7.5c-.5.74-1.79 1.29-2.5 2z">
+</path>
+<path d="M15 5l4 4"></path>
+</svg>
+</div>
+<span class="process-num">03 / ACTION</span>
+<h3>Practical Roadmap</h3>
+<p>You receive clear, actionable steps on architecture, adoption timelines, and engagement models.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="faq-section">
+<div class="wrap">
+<div style="text-align:center;max-width:600px;margin:0 auto;" class="reveal">
+<span class="eyebrow">Got Questions?</span>
+<h2>Frequently Asked Questions</h2>
+</div>
+<div class="faq-grid">
+<div class="faq-item reveal">
+<h3>How quickly will Vico Vision respond?</h3>
+<p>All enquiries sent through our contact system are acknowledged immediately with a reference ticket and
+assigned to an advisor within 24 business hours.</p>
+</div>
+<div class="faq-item reveal">
+<h3>Is our first consultation fee-based?</h3>
+<p>No. Initial exploratory conversations to discuss your SAP landscape, priorities, and potential solution
+fit are completely complimentary.</p>
+</div>
+<div class="faq-item reveal">
+<h3>Can Vico assist with both Enterprise ERP & SME SAP B1?</h3>
+<p>Yes. We specialize across the full spectrum — from large-scale S/4HANA enterprise moves down to SAP
+Business One implementations for growing mid-market companies.</p>
+</div>
+<div class="faq-item reveal">
+<h3>Do you offer SAP career and corporate training?</h3>
+<p>Absolutely. Our Vico Vision Course programs cover hands-on S/4HANA, BTP, Data, and AI integrations for
+individuals and enterprise teams.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="cta-banner">
+<div class="wrap reveal">
+<span class="eyebrow" style="color:#8de2d3;">Ready for What Comes Next?</span>
+<h2>Turn SAP into a connected business advantage.</h2>
+<p>Tell us where your business is today. We'll help map the SAP capabilities, connections, and next steps that
+move it forward.</p>
+<div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
+<a href="services.html" class="btn btn-green">Explore Our Services →</a>
+<a href="our-products.html" class="btn btn-dark" style="border:1px solid rgba(255,255,255,.2);">View Products
+& Platform</a>
+</div>
+</div>
+</section>
+</main>
+<div id="site-footer"></div>
+<script src="site-config.js"></script>
+<script src="site-components.js"></script>
+<script>
+// LIVE GOOGLE APPS SCRIPT WEB APP URL
+const GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxSY7R5mvVB2u7wBtJH6I7E2EBjHXamZBrO5fgTLhDyaiOmNcSHdwFhy2shThZzw_68/exec";
+(() => {
+// Intersection Observer for reveal animations
+const reveals = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+io.unobserve(entry.target);
+}
+});
+}, { threshold: .12 });
+reveals.forEach(el => io.observe(el));
+const form = document.getElementById('vicoContactForm');
+const alertBox = document.getElementById('formAlert');
+const submitBtn = document.getElementById('submitBtn');
+const formContainer = document.getElementById('formContainer');
+const successState = document.getElementById('successState');
+const displaySubId = document.getElementById('displaySubId');
+function showAlert(msg, isError) {
+alertBox.style.display = 'block';
+alertBox.className = 'form-alert ' + (isError ? 'error' : 'success');
+alertBox.textContent = msg;
+}
+function hideAlert() {
+alertBox.style.display = 'none';
+}
+if (form) {
+form.addEventListener('submit', function (e) {
+e.preventDefault();
+hideAlert();
+const fullName = document.getElementById('fullName').value.trim();
+const email = document.getElementById('email').value.trim();
+const phone = document.getElementById('phone').value.trim();
+const interestedIn = document.getElementById('interestedIn').value;
+const experienceLevel = document.getElementById('experienceLevel').value;
+const preferredContact = document.getElementById('preferredContact').value;
+const message = document.getElementById('message').value.trim();
+const consent = document.getElementById('consent').checked;
+if (!fullName || !email || !phone || !interestedIn || !message) {
+showAlert("Please fill in all required fields marked with *.", true);
+return;
+}
+if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+showAlert("Please enter a valid email address.", true);
+return;
+}
+if (!consent) {
+showAlert("Please check the consent checkbox to submit.", true);
+return;
+}
+// Check Honeypot
+const hp = form.querySelector('input[name="website_hp"]').value;
+// Lock Submit Button
+submitBtn.disabled = true;
+submitBtn.textContent = "Sending Enquiry...";
+const payload = {
+full_name: fullName,
+email: email,
+phone: phone,
+interested_in: interestedIn,
+experience_level: experienceLevel,
+preferred_contact: preferredContact,
+message: message,
+consent: consent,
+website_hp: hp,
+source_page: "contact.html"
+};
+// Post to Google Apps Script Web App
+fetch(GOOGLE_APPS_SCRIPT_URL, {
+method: "POST",
+headers: { "Content-Type": "text/plain;charset=utf-8" },
+body: JSON.stringify(payload)
+})
+.then(res => res.json())
+.then(res => {
+if (res.status === "success") {
+displaySubId.textContent = res.submissionId || "VICO-RECEIVED";
+formContainer.style.display = 'none';
+successState.style.display = 'block';
+} else {
+showAlert(res.message || "Failed to submit enquiry. Please try again.", true);
+submitBtn.disabled = false;
+submitBtn.textContent = "Start the Conversation →";
+}
+})
+.catch(err => {
+showAlert("Connection error. Please verify your network and try again.", true);
+submitBtn.disabled = false;
+submitBtn.textContent = "Start the Conversation →";
+});
+});
+}
+window.resetForm = function () {
+form.reset();
+submitBtn.disabled = false;
+submitBtn.textContent = "Start the Conversation →";
+hideAlert();
+successState.style.display = 'none';
+formContainer.style.display = 'block';
+};
+})();
+</script>
+</body>
+</html>
