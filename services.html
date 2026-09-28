@@ -4,21 +4,34 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description"
-content="Vico SAP Services — transformation, digital core, integration, automation, intelligence, data and continuous enterprise evolution.">
-<title>Services — Vico | Vision Course</title>
+content="Vyntra SAP Services — transformation, digital core, integration, automation, intelligence, data and continuous enterprise evolution.">
+<title>Services — Vyntra | Vision Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://peachpuff-chamois-105831.hostingersite.com" crossorigin>
+<link rel="dns-prefetch" href="//peachpuff-chamois-105831.hostingersite.com">
 <style>
 :root {
---ink: #151515;
---paper: #f5f2ea;
---white: #fff;
---green: #087b70;
---mint: #dcefe8;
---coral: #f26b5b;
---gold: #e7bd68;
---muted: #66717d;
---dark: #111817;
---line: rgba(21, 21, 21, .12);
---wrap: min(1320px, calc(100% - 64px));
+  --vyntra-teal: #087F73;
+  --vyntra-teal-dark: #05665D;
+  --vyntra-text: #111111;
+  --vyntra-muted: #5F6B76;
+  --vyntra-bg: #F7FAFA;
+  --vyntra-white: #FFFFFF;
+  --vyntra-light-teal: #EAF6F4;
+  --vyntra-coral: #F36F61;
+  --vyntra-border: #E1E7E6;
+  --ink: #111111;
+  --paper: #F7FAFA;
+  --white: #FFFFFF;
+  --green: #087F73;
+  --mint: #EAF6F4;
+  --coral: #F36F61;
+  --muted: #5F6B76;
+  --line: #E1E7E6;
+  --dark: #05665D;
+  --wrap: min(1280px, calc(100% - 48px));
 }
 * {
 box-sizing: border-box
@@ -30,7 +43,9 @@ body {
 margin: 0;
 background: var(--paper);
 color: var(--ink);
-font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+font-weight: 400;
+line-height: 1.6;
 -webkit-font-smoothing: antialiased;
 overflow-x: hidden;
 }
@@ -41,91 +56,107 @@ color: inherit
 button {
 font: inherit
 }
-.wrap {
-width: var(--wrap);
-margin: auto
+.wrap,
+.container {
+width: min(100% - 48px, 1280px);
+margin-inline: auto;
+}
+@media (max-width: 768px) {
+.wrap,
+.container {
+width: min(100% - 32px, 1280px);
+}
+}
+@media (max-width: 480px) {
+.wrap,
+.container {
+width: min(100% - 24px, 1280px);
+}
 }
 .section {
-padding: 120px 0
+padding: 64px 0
 }
 .eyebrow {
 display: inline-flex;
 align-items: center;
-gap: 10px;
-padding: 8px 16px;
-background: rgba(255, 255, 255, .88);
-border: 1px solid rgba(8, 123, 112, .22);
-border-radius: 999px;
-backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
-box-shadow: 0 4px 16px rgba(0, 0, 0, .04);
-font-size: 11px;
-font-weight: 900;
-letter-spacing: .16em;
+gap: 8px;
+font-size: 11.5px;
+font-weight: 600;
+letter-spacing: .12em;
 text-transform: uppercase;
 color: var(--green);
-transition: transform .25s ease, box-shadow .25s ease;
-}
-.eyebrow:hover {
-transform: translateY(-2px);
-box-shadow: 0 6px 20px rgba(8, 123, 112, .12);
+margin-bottom: 12px;
 }
 .eyebrow:before {
 content: "";
-width: 8px;
-height: 8px;
+display: inline-block;
+width: 6px;
+height: 6px;
 border-radius: 50%;
 background: var(--coral);
-box-shadow: 0 0 10px rgba(242, 107, 91, .7);
-animation: dotPulse 2s infinite ease-in-out;
-}
-@keyframes dotPulse {
-0%, 100% { transform: scale(1); opacity: 1; }
-50% { transform: scale(1.35); opacity: .6; }
+flex-shrink: 0;
 }
 h1,
 h2,
-h3 {
-letter-spacing: -.055em
+h3,
+h4 {
+font-family: 'Inter', sans-serif;
+color: var(--ink);
 }
 h1 {
-font-size: clamp(55px, 7.4vw, 112px);
-line-height: .88;
-margin: 25px 0 28px
+font-size: clamp(38px, 4.6vw, 68px);
+line-height: 1.08;
+font-weight: 800;
+letter-spacing: -.025em;
+margin: 20px 0 24px;
+text-wrap: balance;
 }
 h2 {
-font-size: clamp(44px, 5.7vw, 78px);
-line-height: .94;
-margin: 18px 0 24px
+font-size: clamp(28px, 3.2vw, 42px);
+line-height: 1.15;
+font-weight: 700;
+letter-spacing: -.02em;
+margin: 12px 0 16px;
+text-wrap: balance;
 }
 h3 {
-font-size: 25px;
-line-height: 1.05;
-margin: 0 0 12px
+font-size: 20px;
+line-height: 1.3;
+font-weight: 600;
+letter-spacing: -.015em;
+margin: 0 0 10px
 }
 p {
-line-height: 1.65
+font-size: 15.5px;
+line-height: 1.65;
+font-weight: 400;
+color: var(--muted);
+margin: 0 0 16px;
 }
 .lead {
-font-size: clamp(18px, 1.55vw, 22px);
-line-height: 1.58;
+font-size: clamp(16px, 1.25vw, 19px);
+line-height: 1.6;
+font-weight: 400;
 color: var(--muted);
-max-width: 700px
+max-width: 680px
 }
 .btn {
 display: inline-flex;
 align-items: center;
 justify-content: center;
-min-height: 50px;
-padding: 0 22px;
-border-radius: 999px;
-font-size: 13px;
-font-weight: 850;
+min-height: 48px;
+padding: 0 24px;
+border-radius: 12px;
+font-size: 13.5px;
+font-weight: 600;
 border: 1px solid transparent;
-transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+transition: all .2s ease;
+cursor: pointer;
+letter-spacing: 0.01em;
 }
 .btn:hover {
-transform: translateY(-3px)
+transform: translateY(-2px);
+box-shadow: 0 4px 14px rgba(8, 127, 115, .2);
 }
 .btn-dark {
 background: var(--ink);
@@ -133,19 +164,24 @@ color: #fff
 }
 .btn-green {
 background: var(--green);
-color: #fff
+color: #fff;
+border-color: var(--green);
+}
+.btn-green:hover {
+background: var(--vyntra-teal-dark);
+border-color: var(--vyntra-teal-dark);
 }
 .btn-light {
 background: #fff;
-border-color: var(--line)
+border-color: var(--line);
+color: var(--ink);
 }
 .btn-outline {
-background: rgba(255, 255, 255, .8);
+background: #fff;
 color: var(--ink);
-border-color: rgba(21, 21, 21, .18);
-backdrop-filter: blur(8px);
+border-color: var(--line);
 }
-.btn-outline:hover {
+.btn-outline:hover, .btn-light:hover {
 background: #fff;
 border-color: var(--green);
 color: var(--green);
@@ -170,7 +206,7 @@ transform: none
 }
 /* HERO (LIGHT THEME) */
 .hero {
-min-height: calc(100svh - 70px);
+min-height: calc(100svh - 66px);
 position: relative;
 overflow: hidden;
 background: #f6f8f7;
@@ -186,18 +222,33 @@ inset: 0
 width: 100%;
 height: 100%;
 object-fit: cover;
-opacity: .66;
-filter: saturate(1.15) contrast(1.05);
+opacity: .68;
+filter: saturate(1.08) contrast(1.04);
+z-index: 0;
+transform: translateZ(0);
+will-change: transform;
+backface-visibility: hidden;
+contain: paint;
 }
 .hero-media:after {
 content: "";
 position: absolute;
 inset: 0;
 background:
-radial-gradient(circle at 85% 20%, rgba(8, 123, 112, .14), transparent 45%),
-linear-gradient(90deg, rgba(246, 248, 247, .88) 0%, rgba(246, 248, 247, .62) 55%, rgba(246, 248, 247, .20) 100%),
-linear-gradient(0deg, rgba(246, 248, 247, .85) 0%, transparent 60%);
+radial-gradient(circle at 85% 20%, rgba(8, 123, 112, .08), transparent 50%),
+linear-gradient(90deg, rgba(246, 248, 247, .88) 0%, rgba(246, 248, 247, .72) 36%, rgba(246, 248, 247, .28) 65%, transparent 100%),
+linear-gradient(0deg, rgba(246, 248, 247, .75) 0%, transparent 35%);
 pointer-events: none;
+z-index: 1;
+}
+@media (max-width: 768px) {
+.hero-media video {
+opacity: .42;
+object-position: center 30%;
+}
+.hero-media:after {
+background: linear-gradient(180deg, rgba(246, 248, 247, .90) 0%, rgba(246, 248, 247, .76) 55%, rgba(246, 248, 247, .45) 100%);
+}
 }
 .hero-grid {
 position: absolute;
@@ -210,7 +261,7 @@ transform: translateY(var(--parallax, 0px));
 .hero-content {
 position: relative;
 z-index: 2;
-padding: 130px 0 82px
+padding: 96px 0 54px
 }
 .hero .eyebrow {
 color: var(--green)
@@ -224,97 +275,91 @@ color: var(--green)
 .hero p {
 max-width: 720px;
 color: var(--muted);
-font-size: clamp(18px, 1.5vw, 21px);
+font-size: clamp(17px, 1.4vw, 20px);
 line-height: 1.6;
-margin: 0 0 34px;
+margin: 0 0 30px;
 }
 .hero-chips {
 display: flex;
 gap: 10px;
 flex-wrap: wrap;
-margin-top: 40px;
+margin-top: 30px;
+position: relative;
+z-index: 10;
+max-width: 100%;
 }
 .hero-chips span {
-padding: 9px 16px;
-border: 1px solid rgba(0, 0, 0, .1);
-border-radius: 999px;
-background: rgba(255, 255, 255, .75);
+padding: 8px 16px;
+border: 1px solid var(--line);
+border-radius: 8px;
+background: rgba(255, 255, 255, .9);
 backdrop-filter: blur(8px);
+-webkit-backdrop-filter: blur(8px);
 color: #374151;
-font-size: 10px;
-font-weight: 800;
-letter-spacing: .09em;
-text-transform: uppercase;
-transition: .25s ease;
-box-shadow: 0 4px 15px rgba(0, 0, 0, .04);
+font-size: 11px;
+font-weight: 500;
+letter-spacing: .03em;
+text-transform: none;
+transition: .2s ease;
+box-shadow: 0 2px 8px rgba(0, 0, 0, .03);
+white-space: nowrap;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+text-align: center;
 }
 .hero-chips span:hover {
 border-color: var(--green);
 color: var(--green);
 background: #fff;
-transform: translateY(-2px);
-box-shadow: 0 8px 25px rgba(8, 123, 112, .2);
+transform: translateY(-1px);
+box-shadow: 0 4px 14px rgba(8, 127, 115, .15);
 }
-.hero-side {
-position: absolute;
-right: 5%;
-top: 28%;
-z-index: 2;
-width: 190px;
-height: 190px;
-border: 1px solid rgba(0, 0, 0, .1);
-border-radius: 50%;
-transform: translateY(var(--parallax, 0px));
+@media (max-width: 768px) {
+.hero-chips {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 8px;
+width: 100%;
+max-width: 440px;
+margin-top: 24px;
 }
-.hero-side:before,
-.hero-side:after {
-content: "";
-position: absolute;
-border-radius: 50%;
+.hero-chips span {
+width: 100%;
+padding: 8px 10px;
+font-size: 10px;
+white-space: normal;
+word-break: normal;
 }
-.hero-side:before {
-width: 8px;
-height: 8px;
-background: var(--coral);
-right: 18%;
-top: 18%;
-box-shadow: 0 0 25px rgba(242, 107, 91, .8)
 }
-.hero-side:after {
-width: 6px;
-height: 6px;
-background: var(--green);
-left: 16%;
-bottom: 22%;
-box-shadow: 0 0 20px rgba(8, 123, 112, .8)
-}
+
 .hero-note {
-margin-top: 42px;
+margin-top: 36px;
 display: flex;
 align-items: center;
-gap: 15px;
+gap: 14px;
 color: var(--muted);
-font-size: 10px;
-font-weight: 800;
-letter-spacing: .15em;
+font-size: 11px;
+font-weight: 500;
+letter-spacing: .1em;
 text-transform: uppercase
 }
 .hero-note i {
-width: 42px;
+width: 36px;
 height: 1px;
-background: rgba(0, 0, 0, .2)
+background: rgba(0, 0, 0, .15)
 }
 /* PRESSURE (LIGHT THEME) */
 .pressure {
 background: #f0f4f3;
 color: var(--ink);
-padding: 105px 0;
+padding: 60px 0;
 border-top: 1px solid var(--line);
 }
 .pressure-grid {
 display: grid;
 grid-template-columns: 1fr 420px;
-gap: 60px;
+gap: 40px;
 align-items: end
 }
 .pressure .eyebrow {
@@ -323,7 +368,7 @@ color: var(--green)
 .pressure h2 {
 max-width: none;
 white-space: nowrap;
-font-size: clamp(24px, 2.7vw, 44px);
+font-size: clamp(24px, 2.7vw, 42px);
 }
 .pressure-copy {
 color: var(--muted);
@@ -335,33 +380,34 @@ grid-template-columns: repeat(4, 1fr);
 gap: 0;
 border-top: 1px solid var(--line);
 border-bottom: 1px solid var(--line);
-margin-top: 75px;
+margin-top: 36px;
 }
 .pressure-item {
-padding: 30px 25px 30px 0;
+padding: 24px 20px 24px 0;
 border-right: 1px solid var(--line)
 }
 .pressure-item:not(:first-child) {
-padding-left: 25px
+padding-left: 20px
 }
 .pressure-item:last-child {
 border-right: 0
 }
 .pressure-item span {
-font-size: 10px;
+font-size: 11px;
 color: var(--coral);
-font-weight: 900;
-letter-spacing: .14em
+font-weight: 600;
+letter-spacing: .1em
 }
 .pressure-item strong {
 display: block;
-font-size: 21px;
-margin: 32px 0 9px;
-letter-spacing: -.035em;
+font-size: 18px;
+font-weight: 600;
+margin: 16px 0 6px;
+letter-spacing: -.02em;
 color: var(--ink);
 }
 .pressure-item p {
-font-size: 13px;
+font-size: 13.5px;
 color: var(--muted);
 margin: 0
 }
@@ -373,12 +419,12 @@ overflow: hidden
 .engine-head {
 display: grid;
 grid-template-columns: 1fr 1fr;
-gap: 48px;
+gap: 40px;
 align-items: end;
-margin-bottom: 50px
+margin-bottom: 30px
 }
 .engine-head h2 {
-margin: 16px 0 0;
+margin: 12px 0 0;
 max-width: 560px
 }
 .engine-head .lead {
@@ -388,9 +434,9 @@ margin: 0
 }
 .engine-stage {
 position: relative;
-min-height: 650px;
+min-height: 520px;
 border: 1px solid var(--line);
-border-radius: 36px;
+border-radius: 28px;
 background:
 radial-gradient(circle at 50% 50%, rgba(8, 123, 112, .10), transparent 27%),
 #ece8de;
@@ -457,13 +503,14 @@ box-shadow: 0 22px 55px rgba(8, 123, 112, .16)
 display: block;
 font-size: 9px;
 color: var(--coral);
-font-weight: 900;
-letter-spacing: .14em;
+font-weight: 600;
+letter-spacing: .12em;
 margin-bottom: 7px
 }
 .engine-node strong {
 font-size: 16px;
-letter-spacing: -.03em
+font-weight: 600;
+letter-spacing: -.02em
 }
 .n-business {
 left: 6%;
@@ -508,14 +555,15 @@ padding: 15px;
 }
 .engine-center small {
 color: #bfe9de;
-font-size: 9px;
-font-weight: 900;
-letter-spacing: .16em
+font-size: 9.5px;
+font-weight: 600;
+letter-spacing: .14em
 }
 .engine-center strong {
 font-size: 16px;
+font-weight: 600;
 line-height: 1.15;
-letter-spacing: -.03em
+letter-spacing: -.02em
 }
 .engine-detail {
 position: absolute;
@@ -535,7 +583,8 @@ z-index: 10;
 box-shadow: 0 12px 35px rgba(0, 0, 0, .06);
 }
 .engine-detail strong {
-font-size: 15px
+font-size: 15px;
+font-weight: 600;
 }
 .engine-detail span {
 font-size: 13px;
@@ -548,9 +597,9 @@ background: #fff
 .rail-head {
 display: flex;
 justify-content: space-between;
-gap: 50px;
+gap: 40px;
 align-items: end;
-margin-bottom: 45px
+margin-bottom: 30px
 }
 .rail-head .lead {
 max-width: 500px
@@ -566,8 +615,8 @@ grid-template-columns: repeat(7, 1fr);
 min-width: 1100px
 }
 .rail-btn {
-min-height: 250px;
-padding: 25px 22px;
+min-height: 200px;
+padding: 20px 18px;
 text-align: left;
 border: 0;
 border-right: 1px solid var(--line);
@@ -586,39 +635,42 @@ background: var(--paper)
 display: block;
 font-size: 10px;
 color: var(--green);
-font-weight: 900;
-letter-spacing: .14em
+font-weight: 600;
+letter-spacing: .12em
 }
 .rail-btn strong {
 display: block;
-margin-top: 70px;
-font-size: 21px;
-letter-spacing: -.035em
+margin-top: 45px;
+font-size: 18px;
+font-weight: 600;
+letter-spacing: -.02em
 }
 .rail-btn span {
 display: block;
-margin-top: 9px;
+margin-top: 6px;
 color: var(--muted);
 font-size: 11px;
 line-height: 1.45
 }
 .rail-panel {
-margin-top: 30px;
+margin-top: 24px;
 display: grid;
 grid-template-columns: 1fr 1fr;
-gap: 60px;
+gap: 40px;
 align-items: center;
-min-height: 300px
+min-height: 260px
 }
 .rail-copy small {
 color: var(--coral);
 font-size: 10px;
-font-weight: 900;
-letter-spacing: .15em
+font-weight: 600;
+letter-spacing: .14em
 }
 .rail-copy h3 {
-font-size: 38px;
-margin: 12px 0
+font-size: 24px;
+font-weight: 600;
+line-height: 1.2;
+margin: 8px 0 10px
 }
 .rail-copy p {
 max-width: 600px;
@@ -627,7 +679,7 @@ margin: 0
 }
 .rail-visual {
 height: 270px;
-border-radius: 28px;
+border-radius: 20px;
 background: var(--dark);
 position: relative;
 overflow: hidden;
@@ -658,7 +710,7 @@ display: grid;
 place-items: center;
 text-align: center;
 font-size: 10px;
-font-weight: 900;
+font-weight: 600;
 z-index: 2
 }
 .visual-node {
@@ -848,7 +900,7 @@ display: grid;
 place-items: center;
 text-align: center;
 font-size: 15px;
-font-weight: 900;
+font-weight: 600;
 z-index: 3;
 box-shadow: 0 25px 60px rgba(21, 21, 21, .18)
 }
@@ -857,9 +909,9 @@ position: absolute;
 padding: 12px 16px;
 background: #fff;
 border: 1px solid rgba(8, 123, 112, .16);
-border-radius: 14px;
+border-radius: 12px;
 font-size: 11px;
-font-weight: 800;
+font-weight: 600;
 box-shadow: 0 10px 30px rgba(8, 123, 112, .08);
 z-index: 3
 }
@@ -965,7 +1017,7 @@ color: #fff;
 display: grid;
 place-items: center;
 text-align: center;
-font-weight: 900;
+font-weight: 600;
 position: relative;
 box-shadow: 0 20px 50px rgba(0, 0, 0, .22);
 z-index: 2;
@@ -1006,13 +1058,13 @@ position: absolute;
 display: inline-flex;
 align-items: center;
 gap: 8px;
-padding: 11px 18px;
+padding: 10px 16px;
 background: #fff;
 border: 1px solid rgba(8, 123, 112, .22);
-border-radius: 999px;
+border-radius: 12px;
 font-size: 11px;
-font-weight: 850;
-letter-spacing: .08em;
+font-weight: 600;
+letter-spacing: .06em;
 text-transform: uppercase;
 color: var(--ink);
 box-shadow: 0 10px 25px rgba(0, 0, 0, .06);
@@ -1022,7 +1074,7 @@ line-height: 1.25;
 text-align: left;
 }
 .ai-node:hover {
-transform: scale(1.08) translateY(-2px);
+transform: scale(1.04) translateY(-2px);
 box-shadow: 0 15px 35px rgba(0, 0, 0, .12)
 }
 .ai-dot {
@@ -1121,7 +1173,7 @@ display: grid;
 place-items: center;
 margin: auto;
 font-size: 12px;
-font-weight: 900;
+font-weight: 600;
 transition: .3s ease
 }
 .supply-step:hover .supply-dot {
@@ -1131,7 +1183,8 @@ transform: translateY(-5px)
 }
 .supply-step h3 {
 text-align: center;
-font-size: 19px;
+font-size: 18px;
+font-weight: 600;
 margin: 22px 0 7px
 }
 .supply-step p {
@@ -1158,7 +1211,7 @@ align-items: center
 color: #bfe9de
 }
 .evolve .lead {
-color: rgba(255, 255, 255, .57)
+color: rgba(255, 255, 255, .75)
 }
 .evolve-wheel {
 height: 500px;
@@ -1199,7 +1252,7 @@ display: grid;
 place-items: center;
 text-align: center;
 font-size: 12px;
-font-weight: 900;
+font-weight: 600;
 z-index: 3
 }
 .e-item {
@@ -1213,7 +1266,7 @@ display: grid;
 place-items: center;
 text-align: center;
 font-size: 11px;
-font-weight: 800;
+font-weight: 600;
 z-index: 4
 }
 .e1 {
@@ -1247,34 +1300,53 @@ animation: spin 12s linear infinite
 }
 /* CTA */
 .cta {
-padding: 120px 0;
-background: linear-gradient(135deg, #121919, #181328);
+padding: 100px 0;
+background: var(--vyntra-teal-dark);
 color: #fff;
 position: relative;
-overflow: hidden
+overflow: hidden;
+border-top: 1px solid rgba(255, 255, 255, .1);
 }
 .cta:before {
 content: "";
 position: absolute;
 inset: 0;
-background-image: linear-gradient(rgba(255, 255, 255, .035) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .035) 1px, transparent 1px);
-background-size: 70px 70px
+background-image: linear-gradient(rgba(255, 255, 255, .03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .03) 1px, transparent 1px);
+background-size: 60px 60px;
+pointer-events: none;
 }
 .cta-inner {
 position: relative;
 z-index: 2;
-max-width: 900px
+max-width: 860px;
 }
 .cta .eyebrow {
-color: #bfe9de
+color: #a3e7dc;
+font-size: 11.5px;
+font-weight: 600;
+letter-spacing: .12em;
+text-transform: uppercase;
+margin-bottom: 12px;
 }
 .cta h2 {
-max-width: 850px
+font-size: clamp(32px, 4vw, 52px);
+line-height: 1.15;
+letter-spacing: -.025em;
+font-weight: 700;
+max-width: 820px;
+margin: 16px 0 18px;
+color: #fff;
+}
+.cta h2 span {
+color: #a3e7dc;
+display: inline;
 }
 .cta p {
-max-width: 620px;
-color: rgba(255, 255, 255, .58);
-font-size: 18px
+max-width: 600px;
+color: rgba(255, 255, 255, .85);
+font-size: 16.5px;
+line-height: 1.6;
+font-weight: 400;
 }
 .cta-orb {
 position: absolute;
@@ -1282,19 +1354,18 @@ right: 8%;
 top: 20%;
 width: 250px;
 height: 250px;
-border: 1px solid rgba(255, 255, 255, .1);
+border: 1px solid rgba(255, 255, 255, .12);
 border-radius: 50%
 }
 .cta-orb:after {
 content: "";
 position: absolute;
-width: 9px;
-height: 9px;
+width: 8px;
+height: 8px;
 border-radius: 50%;
 background: var(--coral);
 right: 14%;
 top: 18%;
-box-shadow: 0 0 25px rgba(242, 107, 91, .8)
 }
 @media(max-width:1050px) {
 :root {
@@ -1363,12 +1434,7 @@ padding: 120px 0 55px
 .hero p {
 font-size: 17px
 }
-.hero-side {
-width: 130px;
-height: 130px;
-right: -35px;
-top: 25%
-}
+
 .pressure {
 padding: 75px 0
 }
@@ -1714,23 +1780,22 @@ transition: none !important
 <main>
 <section class="hero">
 <div class="hero-media">
-<video autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+<video id="servicesHeroVideo" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
 <source src="https://peachpuff-chamois-105831.hostingersite.com/videos/services.mp4" type="video/mp4">
 </video>
 </div>
 <div class="hero-grid" aria-hidden="true"></div>
-<div class="hero-side" aria-hidden="true"></div>
 <div class="wrap hero-content reveal">
-<span class="eyebrow">VICO SAP SERVICES</span>
+<span class="eyebrow">VYNTRA SAP SERVICES</span>
 <h1>Transform SAP into a business that <span>keeps moving.</span></h1>
-<p>From the digital core to integration, data, automation and intelligence, Vico connects SAP transformation to the way the business actually operates.</p>
+<p>From the digital core to integration, data, automation and intelligence, Vyntra connects SAP transformation to the way the business actually operates.</p>
 <div class="actions">
-<a class="btn btn-green" href="contact.html">Talk to Vico</a>
+<a class="btn btn-green" href="contact.html#contact-form" data-site-form-link>Talk to Vyntra</a>
 <a class="btn btn-outline" href="#service-rail">Explore Services</a>
 </div>
 <div class="hero-chips">
-<span>Advisory &amp; Strategy</span><span>Cloud Migration</span><span>System Integration</span>
-<span>BTP Architecture</span><span>Automation &amp; AI</span><span>Managed Operations</span>
+<span>Advisory &amp; Strategy</span><span>Cloud Migration</span>
+<span>BTP Architecture</span><span>Automation &amp; AI</span>
 </div>
 </div>
 </section>
@@ -1766,7 +1831,7 @@ complexity.</p>
 <div class="wrap">
 <div class="engine-head reveal">
 <div>
-<span class="eyebrow">The Vico transformation engine</span>
+<span class="eyebrow">The Vyntra transformation engine</span>
 <h2>Everything connects back to the business.</h2>
 </div>
 <p class="lead">Our services are designed as a connected system: understand the business, modernize the core,
@@ -1807,7 +1872,7 @@ data-copy="Feed experience and insight back into the next cycle of transformatio
 <span><small>06</small><strong>Evolve</strong></span>
 </button>
 <div class="engine-center">
-<div><small>VICO</small><br><strong>TRANSFORMATION<br>ENGINE</strong></div>
+<div><small>VYNTRA</small><br><strong>TRANSFORMATION<br>ENGINE</strong></div>
 </div>
 <div class="engine-detail"><strong id="engineTitle">Business</strong><span id="engineCopy">Start with the
 operating reality, priorities and outcomes that matter.</span></div>
@@ -1850,7 +1915,7 @@ and shape a realistic transformation roadmap around business value.</p>
 </div>
 <div class="rail-visual" id="railVisual">
 <div class="visual-flow"></div>
-<div class="visual-core">VICO<br>SERVICE</div>
+<div class="visual-core">VYNTRA<br>SERVICE</div>
 <span class="visual-node vn1">Business</span><span class="visual-node vn2">Process</span><span
 class="visual-node vn3">Architecture</span><span class="visual-node vn4">Value</span>
 </div>
@@ -1862,7 +1927,7 @@ class="visual-node vn3">Architecture</span><span class="visual-node vn4">Value</
 <div class="reveal">
 <span class="eyebrow">S/4HANA + Digital Core</span>
 <h2>Modernize the foundation without losing the business.</h2>
-<p class="lead">Vico approaches S/4HANA transformation around process simplification, clean-core principles,
+<p class="lead">Vyntra approaches S/4HANA transformation around process simplification, clean-core principles,
 cloud readiness and the operating model the business needs next.</p>
 <div class="actions"><a class="btn btn-green" href="contact.html">Discuss S/4HANA</a></div>
 </div>
@@ -1895,7 +1960,7 @@ class="btp-dot bd3">APIs</span><span class="btp-dot bd4">Workflows</span>
 <span class="eyebrow">BTP + Integration</span>
 <h2>Connect the landscape. Extend without cluttering the core.</h2>
 <p class="lead">SAP Business Technology Platform can provide the connective layer between the digital core,
-surrounding applications, data and workflows. Vico uses that architecture to make the wider enterprise work
+surrounding applications, data and workflows. Vyntra uses that architecture to make the wider enterprise work
 together.</p>
 <div class="actions"><a class="btn btn-dark" href="contact.html">Explore Integration</a></div>
 </div>
@@ -1975,12 +2040,11 @@ class="ai-core-title">CONNECTED<br>INTELLIGENCE</span></div>
 </section>
 <section class="cta">
 <div class="wrap cta-inner reveal">
-<span class="eyebrow">Ready for what's next?</span>
-<h2>Build the capability to keep evolving.</h2>
+<span class="eyebrow">Ready for What's Next?</span>
+<h2>Build the enterprise capability to <span>keep evolving.</span></h2>
 <p>SAP transformation creates its greatest value when the enterprise can keep connecting, learning, automating
 and improving.</p>
-<div class="actions"><a class="btn btn-green" href="contact.html">Talk to Vico</a><a class="btn btn-outline"
-href="solutions.html">Explore Solutions</a></div>
+<div class="actions"><a class="btn btn-light" href="contact.html#contact-form" data-site-form-link>Talk to Vyntra</a><a class="btn btn-outline" style="background:transparent; color:#fff; border-color:rgba(255,255,255,0.35);" href="1-vico-solutions.html">Explore Solutions</a></div>
 </div>
 <div class="cta-orb" aria-hidden="true"></div>
 </section>
@@ -2073,14 +2137,43 @@ if (visualNodes[i]) visualNodes[i].textContent = text;
 });
 });
 });
+// Ensure hero video autoplays reliably
+const servicesVideo = document.getElementById('servicesHeroVideo') || document.querySelector('.hero-media video');
+if (servicesVideo) {
+servicesVideo.preload = 'metadata';
+servicesVideo.muted = true;
+servicesVideo.defaultMuted = true;
+servicesVideo.playsInline = true;
+const playServicesVideo = () => {
+servicesVideo.muted = true;
+const p = servicesVideo.play();
+if (p && p.catch) p.catch(() => {});
+};
+playServicesVideo();
+servicesVideo.addEventListener('loadeddata', playServicesVideo);
+servicesVideo.addEventListener('canplay', playServicesVideo);
+['click', 'touchstart', 'scroll'].forEach(evt => {
+window.addEventListener(evt, playServicesVideo, { once: true, passive: true });
+});
+if ('IntersectionObserver' in window) {
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+playServicesVideo();
+} else {
+servicesVideo.pause();
+}
+});
+}, { threshold: 0.05 });
+observer.observe(servicesVideo);
+}
+}
 let ticking = false;
 const heroGrid = document.querySelector('.hero-grid');
-const heroSide = document.querySelector('.hero-side');
 const parallax = () => {
 if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 const y = Math.min(window.scrollY * .12, 70);
 heroGrid?.style.setProperty('--parallax', `${y}px`);
-heroSide?.style.setProperty('--parallax', `${y * .5}px`);
 ticking = false;
 };
 window.addEventListener('scroll', () => {

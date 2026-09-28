@@ -53,7 +53,7 @@ return ContentService
 .setMimeType(ContentService.MimeType.JSON);
 }
 var timestamp = Utilities.formatDate(new Date(), "Asia/Kolkata", "yyyy-MM-dd HH:mm:ss");
-var submissionId = "VICO-" + Math.floor(100000 + Math.random() * 900000);
+var submissionId = "VYNTRA-" + Math.floor(100000 + Math.random() * 900000);
 sheet.appendRow([
 submissionId,
 timestamp,

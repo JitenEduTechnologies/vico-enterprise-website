@@ -4,21 +4,34 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description"
-content="Vico Industry SAP Solutions — Manufacturing, Healthcare & Life Sciences, Retail, Distribution, Engineering, and High Tech transformation.">
-<title>Industries — Vico | Vision Course</title>
+content="Vyntra Industry SAP Solutions — Manufacturing, Healthcare & Life Sciences, Retail, Distribution, Engineering, and High Tech transformation.">
+<title>Industries — Vyntra | Vision Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://peachpuff-chamois-105831.hostingersite.com" crossorigin>
+<link rel="dns-prefetch" href="//peachpuff-chamois-105831.hostingersite.com">
 <style>
 :root {
---ink: #151515;
---paper: #f5f2ea;
---white: #fff;
---green: #087b70;
---mint: #dcefe8;
---coral: #f26b5b;
---gold: #e7bd68;
---muted: #66717d;
---dark: #111817;
---line: rgba(21, 21, 21, .12);
---wrap: min(1320px, calc(100% - 64px));
+  --vyntra-teal: #087F73;
+  --vyntra-teal-dark: #05665D;
+  --vyntra-text: #111111;
+  --vyntra-muted: #5F6B76;
+  --vyntra-bg: #F7FAFA;
+  --vyntra-white: #FFFFFF;
+  --vyntra-light-teal: #EAF6F4;
+  --vyntra-coral: #F36F61;
+  --vyntra-border: #E1E7E6;
+  --ink: #111111;
+  --paper: #F7FAFA;
+  --white: #FFFFFF;
+  --green: #087F73;
+  --mint: #EAF6F4;
+  --coral: #F36F61;
+  --muted: #5F6B76;
+  --line: #E1E7E6;
+  --dark: #05665D;
+  --wrap: min(1280px, calc(100% - 48px));
 }
 * {
 box-sizing: border-box
@@ -30,7 +43,9 @@ body {
 margin: 0;
 background: var(--paper);
 color: var(--ink);
-font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+font-weight: 400;
+line-height: 1.6;
 -webkit-font-smoothing: antialiased;
 overflow-x: hidden;
 }
@@ -41,91 +56,107 @@ color: inherit
 button {
 font: inherit
 }
-.wrap {
-width: var(--wrap);
-margin: auto
+.wrap,
+.container {
+width: min(100% - 48px, 1280px);
+margin-inline: auto;
+}
+@media (max-width: 768px) {
+.wrap,
+.container {
+width: min(100% - 32px, 1280px);
+}
+}
+@media (max-width: 480px) {
+.wrap,
+.container {
+width: min(100% - 24px, 1280px);
+}
 }
 .section {
-padding: 120px 0
+padding: 64px 0
 }
 .eyebrow {
 display: inline-flex;
 align-items: center;
-gap: 10px;
-padding: 8px 16px;
-background: rgba(255, 255, 255, .88);
-border: 1px solid rgba(8, 123, 112, .22);
-border-radius: 999px;
-backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
-box-shadow: 0 4px 16px rgba(0, 0, 0, .04);
-font-size: 11px;
-font-weight: 900;
-letter-spacing: .16em;
+gap: 8px;
+font-size: 11.5px;
+font-weight: 600;
+letter-spacing: .12em;
 text-transform: uppercase;
 color: var(--green);
-transition: transform .25s ease, box-shadow .25s ease;
-}
-.eyebrow:hover {
-transform: translateY(-2px);
-box-shadow: 0 6px 20px rgba(8, 123, 112, .12);
+margin-bottom: 12px;
 }
 .eyebrow:before {
 content: "";
-width: 8px;
-height: 8px;
+display: inline-block;
+width: 6px;
+height: 6px;
 border-radius: 50%;
 background: var(--coral);
-box-shadow: 0 0 10px rgba(242, 107, 91, .7);
-animation: dotPulse 2s infinite ease-in-out;
-}
-@keyframes dotPulse {
-0%, 100% { transform: scale(1); opacity: 1; }
-50% { transform: scale(1.35); opacity: .6; }
+flex-shrink: 0;
 }
 h1,
 h2,
-h3 {
-letter-spacing: -.055em
+h3,
+h4 {
+font-family: 'Inter', sans-serif;
+color: var(--ink);
 }
 h1 {
-font-size: clamp(52px, 7vw, 106px);
-line-height: .88;
-margin: 25px 0 28px
+font-size: clamp(38px, 4.6vw, 68px);
+line-height: 1.08;
+font-weight: 800;
+letter-spacing: -.025em;
+margin: 20px 0 24px;
+text-wrap: balance;
 }
 h2 {
-font-size: clamp(40px, 5.2vw, 74px);
-line-height: .95;
-margin: 18px 0 24px
+font-size: clamp(28px, 3.2vw, 42px);
+line-height: 1.15;
+font-weight: 700;
+letter-spacing: -.02em;
+margin: 12px 0 16px;
+text-wrap: balance;
 }
 h3 {
-font-size: 24px;
-line-height: 1.08;
-margin: 0 0 12px
+font-size: 20px;
+line-height: 1.3;
+font-weight: 600;
+letter-spacing: -.015em;
+margin: 0 0 10px
 }
 p {
-line-height: 1.65
+font-size: 15.5px;
+line-height: 1.65;
+font-weight: 400;
+color: var(--muted);
+margin: 0 0 16px;
 }
 .lead {
-font-size: clamp(18px, 1.5vw, 21px);
+font-size: clamp(16px, 1.25vw, 19px);
 line-height: 1.6;
+font-weight: 400;
 color: var(--muted);
-max-width: 700px
+max-width: 680px
 }
 .btn {
 display: inline-flex;
 align-items: center;
 justify-content: center;
-min-height: 50px;
+min-height: 48px;
 padding: 0 24px;
-border-radius: 999px;
-font-size: 13px;
-font-weight: 850;
+border-radius: 12px;
+font-size: 13.5px;
+font-weight: 600;
 border: 1px solid transparent;
-transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+transition: all .2s ease;
+cursor: pointer;
+letter-spacing: 0.01em;
 }
 .btn:hover {
-transform: translateY(-3px)
+transform: translateY(-2px);
+box-shadow: 0 4px 14px rgba(8, 127, 115, .2);
 }
 .btn-dark {
 background: var(--ink);
@@ -133,15 +164,24 @@ color: #fff
 }
 .btn-green {
 background: var(--green);
-color: #fff
+color: #fff;
+border-color: var(--green);
+}
+.btn-green:hover {
+background: var(--vyntra-teal-dark);
+border-color: var(--vyntra-teal-dark);
+}
+.btn-light {
+background: #fff;
+border-color: var(--line);
+color: var(--ink);
 }
 .btn-outline {
-background: rgba(255, 255, 255, .8);
+background: #fff;
 color: var(--ink);
-border-color: rgba(21, 21, 21, .18);
-backdrop-filter: blur(8px);
+border-color: var(--line);
 }
-.btn-outline:hover {
+.btn-outline:hover, .btn-light:hover {
 background: #fff;
 border-color: var(--green);
 color: var(--green);
@@ -163,7 +203,7 @@ transform: none
 }
 /* SECTION 1 — INDUSTRY HERO (LIGHT THEME) */
 .hero {
-min-height: calc(100svh - 70px);
+min-height: calc(100svh - 66px);
 position: relative;
 overflow: hidden;
 background: #f6f8f7;
@@ -175,22 +215,39 @@ align-items: flex-end;
 position: absolute;
 inset: 0
 }
+.hero-media img,
 .hero-media video {
 width: 100%;
 height: 100%;
 object-fit: cover;
-opacity: .66;
-filter: saturate(1.15) contrast(1.05);
+opacity: .65;
+filter: saturate(1.08) contrast(1.04);
+z-index: 0;
+transform: translateZ(0);
+will-change: transform;
+backface-visibility: hidden;
+contain: paint;
 }
 .hero-media:after {
 content: "";
 position: absolute;
 inset: 0;
 background:
-radial-gradient(circle at 85% 20%, rgba(8, 123, 112, .14), transparent 45%),
-linear-gradient(90deg, rgba(246, 248, 247, .88) 0%, rgba(246, 248, 247, .62) 55%, rgba(246, 248, 247, .20) 100%),
-linear-gradient(0deg, rgba(246, 248, 247, .85) 0%, transparent 60%);
+radial-gradient(circle at 85% 20%, rgba(8, 123, 112, .08), transparent 50%),
+linear-gradient(90deg, rgba(246, 248, 247, .88) 0%, rgba(246, 248, 247, .72) 36%, rgba(246, 248, 247, .28) 65%, transparent 100%),
+linear-gradient(0deg, rgba(246, 248, 247, .75) 0%, transparent 35%);
 pointer-events: none;
+z-index: 1;
+}
+@media (max-width: 768px) {
+.hero-media img,
+.hero-media video {
+opacity: .40;
+object-position: center 30%;
+}
+.hero-media:after {
+background: linear-gradient(180deg, rgba(246, 248, 247, .90) 0%, rgba(246, 248, 247, .76) 55%, rgba(246, 248, 247, .45) 100%);
+}
 }
 .hero-grid {
 position: absolute;
@@ -203,7 +260,7 @@ transform: translateY(var(--parallax, 0px));
 .hero-content {
 position: relative;
 z-index: 2;
-padding: 130px 0 82px
+padding: 96px 0 54px
 }
 .hero .eyebrow {
 color: var(--green)
@@ -217,34 +274,62 @@ color: var(--green)
 .hero p {
 max-width: 720px;
 color: var(--muted);
-font-size: 20px
+font-size: clamp(17px, 1.4vw, 20px);
+line-height: 1.6;
+margin: 0 0 30px;
 }
 .hero-chips {
 display: flex;
 gap: 10px;
 flex-wrap: wrap;
-margin-top: 40px
+margin-top: 30px;
+position: relative;
+z-index: 10;
+max-width: 100%;
 }
 .hero-chips span {
-padding: 9px 16px;
-border: 1px solid rgba(0, 0, 0, .1);
-border-radius: 999px;
-background: rgba(255, 255, 255, .75);
+padding: 8px 16px;
+border: 1px solid var(--line);
+border-radius: 8px;
+background: rgba(255, 255, 255, .9);
 backdrop-filter: blur(8px);
+-webkit-backdrop-filter: blur(8px);
 color: #374151;
-font-size: 10px;
-font-weight: 800;
-letter-spacing: .09em;
-text-transform: uppercase;
-transition: .25s ease;
-box-shadow: 0 4px 15px rgba(0, 0, 0, .04);
+font-size: 11px;
+font-weight: 500;
+letter-spacing: .03em;
+text-transform: none;
+transition: .2s ease;
+box-shadow: 0 2px 8px rgba(0, 0, 0, .03);
+white-space: nowrap;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+text-align: center;
 }
 .hero-chips span:hover {
 border-color: var(--green);
 color: var(--green);
 background: #fff;
-transform: translateY(-2px);
-box-shadow: 0 8px 25px rgba(8, 123, 112, .2);
+transform: translateY(-1px);
+box-shadow: 0 4px 14px rgba(8, 127, 115, .15);
+}
+@media (max-width: 768px) {
+.hero-chips {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 8px;
+width: 100%;
+max-width: 440px;
+margin-top: 24px;
+}
+.hero-chips span {
+width: 100%;
+padding: 8px 10px;
+font-size: 10px;
+white-space: normal;
+word-break: normal;
+}
 }
 /* SECTION 2 — EDITORIAL INDUSTRY MOSAIC */
 .mosaic {
@@ -263,22 +348,22 @@ gap: 20px;
 }
 .mosaic-card {
 position: relative;
-border-radius: 28px;
+border-radius: 20px;
 overflow: hidden;
 border: 1px solid var(--line);
-box-shadow: 0 15px 45px rgba(21, 21, 21, .06);
+box-shadow: 0 10px 30px rgba(21, 21, 21, .05);
 background: var(--dark);
 color: #fff;
 min-height: 360px;
 display: flex;
 flex-direction: column;
 justify-content: flex-end;
-padding: 32px;
-transition: transform .35s ease, box-shadow .35s ease;
+padding: 30px;
+transition: transform .25s ease, box-shadow .25s ease;
 }
 .mosaic-card:hover {
-transform: translateY(-6px);
-box-shadow: 0 22px 55px rgba(21, 21, 21, .14)
+transform: translateY(-4px);
+box-shadow: 0 20px 48px rgba(5, 102, 93, .16);
 }
 .mosaic-card img {
 position: absolute;
@@ -286,54 +371,74 @@ inset: 0;
 width: 100%;
 height: 100%;
 object-fit: cover;
-opacity: .62;
-transition: transform .5s ease, opacity .5s ease;
+opacity: .75;
+filter: saturate(1.08) contrast(1.04);
+transition: transform .6s var(--ease), opacity .5s ease;
 }
 .mosaic-card:hover img {
-transform: scale(1.05);
-opacity: .72
+transform: scale(1.04);
+opacity: .85;
 }
 .mosaic-overlay {
 position: absolute;
 inset: 0;
-background: linear-gradient(0deg, rgba(17, 24, 23, .92) 0%, rgba(17, 24, 23, .3) 60%, transparent 100%);
+background: linear-gradient(180deg, rgba(13, 30, 28, .05) 0%, rgba(13, 30, 28, .30) 45%, rgba(13, 30, 28, .84) 75%, rgba(13, 30, 28, .96) 100%);
 pointer-events: none;
 }
 .mosaic-body {
 position: relative;
-z-index: 2
+z-index: 2;
 }
 .mosaic-body small {
-color: #8de2d3;
-font-size: 10px;
-font-weight: 900;
-letter-spacing: .16em;
+color: #A3E7DC;
+font-size: 11px;
+font-weight: 600;
+letter-spacing: .12em;
 text-transform: uppercase;
-display: block;
-margin-bottom: 8px;
+display: inline-flex;
+align-items: center;
+gap: 8px;
+margin-bottom: 10px;
+}
+.mosaic-body small:before {
+content: "";
+display: inline-block;
+width: 5px;
+height: 5px;
+border-radius: 50%;
+background: var(--coral);
+flex-shrink: 0;
 }
 .mosaic-body h3 {
-font-size: 28px;
+font-size: clamp(22px, 2.2vw, 28px);
+font-weight: 700;
+color: #FFFFFF !important;
 margin: 0 0 10px;
-letter-spacing: -.04em
+letter-spacing: -.02em;
+line-height: 1.25;
+text-shadow: 0 2px 10px rgba(0, 0, 0, .45);
 }
 .mosaic-body p {
 margin: 0 0 16px;
-color: rgba(255, 255, 255, .7);
-font-size: 13px;
-line-height: 1.55
+color: rgba(255, 255, 255, .90);
+font-size: 14px;
+line-height: 1.6;
+font-weight: 400;
+max-width: 540px;
 }
 .mosaic-tag {
 display: inline-flex;
+align-items: center;
 padding: 6px 12px;
-border-radius: 999px;
-background: rgba(255, 255, 255, .12);
+border-radius: 8px;
+background: rgba(255, 255, 255, .15);
 backdrop-filter: blur(8px);
-border: 1px solid rgba(255, 255, 255, .18);
-font-size: 10px;
-font-weight: 800;
-letter-spacing: .06em;
-color: #fff;
+-webkit-backdrop-filter: blur(8px);
+border: 1px solid rgba(255, 255, 255, .25);
+font-size: 11px;
+font-weight: 500;
+letter-spacing: .02em;
+color: #FFFFFF;
 }
 /* Mosaic Span Variants for Editorial Rhythm */
 .mc-large {
@@ -375,44 +480,44 @@ border-bottom: 1px solid var(--line);
 padding-bottom: 20px;
 }
 .deepdive-tab {
-padding: 12px 22px;
-border-radius: 999px;
+padding: 10px 20px;
+border-radius: 10px;
 border: 1px solid var(--line);
 background: #fff;
 font-size: 12px;
-font-weight: 850;
-letter-spacing: .06em;
+font-weight: 600;
+letter-spacing: .03em;
 text-transform: uppercase;
 color: var(--muted);
 cursor: pointer;
-transition: .25s ease;
-box-shadow: 0 4px 15px rgba(0, 0, 0, .04);
+transition: .2s ease;
+box-shadow: 0 2px 8px rgba(0, 0, 0, .04);
 }
 .deepdive-tab:hover,
 .deepdive-tab.active {
 background: var(--green);
 color: #fff;
 border-color: var(--green);
-box-shadow: 0 10px 25px rgba(8, 123, 112, .3);
+box-shadow: 0 4px 15px rgba(8, 127, 115, .25);
 }
 .deepdive-stage {
 display: grid;
 grid-template-columns: 1fr 1fr;
-gap: 60px;
+gap: 50px;
 align-items: center;
 border: 1px solid var(--line);
-border-radius: 32px;
+border-radius: 20px;
 background: #fff;
-padding: 48px;
-min-height: 520px;
-box-shadow: 0 20px 60px rgba(0, 0, 0, .06);
+padding: 40px;
+min-height: 480px;
+box-shadow: 0 8px 30px rgba(0, 0, 0, .04);
 }
 .deepdive-vis {
 position: relative;
-border-radius: 24px;
+border-radius: 14px;
 overflow: hidden;
 aspect-ratio: 16/10;
-box-shadow: 0 20px 50px rgba(0, 0, 0, .12);
+box-shadow: 0 12px 35px rgba(0, 0, 0, .08);
 background: #000;
 }
 .deepdive-vis img {
@@ -422,46 +527,49 @@ object-fit: cover;
 transition: opacity .4s ease, transform .4s ease;
 }
 .deepdive-vis:hover img {
-transform: scale(1.04)
+transform: scale(1.02)
 }
 .deepdive-badge {
 position: absolute;
-top: 20px;
-left: 20px;
-padding: 8px 14px;
-border-radius: 999px;
+top: 16px;
+left: 16px;
+padding: 6px 12px;
+border-radius: 8px;
 background: rgba(17, 24, 23, .85);
 backdrop-filter: blur(10px);
 color: #8de2d3;
 font-size: 10px;
-font-weight: 900;
-letter-spacing: .14em;
+font-weight: 600;
+letter-spacing: .1em;
 text-transform: uppercase;
 border: 1px solid rgba(255, 255, 255, .15);
 }
 .deepdive-info small {
-font-size: 10px;
-font-weight: 900;
-letter-spacing: .16em;
+font-size: 10.5px;
+font-weight: 600;
+letter-spacing: .12em;
 color: var(--coral);
 text-transform: uppercase
 }
 .deepdive-info h3 {
-font-size: 36px;
-margin: 12px 0 16px;
+font-size: clamp(24px, 2.5vw, 32px);
+font-weight: 700;
+letter-spacing: -.02em;
+margin: 10px 0 14px;
 color: var(--ink);
 }
 .deepdive-box {
-padding: 18px 22px;
-border-radius: 18px;
+padding: 16px 20px;
+border-radius: 12px;
 background: var(--paper);
 border: 1px solid var(--line);
-margin-bottom: 18px;
+margin-bottom: 16px;
 }
 .deepdive-box strong {
 display: block;
-font-size: 12px;
-letter-spacing: .08em;
+font-size: 11.5px;
+font-weight: 600;
+letter-spacing: .06em;
 text-transform: uppercase;
 color: var(--green);
 margin-bottom: 4px
@@ -490,21 +598,21 @@ position: relative;
 margin-bottom: 50px;
 }
 .pathway-step {
-padding: 22px 16px;
+padding: 20px 14px;
 border: 1px solid var(--line);
-border-radius: 20px;
+border-radius: 14px;
 background: var(--paper);
 text-align: center;
-transition: transform .3s ease, border-color .3s ease;
+transition: transform .25s ease, border-color .25s ease;
 }
 .pathway-step:hover {
-transform: translateY(-4px);
+transform: translateY(-2px);
 border-color: var(--green)
 }
 .pathway-step small {
-font-size: 9px;
-font-weight: 900;
-letter-spacing: .14em;
+font-size: 9.5px;
+font-weight: 600;
+letter-spacing: .1em;
 color: var(--coral);
 display: block;
 margin-bottom: 6px
@@ -512,15 +620,16 @@ margin-bottom: 6px
 .pathway-step strong {
 display: block;
 font-size: 13px;
-letter-spacing: -.02em;
+font-weight: 600;
+letter-spacing: -.01em;
 color: var(--ink)
 }
 .pathway-banner {
 position: relative;
-border-radius: 28px;
+border-radius: 20px;
 overflow: hidden;
 border: 1px solid var(--line);
-box-shadow: 0 20px 50px rgba(21, 21, 21, .08);
+box-shadow: 0 12px 35px rgba(21, 21, 21, .06);
 min-height: 280px;
 display: flex;
 align-items: center;
@@ -537,62 +646,79 @@ opacity: .28
 .pathway-banner-overlay {
 position: relative;
 z-index: 2;
-padding: 48px;
+padding: 44px;
 max-width: 720px;
 color: var(--ink);
 }
 .pathway-banner-overlay small {
 color: var(--green);
-font-size: 10px;
-font-weight: 900;
-letter-spacing: .16em;
+font-size: 10.5px;
+font-weight: 600;
+letter-spacing: .12em;
 text-transform: uppercase;
 margin-bottom: 8px;
 display: block
 }
 .pathway-banner-overlay h3 {
-font-size: 32px;
+font-size: clamp(22px, 2.4vw, 30px);
+font-weight: 700;
+letter-spacing: -.02em;
 margin: 0 0 12px;
-line-height: 1.15;
+line-height: 1.2;
 color: var(--ink)
 }
 .pathway-banner-overlay p {
 margin: 0;
-color: var(--ink);
+color: var(--muted);
 font-size: 15px;
 line-height: 1.6;
-font-weight: 500
+font-weight: 400
 }
 /* SECTION 5 — FINAL CTA */
 .cta {
-padding: 120px 0;
-background: linear-gradient(135deg, #121919, #181328);
+padding: 100px 0;
+background: var(--vyntra-teal-dark);
 color: #fff;
 position: relative;
-overflow: hidden
+overflow: hidden;
+border-top: 1px solid rgba(255, 255, 255, .1);
 }
 .cta:before {
 content: "";
 position: absolute;
 inset: 0;
-background-image: linear-gradient(rgba(255, 255, 255, .035) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .035) 1px, transparent 1px);
-background-size: 70px 70px
+background-image: linear-gradient(rgba(255, 255, 255, .03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .03) 1px, transparent 1px);
+background-size: 60px 60px;
+pointer-events: none;
 }
 .cta-inner {
 position: relative;
 z-index: 2;
-max-width: 900px
+max-width: 860px
 }
 .cta .eyebrow {
-color: #bfe9de
+color: #a3e7dc;
+font-size: 11.5px;
+font-weight: 600;
+letter-spacing: .12em;
+text-transform: uppercase;
+margin-bottom: 12px;
 }
 .cta h2 {
-max-width: 850px
+max-width: 850px;
+font-size: clamp(32px, 4vw, 52px);
+line-height: 1.15;
+letter-spacing: -.025em;
+font-weight: 700;
+color: #fff;
+margin: 16px 0 18px;
 }
 .cta p {
 max-width: 640px;
-color: rgba(255, 255, 255, .58);
-font-size: 18px
+color: rgba(255, 255, 255, .85);
+font-size: 16.5px;
+line-height: 1.6;
+font-weight: 400;
 }
 /* RESPONSIVE MEDIA QUERIES */
 @media(max-width:1050px) {
@@ -692,23 +818,22 @@ transition: none !important
 <section class="hero">
 <div class="hero-media">
 <video autoplay muted loop playsinline preload="metadata" aria-hidden="true">
-<source src="https://peachpuff-chamois-105831.hostingersite.com/videos/1industries.mp4" type="video/mp4">
+<source src="https://peachpuff-chamois-105831.hostingersite.com/videos/12industries.mp4" type="video/mp4">
 </video>
 </div>
 <div class="hero-grid" aria-hidden="true"></div>
 <div class="wrap hero-content reveal">
-<span class="eyebrow">VICO INDUSTRY SOLUTIONS</span>
+<span class="eyebrow">VYNTRA INDUSTRY SOLUTIONS</span>
 <h1>Technology changes by industry. <span>Business reality changes it first.</span></h1>
-<p>Vico brings SAP transformation closer to the processes, people, and operational pressures that make each
+<p>Vyntra brings SAP transformation closer to the processes, people, and operational pressures that make each
 industry unique.</p>
 <div class="actions">
-<a class="btn btn-green" href="contact.html">Talk to Vico</a>
+<a class="btn btn-green" href="contact.html#contact-form" data-site-form-link>Talk to Vyntra</a>
 <a class="btn btn-outline" href="#mosaic">Explore Sectors</a>
 </div>
 <div class="hero-chips">
-<span>Manufacturing</span><span>Healthcare &amp; Life Sciences</span>
+<span>Manufacturing</span><span>Healthcare</span>
 <span>Retail &amp; CPG</span><span>Wholesale Distribution</span>
-<span>Engineering Services</span><span>High Tech</span>
 </div>
 </div>
 </section>
@@ -788,7 +913,7 @@ alt="Engineering and Professional Services SAP management" loading="lazy" decodi
 <span class="eyebrow">INDUSTRY DEEP DIVE</span>
 <h2>Deep process insight per sector.</h2>
 </div>
-<p class="lead">Select an industry to explore the specific operational pressures, SAP capabilities, and Vico
+<p class="lead">Select an industry to explore the specific operational pressures, SAP capabilities, and Vyntra
 transformation approach.</p>
 </div>
 <div class="deepdive-tabs reveal" role="tablist">
@@ -819,7 +944,7 @@ disrupting production schedules.</p>
 shop-floor analytics.</p>
 </div>
 <div class="deepdive-box">
-<strong>Vico Transformation Value</strong>
+<strong>Vyntra Transformation Value</strong>
 <p id="deepdiveVico">Connecting demand forecasting directly with plant scheduling and supplier procurement
 for end-to-end responsiveness.</p>
 </div>
@@ -867,7 +992,7 @@ alt="High Tech SAP enterprise connectivity" loading="lazy" decoding="async">
 <div class="pathway-banner-overlay">
 <small>HIGH TECH &amp; ENTERPRISE</small>
 <h3>Aligning enterprise technology with true industry speed.</h3>
-<p>Vico helps organizations build an SAP foundation that adapts as fast as their market shifts.</p>
+<p>Vyntra helps organizations build an SAP foundation that adapts as fast as their market shifts.</p>
 </div>
 </div>
 </div>
@@ -876,11 +1001,11 @@ alt="High Tech SAP enterprise connectivity" loading="lazy" decoding="async">
 <div class="wrap cta-inner reveal">
 <span class="eyebrow">BUILT AROUND YOUR INDUSTRY</span>
 <h2>Let's build around how your business actually works.</h2>
-<p>Whether you operate in manufacturing, life sciences, retail, distribution, engineering, or high tech, Vico
+<p>Whether you operate in manufacturing, life sciences, retail, distribution, engineering, or high tech, Vyntra
 maps SAP capability to your operating reality.</p>
 <div class="actions">
-<a class="btn btn-green" href="contact.html">Talk to Vico</a>
-<a class="btn btn-outline" href="1-vico-solutions.html">Explore Solutions</a>
+<a class="btn btn-light" href="contact.html#contact-form" data-site-form-link>Talk to Vyntra</a>
+<a class="btn btn-outline" style="background:transparent; color:#fff; border-color:rgba(255,255,255,0.35);" href="1-vico-solutions.html">Explore Solutions</a>
 </div>
 </div>
 </section>
@@ -984,6 +1109,37 @@ if (opportunity) opportunity.textContent = data.opportunity;
 if (vico) vico.textContent = data.vico;
 }, 200);
 };
+// Ensure hero video autoplays reliably
+const indVideo = document.querySelector('.hero-media video');
+if (indVideo) {
+indVideo.preload = 'metadata';
+indVideo.muted = true;
+indVideo.defaultMuted = true;
+indVideo.playsInline = true;
+const playIndVideo = () => {
+indVideo.muted = true;
+const p = indVideo.play();
+if (p && p.catch) p.catch(() => {});
+};
+playIndVideo();
+indVideo.addEventListener('loadeddata', playIndVideo);
+indVideo.addEventListener('canplay', playIndVideo);
+['click', 'touchstart', 'scroll'].forEach(evt => {
+window.addEventListener(evt, playIndVideo, { once: true, passive: true });
+});
+if ('IntersectionObserver' in window) {
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+playIndVideo();
+} else {
+indVideo.pause();
+}
+});
+}, { threshold: 0.05 });
+observer.observe(indVideo);
+}
+}
 // Parallax Hero
 let ticking = false;
 const heroGrid = document.querySelector('.hero-grid');

@@ -4,21 +4,34 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description"
-content="Vico SAP Product Ecosystem — S/4HANA Cloud, BTP Integration, Analytics Cloud, Datasphere, SuccessFactors, CX, and connected enterprise capabilities.">
-<title>Our Products — Vico | Vision Course</title>
+content="Vyntra SAP Product Ecosystem — S/4HANA Cloud, BTP Integration, Analytics Cloud, Datasphere, SuccessFactors, CX, and connected enterprise capabilities.">
+<title>Our Products — Vyntra | Vision Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://peachpuff-chamois-105831.hostingersite.com" crossorigin>
+<link rel="dns-prefetch" href="//peachpuff-chamois-105831.hostingersite.com">
 <style>
 :root {
---ink: #151515;
---paper: #f5f2ea;
---white: #fff;
---green: #087b70;
---mint: #dcefe8;
---coral: #f26b5b;
---gold: #e7bd68;
---muted: #66717d;
---dark: #111817;
---line: rgba(21, 21, 21, .12);
---wrap: min(1320px, calc(100% - 64px));
+  --vyntra-teal: #087F73;
+  --vyntra-teal-dark: #05665D;
+  --vyntra-text: #111111;
+  --vyntra-muted: #5F6B76;
+  --vyntra-bg: #F7FAFA;
+  --vyntra-white: #FFFFFF;
+  --vyntra-light-teal: #EAF6F4;
+  --vyntra-coral: #F36F61;
+  --vyntra-border: #E1E7E6;
+  --ink: #111111;
+  --paper: #F7FAFA;
+  --white: #FFFFFF;
+  --green: #087F73;
+  --mint: #EAF6F4;
+  --coral: #F36F61;
+  --muted: #5F6B76;
+  --line: #E1E7E6;
+  --dark: #05665D;
+  --wrap: min(1280px, calc(100% - 48px));
 }
 * {
 box-sizing: border-box
@@ -30,7 +43,9 @@ body {
 margin: 0;
 background: var(--paper);
 color: var(--ink);
-font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+font-weight: 400;
+line-height: 1.6;
 -webkit-font-smoothing: antialiased;
 overflow-x: hidden;
 }
@@ -41,91 +56,107 @@ color: inherit
 button {
 font: inherit
 }
-.wrap {
-width: var(--wrap);
-margin: auto
+.wrap,
+.container {
+width: min(100% - 48px, 1280px);
+margin-inline: auto;
+}
+@media (max-width: 768px) {
+.wrap,
+.container {
+width: min(100% - 32px, 1280px);
+}
+}
+@media (max-width: 480px) {
+.wrap,
+.container {
+width: min(100% - 24px, 1280px);
+}
 }
 .section {
-padding: 120px 0
+padding: 64px 0
 }
 .eyebrow {
 display: inline-flex;
 align-items: center;
-gap: 10px;
-padding: 8px 16px;
-background: rgba(255, 255, 255, .88);
-border: 1px solid rgba(8, 123, 112, .22);
-border-radius: 999px;
-backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
-box-shadow: 0 4px 16px rgba(0, 0, 0, .04);
-font-size: 11px;
-font-weight: 900;
-letter-spacing: .16em;
+gap: 8px;
+font-size: 11.5px;
+font-weight: 600;
+letter-spacing: .12em;
 text-transform: uppercase;
 color: var(--green);
-transition: transform .25s ease, box-shadow .25s ease;
-}
-.eyebrow:hover {
-transform: translateY(-2px);
-box-shadow: 0 6px 20px rgba(8, 123, 112, .12);
+margin-bottom: 12px;
 }
 .eyebrow:before {
 content: "";
-width: 8px;
-height: 8px;
+display: inline-block;
+width: 6px;
+height: 6px;
 border-radius: 50%;
 background: var(--coral);
-box-shadow: 0 0 10px rgba(242, 107, 91, .7);
-animation: dotPulse 2s infinite ease-in-out;
-}
-@keyframes dotPulse {
-0%, 100% { transform: scale(1); opacity: 1; }
-50% { transform: scale(1.35); opacity: .6; }
+flex-shrink: 0;
 }
 h1,
 h2,
-h3 {
-letter-spacing: -.055em
+h3,
+h4 {
+font-family: 'Inter', sans-serif;
+color: var(--ink);
 }
 h1 {
-font-size: clamp(52px, 7vw, 106px);
-line-height: .88;
-margin: 25px 0 28px
+font-size: clamp(38px, 4.6vw, 68px);
+line-height: 1.08;
+font-weight: 800;
+letter-spacing: -.025em;
+margin: 20px 0 24px;
+text-wrap: balance;
 }
 h2 {
-font-size: clamp(40px, 5.2vw, 74px);
-line-height: .95;
-margin: 18px 0 24px
+font-size: clamp(28px, 3.2vw, 42px);
+line-height: 1.15;
+font-weight: 700;
+letter-spacing: -.02em;
+margin: 12px 0 16px;
+text-wrap: balance;
 }
 h3 {
-font-size: 24px;
-line-height: 1.08;
-margin: 0 0 12px
+font-size: 20px;
+line-height: 1.3;
+font-weight: 600;
+letter-spacing: -.015em;
+margin: 0 0 10px
 }
 p {
-line-height: 1.65
+font-size: 15.5px;
+line-height: 1.65;
+font-weight: 400;
+color: var(--muted);
+margin: 0 0 16px;
 }
 .lead {
-font-size: clamp(18px, 1.5vw, 21px);
+font-size: clamp(16px, 1.25vw, 19px);
 line-height: 1.6;
+font-weight: 400;
 color: var(--muted);
-max-width: 700px
+max-width: 680px
 }
 .btn {
 display: inline-flex;
 align-items: center;
 justify-content: center;
-min-height: 50px;
+min-height: 48px;
 padding: 0 24px;
-border-radius: 999px;
-font-size: 13px;
-font-weight: 850;
+border-radius: 12px;
+font-size: 13.5px;
+font-weight: 600;
 border: 1px solid transparent;
-transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+transition: all .2s ease;
+cursor: pointer;
+letter-spacing: 0.01em;
 }
 .btn:hover {
-transform: translateY(-3px)
+transform: translateY(-2px);
+box-shadow: 0 4px 14px rgba(8, 127, 115, .2);
 }
 .btn-dark {
 background: var(--ink);
@@ -133,15 +164,24 @@ color: #fff
 }
 .btn-green {
 background: var(--green);
-color: #fff
+color: #fff;
+border-color: var(--green);
+}
+.btn-green:hover {
+background: var(--vyntra-teal-dark);
+border-color: var(--vyntra-teal-dark);
+}
+.btn-light {
+background: #fff;
+border-color: var(--line);
+color: var(--ink);
 }
 .btn-outline {
-background: rgba(255, 255, 255, .8);
+background: #fff;
 color: var(--ink);
-border-color: rgba(21, 21, 21, .18);
-backdrop-filter: blur(8px);
+border-color: var(--line);
 }
-.btn-outline:hover {
+.btn-outline:hover, .btn-light:hover {
 background: #fff;
 border-color: var(--green);
 color: var(--green);
@@ -163,7 +203,7 @@ transform: none
 }
 /* SECTION 1 — CINEMATIC PRODUCT HERO (LIGHT THEME) */
 .hero {
-min-height: calc(100svh - 70px);
+min-height: calc(100svh - 66px);
 position: relative;
 overflow: hidden;
 background: #f6f8f7;
@@ -173,78 +213,151 @@ align-items: flex-end;
 }
 .hero-media {
 position: absolute;
-inset: 0
+inset: 0;
 }
-.hero-media video {
+.hero-media img {
 width: 100%;
 height: 100%;
 object-fit: cover;
-opacity: .66;
-filter: saturate(1.15) contrast(1.05);
+object-position: center 30%;
+opacity: .68;
+filter: saturate(1.08) contrast(1.04);
+display: block;
+z-index: 0;
+transform: translateZ(0);
+will-change: transform;
 }
 .hero-media:after {
 content: "";
 position: absolute;
 inset: 0;
 background:
-radial-gradient(circle at 85% 20%, rgba(8, 123, 112, .14), transparent 45%),
-linear-gradient(90deg, rgba(246, 248, 247, .88) 0%, rgba(246, 248, 247, .62) 55%, rgba(246, 248, 247, .20) 100%),
-linear-gradient(0deg, rgba(246, 248, 247, .85) 0%, transparent 60%);
+radial-gradient(circle at 85% 20%, rgba(8, 123, 112, .08), transparent 50%),
+linear-gradient(90deg, rgba(246, 248, 247, .88) 0%, rgba(246, 248, 247, .72) 36%, rgba(246, 248, 247, .28) 65%, transparent 100%),
+linear-gradient(0deg, rgba(246, 248, 247, .75) 0%, transparent 35%);
 pointer-events: none;
+z-index: 1;
+}
+@media (max-width: 768px) {
+.hero {
+min-height: calc(100svh - 60px);
+}
+.hero-media img {
+opacity: .42;
+object-position: center center;
+}
+.hero-media:after {
+background: linear-gradient(180deg, rgba(246, 248, 247, .90) 0%, rgba(246, 248, 247, .76) 55%, rgba(246, 248, 247, .45) 100%);
+}
 }
 .hero-grid {
 position: absolute;
 inset: 0;
-opacity: .12;
+opacity: .08;
 background-image: linear-gradient(rgba(8, 123, 112, .18) 1px, transparent 1px), linear-gradient(90deg, rgba(8, 123, 112, .18) 1px, transparent 1px);
 background-size: 80px 80px;
-transform: translateY(var(--parallax, 0px));
+pointer-events: none;
+z-index: 2;
 }
 .hero-content {
 position: relative;
-z-index: 2;
-padding: 130px 0 82px
+z-index: 10;
+padding: 96px 0 54px;
+width: min(100% - 48px, 1280px);
+margin-inline: auto;
+pointer-events: auto;
 }
-.hero .eyebrow {
-color: var(--green)
+@media (max-width: 768px) {
+.hero-content {
+width: min(100% - 32px, 1280px);
+padding: 80px 0 40px;
+}
+}
+@media (max-width: 480px) {
+.hero-content {
+width: min(100% - 24px, 1280px);
+padding: 72px 0 32px;
+}
 }
 .hero h1 {
-max-width: 980px
+max-width: 980px;
+font-size: clamp(38px, 4.6vw, 64px);
+line-height: 1.1;
+letter-spacing: -.03em;
+margin: 18px 0 22px;
+font-weight: 800;
+color: var(--ink);
+text-wrap: balance;
 }
 .hero h1 span {
-color: var(--green)
+color: var(--green);
 }
 .hero p {
 max-width: 720px;
 color: var(--muted);
-font-size: 20px
+font-size: clamp(16px, 1.25vw, 19px);
+line-height: 1.6;
+margin: 0 0 28px;
+text-wrap: balance;
+}
+.hero .actions {
+display: flex;
+gap: 12px;
+flex-wrap: wrap;
+margin-top: 26px;
 }
 .hero-chips {
 display: flex;
 gap: 10px;
 flex-wrap: wrap;
-margin-top: 40px
+margin-top: 30px;
+position: relative;
+z-index: 10;
+max-width: 100%;
 }
 .hero-chips span {
-padding: 9px 16px;
-border: 1px solid rgba(0, 0, 0, .1);
-border-radius: 999px;
-background: rgba(255, 255, 255, .75);
+padding: 8px 16px;
+border: 1px solid var(--line);
+border-radius: 8px;
+background: rgba(255, 255, 255, .9);
 backdrop-filter: blur(8px);
+-webkit-backdrop-filter: blur(8px);
 color: #374151;
-font-size: 10px;
-font-weight: 800;
-letter-spacing: .09em;
-text-transform: uppercase;
-transition: .25s ease;
-box-shadow: 0 4px 15px rgba(0, 0, 0, .04);
+font-size: 11px;
+font-weight: 500;
+letter-spacing: .03em;
+text-transform: none;
+transition: .2s ease;
+box-shadow: 0 2px 8px rgba(0, 0, 0, .03);
+white-space: nowrap;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+text-align: center;
 }
 .hero-chips span:hover {
 border-color: var(--green);
 color: var(--green);
 background: #fff;
-transform: translateY(-2px);
-box-shadow: 0 8px 25px rgba(8, 123, 112, .2);
+transform: translateY(-1px);
+box-shadow: 0 4px 14px rgba(8, 127, 115, .15);
+}
+@media (max-width: 768px) {
+.hero-chips {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 8px;
+width: 100%;
+max-width: 440px;
+margin-top: 24px;
+}
+.hero-chips span {
+width: 100%;
+padding: 8px 10px;
+font-size: 10px;
+white-space: normal;
+word-break: normal;
+}
 }
 /* SECTION 2 — PRODUCT LANDSCAPE LAYERED SYSTEM (LIGHT THEME) */
 .landscape {
@@ -272,21 +385,21 @@ position: relative
 }
 .landscape-layer {
 border: 1px solid var(--line);
-border-radius: 24px;
+border-radius: 16px;
 background: #fff;
-padding: 28px 32px;
+padding: 24px 28px;
 display: grid;
 grid-template-columns: 200px 1fr 1.2fr;
 gap: 30px;
 align-items: center;
-box-shadow: 0 8px 30px rgba(0, 0, 0, .04);
-transition: transform .35s ease, border-color .35s ease, background .35s ease, box-shadow .35s ease;
+box-shadow: 0 4px 20px rgba(0, 0, 0, .03);
+transition: transform .25s ease, border-color .25s ease, background .25s ease, box-shadow .25s ease;
 }
 .landscape-layer:hover {
-transform: translateX(8px);
+transform: translateX(4px);
 border-color: var(--green);
 background: #fdfdfd;
-box-shadow: 0 12px 35px rgba(8, 123, 112, .12);
+box-shadow: 0 8px 25px rgba(8, 123, 112, .1);
 }
 .landscape-layer.core-highlight {
 border-color: rgba(8, 123, 112, .4);
@@ -298,15 +411,16 @@ flex-direction: column;
 gap: 4px
 }
 .landscape-tag small {
-font-size: 9px;
-font-weight: 900;
-letter-spacing: .16em;
+font-size: 10px;
+font-weight: 600;
+letter-spacing: .12em;
 color: var(--coral);
 text-transform: uppercase
 }
 .landscape-tag strong {
-font-size: 18px;
-letter-spacing: -.03em;
+font-size: 17px;
+font-weight: 600;
+letter-spacing: -.02em;
 color: var(--ink)
 }
 .landscape-products {
@@ -315,17 +429,17 @@ gap: 8px;
 flex-wrap: wrap
 }
 .landscape-pill {
-padding: 7px 13px;
-border-radius: 999px;
+padding: 6px 12px;
+border-radius: 8px;
 background: var(--paper);
 border: 1px solid var(--line);
 font-size: 11px;
-font-weight: 800;
-letter-spacing: .05em;
+font-weight: 600;
+letter-spacing: .02em;
 color: var(--green);
 }
 .landscape-desc {
-font-size: 13px;
+font-size: 13.5px;
 color: var(--muted);
 line-height: 1.55;
 margin: 0
@@ -348,42 +462,42 @@ flex-wrap: wrap;
 margin-bottom: 45px;
 }
 .spotlight-tab {
-padding: 12px 22px;
-border-radius: 999px;
+padding: 10px 20px;
+border-radius: 10px;
 border: 1px solid var(--line);
 background: #fff;
 font-size: 12px;
-font-weight: 850;
-letter-spacing: .06em;
+font-weight: 600;
+letter-spacing: .03em;
 text-transform: uppercase;
 color: var(--muted);
 cursor: pointer;
-transition: .25s ease;
+transition: .2s ease;
 }
 .spotlight-tab:hover,
 .spotlight-tab.active {
 background: var(--ink);
 color: #fff;
 border-color: var(--ink);
-box-shadow: 0 10px 25px rgba(21, 21, 21, .15);
+box-shadow: 0 4px 15px rgba(21, 21, 21, .12);
 }
 .spotlight-stage {
 display: grid;
 grid-template-columns: 1.1fr 0.9fr;
-gap: 60px;
+gap: 50px;
 align-items: center;
 border: 1px solid var(--line);
-border-radius: 36px;
+border-radius: 20px;
 background: #fff;
-padding: 48px;
-box-shadow: 0 20px 60px rgba(21, 21, 21, .06);
-min-height: 500px;
+padding: 40px;
+box-shadow: 0 8px 30px rgba(21, 21, 21, .04);
+min-height: 480px;
 }
 .spotlight-vis {
 position: relative;
-border-radius: 24px;
+border-radius: 14px;
 overflow: hidden;
-box-shadow: 0 15px 40px rgba(0, 0, 0, .12);
+box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
 aspect-ratio: 16/10;
 background: var(--dark);
 }
@@ -394,58 +508,61 @@ object-fit: cover;
 transition: opacity .4s ease, transform .4s ease;
 }
 .spotlight-vis:hover img {
-transform: scale(1.03)
+transform: scale(1.02)
 }
 .spotlight-badge {
 position: absolute;
-top: 20px;
-left: 20px;
-padding: 8px 14px;
-border-radius: 999px;
+top: 16px;
+left: 16px;
+padding: 6px 12px;
+border-radius: 8px;
 background: rgba(21, 21, 21, .85);
 backdrop-filter: blur(10px);
 color: #8de2d3;
 font-size: 10px;
-font-weight: 900;
-letter-spacing: .14em;
+font-weight: 600;
+letter-spacing: .1em;
 text-transform: uppercase;
 border: 1px solid rgba(255, 255, 255, .15);
 }
 .spotlight-info small {
-font-size: 10px;
-font-weight: 900;
-letter-spacing: .16em;
+font-size: 10.5px;
+font-weight: 600;
+letter-spacing: .12em;
 color: var(--coral);
 text-transform: uppercase
 }
 .spotlight-info h3 {
-font-size: 36px;
-margin: 12px 0 16px
+font-size: clamp(24px, 2.5vw, 32px);
+font-weight: 700;
+letter-spacing: -.02em;
+margin: 10px 0 14px
 }
 .spotlight-problem {
 padding: 16px 20px;
-border-radius: 16px;
+border-radius: 12px;
 background: var(--paper);
 border: 1px solid var(--line);
 margin-bottom: 24px;
-font-size: 13px;
+font-size: 13.5px;
 color: var(--muted);
 line-height: 1.6;
 }
 .spotlight-problem strong {
 color: var(--ink);
 display: block;
-margin-bottom: 4px
+margin-bottom: 4px;
+font-weight: 600;
 }
 .spotlight-caps {
 list-style: none;
 padding: 0;
-margin: 0 0 32px
+margin: 0 0 28px
 }
 .spotlight-caps li {
 position: relative;
-padding-left: 26px;
-margin-bottom: 12px;
+padding-left: 24px;
+margin-bottom: 10px;
 font-size: 14px;
 color: var(--ink);
 line-height: 1.5;
@@ -456,7 +573,7 @@ position: absolute;
 left: 0;
 top: 0;
 color: var(--green);
-font-weight: 900
+font-weight: 600
 }
 /* SECTION 4 — HOW PRODUCTS WORK TOGETHER */
 .architecture {
@@ -466,43 +583,43 @@ overflow: hidden
 .arch-grid {
 display: grid;
 grid-template-columns: 1fr 1fr;
-gap: 70px;
+gap: 60px;
 align-items: center
 }
 .arch-flow {
 display: flex;
 flex-direction: column;
-gap: 14px;
+gap: 12px;
 position: relative
 }
 .arch-step {
 display: grid;
-grid-template-columns: 48px 1fr;
-gap: 18px;
+grid-template-columns: 44px 1fr;
+gap: 16px;
 align-items: center;
-padding: 18px 22px;
+padding: 16px 20px;
 border: 1px solid var(--line);
-border-radius: 20px;
+border-radius: 14px;
 background: var(--paper);
-transition: transform .3s ease, box-shadow .3s ease;
+transition: transform .25s ease, box-shadow .25s ease;
 }
 .arch-step:hover {
-transform: translateX(6px);
-box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
+transform: translateX(4px);
+box-shadow: 0 6px 20px rgba(0, 0, 0, .04);
 border-color: var(--green)
 }
 .arch-num {
-width: 42px;
-height: 42px;
+width: 38px;
+height: 38px;
 border-radius: 50%;
 background: #ffffff;
 color: var(--ink);
 display: grid;
 place-items: center;
-font-size: 11px;
-font-weight: 900;
+font-size: 12px;
+font-weight: 600;
 border: 1px solid var(--line);
-box-shadow: 0 4px 12px rgba(21, 21, 21, .06);
+box-shadow: 0 2px 8px rgba(21, 21, 21, .04);
 }
 .arch-step:nth-child(2) .arch-num {
 background: var(--green);
@@ -516,7 +633,8 @@ border: none;
 }
 .arch-step strong {
 display: block;
-font-size: 15px;
+font-size: 14.5px;
+font-weight: 600;
 margin-bottom: 2px
 }
 .arch-step span {
@@ -524,10 +642,10 @@ font-size: 12px;
 color: var(--muted)
 }
 .arch-vis-card {
-border-radius: 28px;
+border-radius: 20px;
 overflow: hidden;
 border: 1px solid var(--line);
-box-shadow: 0 20px 50px rgba(21, 21, 21, .08);
+box-shadow: 0 16px 45px rgba(21, 21, 21, .06);
 position: relative;
 background: var(--dark);
 }
@@ -545,52 +663,68 @@ background: linear-gradient(0deg, rgba(17, 24, 23, .92) 0%, rgba(17, 24, 23, .2)
 display: flex;
 flex-direction: column;
 justify-content: flex-end;
-padding: 36px;
+padding: 32px;
 color: #fff;
 }
 .arch-vis-overlay small {
 color: #8de2d3;
-font-size: 10px;
-font-weight: 900;
-letter-spacing: .16em;
+font-size: 10.5px;
+font-weight: 600;
+letter-spacing: .12em;
 text-transform: uppercase;
-margin-bottom: 8px
+margin-bottom: 6px
 }
 .arch-vis-overlay strong {
-font-size: 22px;
-letter-spacing: -.03em;
-line-height: 1.25
+font-size: 20px;
+font-weight: 600;
+letter-spacing: -.02em;
+line-height: 1.3
 }
 /* SECTION 5 — FINAL CTA */
 .cta {
-padding: 120px 0;
-background: linear-gradient(135deg, #121919, #181328);
+padding: 100px 0;
+background: var(--vyntra-teal-dark);
 color: #fff;
 position: relative;
-overflow: hidden
+overflow: hidden;
+border-top: 1px solid rgba(255, 255, 255, .1);
 }
 .cta:before {
 content: "";
 position: absolute;
 inset: 0;
-background-image: linear-gradient(rgba(255, 255, 255, .035) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .035) 1px, transparent 1px);
-background-size: 70px 70px
+background-image: linear-gradient(rgba(255, 255, 255, .03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .03) 1px, transparent 1px);
+background-size: 60px 60px;
+pointer-events: none;
 }
 .cta-inner {
 position: relative;
 z-index: 2;
-max-width: 900px
+max-width: 860px
 }
 .cta .eyebrow {
-color: #bfe9de
+color: #a3e7dc;
+font-size: 11.5px;
+font-weight: 600;
+letter-spacing: .12em;
+text-transform: uppercase;
+margin-bottom: 12px;
 }
 .cta h2 {
-max-width: 850px
+max-width: 850px;
+font-size: clamp(32px, 4vw, 52px);
+line-height: 1.15;
+letter-spacing: -.025em;
+font-weight: 700;
+color: #fff;
+margin: 16px 0 18px;
 }
 .cta p {
 max-width: 640px;
-color: rgba(255, 255, 255, .58);
-font-size: 18px
+color: rgba(255, 255, 255, .85);
+font-size: 16.5px;
+line-height: 1.6;
+font-weight: 400;
 }
 /* RESPONSIVE MEDIA QUERIES */
 @media(max-width:1050px) {
@@ -682,23 +816,20 @@ transition: none !important
 <main>
 <section class="hero">
 <div class="hero-media">
-<video autoplay muted loop playsinline preload="metadata" aria-hidden="true">
-<source src="https://peachpuff-chamois-105831.hostingersite.com/videos/ourproducts.mp4" type="video/mp4">
-</video>
+<img src="https://peachpuff-chamois-105831.hostingersite.com/images/1-tech.jpg" alt="Vyntra SAP Product Ecosystem" loading="eager" fetchpriority="high" decoding="async">
 </div>
 <div class="hero-grid" aria-hidden="true"></div>
 <div class="wrap hero-content reveal">
-<span class="eyebrow">VICO PRODUCT ECOSYSTEM</span>
+<span class="eyebrow">Vyntra Product Ecosystem</span>
 <h1>Technology that <span>works together.</span></h1>
-<p>From the digital core to analytics, workforce, customer experience, and intelligent operations — Vico brings
-the SAP landscape together around business outcomes.</p>
+<p>From the digital core to analytics, workforce, customer experience, and intelligent operations — Vyntra brings the SAP landscape together around business outcomes.</p>
 <div class="actions">
-<a class="btn btn-green" href="contact.html">Talk to Vico</a>
+<a class="btn btn-green" href="contact.html#contact-form" data-site-form-link>Talk to Vyntra</a>
 <a class="btn btn-outline" href="#spotlight">Explore Ecosystem</a>
 </div>
 <div class="hero-chips">
-<span>S/4HANA Cloud</span><span>SAP BTP</span><span>Analytics Cloud</span>
-<span>Datasphere</span><span>SuccessFactors</span><span>SAP CX</span><span>Ariba</span>
+<span>S/4HANA Cloud</span><span>SAP BTP</span>
+<span>Analytics Cloud</span><span>SuccessFactors</span>
 </div>
 </div>
 </section>
@@ -774,7 +905,7 @@ directly with core operations.</p>
 <span class="eyebrow">PRODUCT SPOTLIGHT</span>
 <h2>Explore core SAP capabilities.</h2>
 <p class="lead" style="margin:0 auto">Select a product area to see where it fits, the business problem it
-solves, and how Vico maximizes its value.</p>
+solves, and how Vyntra maximizes its value.</p>
 </div>
 <div class="spotlight-tabs reveal" role="tablist">
 <button class="spotlight-tab active" onclick="switchSpotlight(0)">S/4HANA Core</button>
@@ -840,7 +971,7 @@ outcomes</span></div>
 <div class="reveal">
 <div class="arch-vis-card">
 <img src="https://peachpuff-chamois-105831.hostingersite.com/images/ourproducts%20images/3.jpeg"
-alt="Vico SAP connected architecture screenshot" loading="lazy" decoding="async">
+alt="Vyntra SAP connected architecture screenshot" loading="lazy" decoding="async">
 <div class="arch-vis-overlay">
 <small>INTEGRATED OPERATING PICTURE</small>
 <strong>Connected capabilities drive continuous enterprise evolution.</strong>
@@ -855,10 +986,10 @@ alt="Vico SAP connected architecture screenshot" loading="lazy" decoding="async"
 <span class="eyebrow">READY TO ALIGN YOUR TECH LANDSCAPE?</span>
 <h2>Let's build the right SAP landscape for what's next.</h2>
 <p>From product evaluation and clean-core architecture to BTP integration, data foundations, and continuous
-evolution, Vico brings clarity to enterprise technology decisions.</p>
+evolution, Vyntra brings clarity to enterprise technology decisions.</p>
 <div class="actions">
-<a class="btn btn-green" href="contact.html">Talk to Vico</a>
-<a class="btn btn-outline" href="1-vico-solutions.html">Explore Solutions</a>
+<a class="btn btn-light" href="contact.html#contact-form" data-site-form-link>Talk to Vyntra</a>
+<a class="btn btn-outline" style="background:transparent; color:#fff; border-color:rgba(255,255,255,0.35);" href="1-vico-solutions.html">Explore Solutions</a>
 </div>
 </div>
 </section>
@@ -971,6 +1102,37 @@ caps.appendChild(li);
 }
 }, 200);
 };
+// Ensure hero video autoplays reliably
+const prodVideo = document.querySelector('.hero-media video');
+if (prodVideo) {
+prodVideo.preload = 'metadata';
+prodVideo.muted = true;
+prodVideo.defaultMuted = true;
+prodVideo.playsInline = true;
+const playProdVideo = () => {
+prodVideo.muted = true;
+const p = prodVideo.play();
+if (p && p.catch) p.catch(() => {});
+};
+playProdVideo();
+prodVideo.addEventListener('loadeddata', playProdVideo);
+prodVideo.addEventListener('canplay', playProdVideo);
+['click', 'touchstart', 'scroll'].forEach(evt => {
+window.addEventListener(evt, playProdVideo, { once: true, passive: true });
+});
+if ('IntersectionObserver' in window) {
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+playProdVideo();
+} else {
+prodVideo.pause();
+}
+});
+}, { threshold: 0.05 });
+observer.observe(prodVideo);
+}
+}
 // Light Parallax for Hero
 let ticking = false;
 const heroGrid = document.querySelector('.hero-grid');
