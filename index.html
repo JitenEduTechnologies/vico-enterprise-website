@@ -131,193 +131,7 @@ color: var(--muted);
 font-size: 16px;
 line-height: 1.65;
 }
-/* HEADER (LIGHT THEME) */
-.site-header {
-position: fixed;
-z-index: 1000;
-inset: 0 0 auto;
-height: 66px;
-background: rgba(255, 255, 255, .88);
-backdrop-filter: blur(20px);
--webkit-backdrop-filter: blur(20px);
-border-bottom: 1px solid rgba(0, 0, 0, .06);
-box-shadow: 0 4px 20px rgba(0, 0, 0, .03);
-transition: transform .42s cubic-bezier(.2, .8, .2, 1);
-will-change: transform;
-transform: translateY(0);
-}
-.site-header.is-hidden {
-transform: translateY(-110%)
-}
-.header-inner {
-height: 100%;
-width: min(1320px, calc(100% - 48px));
-margin: auto;
-display: flex;
-align-items: center;
-justify-content: space-between;
-gap: 20px;
-}
-.brand {
-display: flex;
-align-items: center;
-gap: 9px;
-color: #111827;
-flex: none;
-text-decoration: none;
-}
-.brand-mark {
-width: 30px;
-height: 30px;
-border-radius: 9px;
-background: var(--coral);
-position: relative;
-transform: rotate(-8deg);
-flex-shrink: 0;
-}
-.brand-mark:after {
-content: "";
-position: absolute;
-width: 13px;
-height: 13px;
-border: 3.5px solid #fff;
-border-left-color: transparent;
-border-radius: 50%;
-left: 7px;
-top: 5px;
-}
-.brand-mark:before {
-content: "";
-position: absolute;
-width: 8px;
-height: 3.5px;
-background: #fff;
-right: 4px;
-bottom: 6px;
-transform: rotate(-35deg);
-}
-.brand-word {
-font-size: 20px;
-font-weight: 700;
-letter-spacing: -.03em;
-color: var(--vyntra-text);
-}
-.nav {
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 4px;
-margin-left: auto;
-margin-right: 12px;
-}
-.nav a {
-font-size: 13.5px;
-font-weight: 500;
-color: var(--vyntra-muted);
-padding: 8px 12px;
-border-radius: 8px;
-white-space: nowrap;
-text-decoration: none;
-transition: color .15s ease, background .15s ease;
-}
-.nav a:hover {
-color: var(--vyntra-teal);
-background: var(--vyntra-light-teal);
-}
-.nav a.active {
-color: var(--vyntra-teal);
-font-weight: 600;
-background: var(--vyntra-light-teal);
-}
-.header-cta {
-display: inline-flex;
-align-items: center;
-justify-content: center;
-min-height: 40px;
-padding: 0 18px;
-border: 1px solid transparent;
-border-radius: 10px;
-background: var(--vyntra-teal);
-color: #fff;
-font-size: 13px;
-font-weight: 600;
-letter-spacing: -.01em;
-white-space: nowrap;
-text-decoration: none;
-transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
-box-shadow: 0 2px 8px rgba(8, 127, 115, .2);
-flex-shrink: 0;
-}
-.header-cta:hover {
-transform: translateY(-1px);
-background: var(--vyntra-teal-dark);
-box-shadow: 0 4px 14px rgba(8, 127, 115, .28);
-}
-.menu-btn {
-display: none;
-margin-left: auto;
-width: 44px;
-height: 44px;
-border-radius: 50%;
-border: 1px solid rgba(0, 0, 0, .12);
-background: rgba(0, 0, 0, .04);
-color: #111827;
-cursor: pointer;
-font-size: 20px;
-line-height: 1;
-align-items: center;
-justify-content: center;
-}
-@media(max-width:1200px) {
-.nav { gap: 2px; }
-.nav a { font-size: 12px; padding: 6px 9px; }
-.header-cta { padding: 8px 16px; font-size: 11.5px; }
-}
-@media(max-width:980px) {
-.nav { gap: 1px; }
-.nav a { font-size: 11px; padding: 5px 6px; }
-.header-cta { padding: 7px 12px; font-size: 10.5px; }
-}
-@media(max-width:920px) {
-.header-inner { width: calc(100% - 32px); }
-.nav, .header-cta { display: none; }
-.menu-btn { display: flex; }
-.nav.open {
-display: flex;
-position: absolute;
-top: 66px;
-left: 12px;
-right: 12px;
-flex-direction: column;
-gap: 4px;
-background: rgba(255, 255, 255, .98);
-border: 1px solid rgba(0, 0, 0, .1);
-border-radius: 20px;
-padding: 12px;
-box-shadow: 0 20px 50px rgba(0, 0, 0, .15);
-}
-.nav.open a {
-width: 100%;
-min-height: 44px;
-display: flex;
-align-items: center;
-padding: 10px 16px;
-font-size: 14px;
-border-radius: 12px;
-color: #1f2937;
-}
-.nav.open a:hover,
-.nav.open a.active {
-background: rgba(8, 123, 112, .08);
-color: #087b70;
-}
-}
-@media(max-width:600px) {
-.site-header { height: 60px; }
-.nav.open { top: 60px; }
-.brand-word { font-size: 21px; }
-.brand-mark { width: 28px; height: 28px; }
-}
+/* Header styles provided dynamically by shared header.html */
 /* HERO (LIGHT THEME - SERVICES STYLE) */
 .hero {
 min-height: calc(100svh - 66px);
@@ -3175,7 +2989,7 @@ color: #716d65;
 font-size: 11.5px;
 line-height: 1.62;
 }
-#methodology .method-flow-svg {
+#methodology .desktop-flow-svg {
 position: absolute;
 z-index: 1;
 left: 0;
@@ -3184,6 +2998,9 @@ width: 100%;
 height: 165px;
 overflow: visible;
 pointer-events: none;
+}
+#methodology .tablet-flow-svg {
+display: none;
 }
 #methodology .method-main-line {
 fill: none;
@@ -3229,58 +3046,57 @@ display: none
 #methodology .method-flow {
 width: calc(100% - 40px);
 margin-top: 78px;
+position: relative;
 }
 #methodology .method-grid {
 grid-template-columns: repeat(3, minmax(0, 1fr));
 gap: 68px 22px;
+position: relative;
+z-index: 3;
 }
 #methodology .method-card {
 min-height: 265px;
 padding: 76px 18px 24px;
+position: relative;
+z-index: 3;
+background: rgba(255, 255, 255, .96);
 }
-#methodology .method-flow-svg {
-display: none
+#methodology .desktop-flow-svg {
+display: none;
+}
+#methodology .tablet-flow-svg {
+display: block;
+position: absolute;
+z-index: 1;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: visible;
+pointer-events: none;
+}
+#methodology .tablet-main-line {
+fill: none;
+stroke: rgba(38, 48, 45, .12);
+stroke-width: 2.2;
+vector-effect: non-scaling-stroke;
+}
+#methodology .tablet-progress-line {
+fill: none;
+stroke: url(#tabletMethodGradient);
+stroke-width: 2.2;
+stroke-linecap: round;
+stroke-dasharray: 5 9;
+vector-effect: non-scaling-stroke;
+animation: methodFlow 7s linear infinite;
 }
 #methodology .method-card:nth-child(1)::after,
-#methodology .method-card:nth-child(2)::after {
-content: "";
-position: absolute;
-z-index: 1;
-right: -47px;
-top: -1px;
-width: 58px;
-height: 72px;
-border-top: 2px solid #159b8c;
-border-right: 2px solid #159b8c;
-border-radius: 0 28px 0 0;
-pointer-events: none;
-}
+#methodology .method-card:nth-child(2)::after,
 #methodology .method-card:nth-child(4)::after,
-#methodology .method-card:nth-child(5)::after {
-content: "";
-position: absolute;
-z-index: 1;
-right: -47px;
-top: -1px;
-width: 58px;
-height: 72px;
-border-top: 2px solid #e47b6d;
-border-right: 2px solid #e47b6d;
-border-radius: 0 28px 0 0;
-pointer-events: none;
-}
-#methodology .method-card:nth-child(3)::before {
-content: "";
-position: absolute;
-z-index: 1;
-left: 50%;
-bottom: -70px;
-width: 2px;
-height: 70px;
-background: linear-gradient(180deg, #b99a64, #e47b6d);
-}
+#methodology .method-card:nth-child(5)::after,
+#methodology .method-card:nth-child(3)::before,
 #methodology .method-card:nth-child(6)::after {
-display: none
+display: none !important;
 }
 }
 /* Mobile: six equal, alternating cards around one continuous central curved path. */
@@ -3308,7 +3124,8 @@ width: calc(100% - 18px);
 margin: 64px auto 0;
 }
 #methodology .method-grid,
-#methodology .desktop-flow-svg {
+#methodology .desktop-flow-svg,
+#methodology .tablet-flow-svg {
 display: none
 }
 #methodology .mobile-flow {
@@ -3327,7 +3144,7 @@ left: 0;
 top: 0;
 width: 100%;
 height: 100%;
-overflow: hidden;
+overflow: visible;
 pointer-events: none;
 }
 #methodology .mobile-main-line {
@@ -3504,25 +3321,7 @@ overflow-x: hidden;
 <link rel="dns-prefetch" href="//godietech.ujwalabookhouse.com">
 </head>
 <body>
-<header class="site-header" id="siteHeader">
-<div class="header-inner">
-<a class="brand" href="index.html" aria-label="Vyntra home">
-<span class="brand-mark" aria-hidden="true"></span><span class="brand-word">Vyntra</span>
-</a>
-<nav class="nav" id="mainNav" aria-label="Primary navigation">
-<a href="index.html" class="active">Home</a>
-<a class="drop" href="1-vico-solutions.html">Solutions</a>
-<a class="drop" href="services.html">Services</a>
-<a class="drop" href="our-products.html">Our Products</a>
-<a class="drop" href="industries.html">Industries</a>
-<a class="drop" href="careers.html">SAP Careers</a>
-<a class="drop" href="contact.html">Contact Us</a>
-</nav>
-<a class="header-cta" href="contact.html#contact-form">Contact Us</a>
-<button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false"
-aria-controls="mainNav">☰</button>
-</div>
-</header>
+<div id="site-header"></div>
 <main>
 <section class="hero">
 <video id="heroVideo" muted loop playsinline autoplay preload="metadata" aria-hidden="true">
@@ -3841,6 +3640,18 @@ S 865 104, 900 74
 S 965 44, 1000 74
 S 1065 104, 1100 74" />
 </svg>
+<svg class="method-flow-svg tablet-flow-svg" aria-hidden="true">
+<defs>
+<linearGradient id="tabletMethodGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#159b8c" />
+<stop offset="42%" stop-color="#b99a64" />
+<stop offset="72%" stop-color="#e47b6d" />
+<stop offset="100%" stop-color="#25302d" />
+</linearGradient>
+</defs>
+<path class="tablet-main-line" />
+<path class="tablet-progress-line" />
+</svg>
 <div class="method-grid">
 <article class="method-card c1">
 <div class="method-node">01</div>
@@ -3880,7 +3691,7 @@ S 1065 104, 1100 74" />
 </article>
 </div>
 <div class="mobile-flow" aria-label="Mobile transformation journey">
-<svg class="mobile-flow-svg" viewBox="0 0 100 620" preserveAspectRatio="none" aria-hidden="true">
+<svg class="mobile-flow-svg" aria-hidden="true">
 <defs>
 <linearGradient id="mobileMethodGradient" x1="0%" y1="0%" x2="100%" y2="100%">
 <stop offset="0%" stop-color="#159b8c" />
@@ -3889,22 +3700,8 @@ S 1065 104, 1100 74" />
 <stop offset="100%" stop-color="#25302d" />
 </linearGradient>
 </defs>
-<path class="mobile-main-line" d="M 50 42
-C 86 70, 86 95, 50 112
-C 14 129, 14 154, 50 180
-C 86 205, 86 230, 50 248
-C 14 266, 14 292, 50 314
-C 86 337, 86 362, 50 382
-C 14 402, 14 430, 50 452
-C 86 474, 86 502, 50 532" />
-<path class="mobile-progress-line" d="M 50 42
-C 86 70, 86 95, 50 112
-C 14 129, 14 154, 50 180
-C 86 205, 86 230, 50 248
-C 14 266, 14 292, 50 314
-C 86 337, 86 362, 50 382
-C 14 402, 14 430, 50 452
-C 86 474, 86 502, 50 532" />
+<path class="mobile-main-line" />
+<path class="mobile-progress-line" />
 </svg>
 <div class="mobile-card mc01">
 <div class="method-node">01</div>
@@ -4257,6 +4054,142 @@ if (e.key === 'F12' || e.keyCode === 123) { e.preventDefault(); return false; }
 if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c')) { e.preventDefault(); return false; }
 if (e.ctrlKey && (e.key === 's' || e.key === 'S' || e.keyCode === 83)) { e.preventDefault(); return false; }
 }, false);
+})();
+</script>
+<script id="transformation-journey-line-script">
+(() => {
+  'use strict';
+
+  function updateTransformationJourneyLines() {
+    const methodology = document.getElementById('methodology');
+    if (!methodology) return;
+
+    const w = window.innerWidth;
+
+    // --- TABLET MODE (601px to 1100px) ---
+    if (w >= 601 && w <= 1100) {
+      const flow = methodology.querySelector('.method-flow');
+      const svg = methodology.querySelector('.tablet-flow-svg');
+      const cards = methodology.querySelectorAll('.method-grid .method-card');
+      if (flow && svg && cards.length >= 6) {
+        const flowRect = flow.getBoundingClientRect();
+        const svgW = Math.max(1, flowRect.width);
+        const svgH = Math.max(1, flowRect.height);
+        svg.setAttribute('viewBox', '0 0 ' + svgW + ' ' + svgH);
+
+        const nodes = Array.from(cards).map(card => {
+          const node = card.querySelector('.method-node');
+          const target = node || card;
+          const r = target.getBoundingClientRect();
+          return {
+            x: r.left + r.width / 2 - flowRect.left,
+            y: r.top + r.height / 2 - flowRect.top
+          };
+        });
+
+        const [c1, c2, c3, c4, c5, c6] = nodes;
+        const card3Rect = cards[2].getBoundingClientRect();
+        const cardWidth = card3Rect.width;
+
+        // Path geometry connecting: 01 -> 02 -> 03 -> loop across row gap -> 04 -> 05 -> 06
+        const dx12 = c2.x - c1.x;
+        const p12 = 'M ' + c1.x.toFixed(1) + ' ' + c1.y.toFixed(1) +
+          ' C ' + (c1.x + dx12 * 0.35).toFixed(1) + ' ' + (c1.y - 24).toFixed(1) +
+          ', ' + (c2.x - dx12 * 0.35).toFixed(1) + ' ' + (c2.y - 24).toFixed(1) +
+          ', ' + c2.x.toFixed(1) + ' ' + c2.y.toFixed(1);
+
+        const dx23 = c3.x - c2.x;
+        const p23 = ' C ' + (c2.x + dx23 * 0.35).toFixed(1) + ' ' + (c2.y + 24).toFixed(1) +
+          ', ' + (c3.x - dx23 * 0.35).toFixed(1) + ' ' + (c3.y + 24).toFixed(1) +
+          ', ' + c3.x.toFixed(1) + ' ' + c3.y.toFixed(1);
+
+        const rightBound = Math.min(svgW - 8, c3.x + cardWidth * 0.48 + 14);
+        const midY = (c3.y + c4.y) / 2;
+        const leftBound = Math.max(8, c4.x - cardWidth * 0.48 - 14);
+
+        const p34 = ' C ' + (c3.x + 38).toFixed(1) + ' ' + c3.y.toFixed(1) +
+          ', ' + rightBound.toFixed(1) + ' ' + (c3.y + 35).toFixed(1) +
+          ', ' + rightBound.toFixed(1) + ' ' + midY.toFixed(1) +
+          ' C ' + rightBound.toFixed(1) + ' ' + (midY + 28).toFixed(1) +
+          ', ' + (c3.x + 10).toFixed(1) + ' ' + midY.toFixed(1) +
+          ', ' + c2.x.toFixed(1) + ' ' + midY.toFixed(1) +
+          ' C ' + (c4.x + 30).toFixed(1) + ' ' + midY.toFixed(1) +
+          ', ' + leftBound.toFixed(1) + ' ' + (midY + 12).toFixed(1) +
+          ', ' + leftBound.toFixed(1) + ' ' + (c4.y - 28).toFixed(1) +
+          ' C ' + leftBound.toFixed(1) + ' ' + (c4.y - 8).toFixed(1) +
+          ', ' + (c4.x - 28).toFixed(1) + ' ' + c4.y.toFixed(1) +
+          ', ' + c4.x.toFixed(1) + ' ' + c4.y.toFixed(1);
+
+        const dx45 = c5.x - c4.x;
+        const p45 = ' C ' + (c4.x + dx45 * 0.35).toFixed(1) + ' ' + (c4.y - 24).toFixed(1) +
+          ', ' + (c5.x - dx45 * 0.35).toFixed(1) + ' ' + (c5.y - 24).toFixed(1) +
+          ', ' + c5.x.toFixed(1) + ' ' + c5.y.toFixed(1);
+
+        const dx56 = c6.x - c5.x;
+        const p56 = ' C ' + (c5.x + dx56 * 0.35).toFixed(1) + ' ' + (c5.y + 24).toFixed(1) +
+          ', ' + (c6.x - dx56 * 0.35).toFixed(1) + ' ' + (c6.y + 24).toFixed(1) +
+          ', ' + c6.x.toFixed(1) + ' ' + c6.y.toFixed(1);
+
+        const fullTabletD = p12 + p23 + p34 + p45 + p56;
+        svg.querySelectorAll('path').forEach(p => p.setAttribute('d', fullTabletD));
+      }
+    }
+
+    // --- MOBILE MODE (<= 600px) ---
+    if (w <= 600) {
+      const mobileFlow = methodology.querySelector('.mobile-flow');
+      const mobileSvg = methodology.querySelector('.mobile-flow-svg');
+      const cards = methodology.querySelectorAll('.mobile-flow .mobile-card');
+      if (mobileFlow && mobileSvg && cards.length >= 6) {
+        const flowRect = mobileFlow.getBoundingClientRect();
+        const svgW = Math.max(1, flowRect.width);
+        const svgH = Math.max(1, flowRect.height);
+        mobileSvg.setAttribute('viewBox', '0 0 ' + svgW + ' ' + svgH);
+
+        const nodes = Array.from(cards).map(card => {
+          const node = card.querySelector('.method-node');
+          const target = node || card;
+          const r = target.getBoundingClientRect();
+          return {
+            x: r.left + r.width / 2 - flowRect.left,
+            y: r.top + r.height / 2 - flowRect.top
+          };
+        });
+
+        // Continuous S-curves weaving between staggered 01 -> 02 -> 03 -> 04 -> 05 -> 06
+        let mobileD = 'M ' + nodes[0].x.toFixed(1) + ' ' + nodes[0].y.toFixed(1);
+        for (let i = 0; i < nodes.length - 1; i++) {
+          const curr = nodes[i];
+          const next = nodes[i + 1];
+          const dy = next.y - curr.y;
+          mobileD += ' C ' + curr.x.toFixed(1) + ' ' + (curr.y + dy * 0.48).toFixed(1) +
+            ', ' + next.x.toFixed(1) + ' ' + (next.y - dy * 0.48).toFixed(1) +
+            ', ' + next.x.toFixed(1) + ' ' + next.y.toFixed(1);
+        }
+
+        mobileSvg.querySelectorAll('path').forEach(p => p.setAttribute('d', mobileD));
+      }
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updateTransformationJourneyLines);
+  } else {
+    updateTransformationJourneyLines();
+  }
+  window.addEventListener('load', updateTransformationJourneyLines);
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(updateTransformationJourneyLines);
+  }
+  window.addEventListener('resize', updateTransformationJourneyLines, { passive: true });
+  window.addEventListener('orientationchange', updateTransformationJourneyLines, { passive: true });
+
+  const methodologySection = document.getElementById('methodology');
+  if (methodologySection && window.ResizeObserver) {
+    new ResizeObserver(() => {
+      window.requestAnimationFrame(updateTransformationJourneyLines);
+    }).observe(methodologySection);
+  }
 })();
 </script>
 </body>

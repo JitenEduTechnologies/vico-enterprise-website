@@ -18,7 +18,7 @@
   z-index: 1000;
   inset: 0 0 auto;
   height: 66px;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--vyntra-border);
@@ -96,7 +96,7 @@
   letter-spacing: -0.03em;
   color: var(--vyntra-text);
 }
-/* DESKTOP NAVIGATION */
+/* DESKTOP NAVIGATION (> 1024px) */
 .nav {
   display: flex;
   align-items: center;
@@ -124,6 +124,9 @@
   font-weight: 600;
   background: var(--vyntra-light-teal);
 }
+.nav .mobile-cta {
+  display: none;
+}
 /* HEADER CTA BUTTON */
 .header-cta {
   display: inline-flex;
@@ -149,90 +152,238 @@
   background: var(--vyntra-teal-dark);
   box-shadow: 0 4px 14px rgba(8, 127, 115, 0.28);
 }
-/* MOBILE MENU BUTTON */
+/* MOBILE / TABLET MENU BUTTON */
 .menu-btn {
   display: none;
   margin-left: auto;
-  width: 42px;
-  height: 42px;
-  border-radius: 8px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 10px;
   border: 1px solid var(--vyntra-border);
   background: var(--vyntra-bg);
   color: var(--vyntra-text);
   cursor: pointer;
-  font-size: 20px;
+  font-size: 22px;
   line-height: 1;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 1002;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.2s ease, transform 0.15s ease, border-color 0.2s ease;
 }
-@media(max-width:1200px) {
+.menu-btn:hover {
+  background: var(--vyntra-light-teal);
+  border-color: rgba(8, 127, 115, 0.3);
+}
+.menu-btn:active {
+  transform: scale(0.96);
+}
+.menu-btn[aria-expanded="true"],
+.menu-btn.is-active {
+  background: var(--vyntra-light-teal);
+  border-color: rgba(8, 127, 115, 0.4);
+  color: var(--vyntra-teal);
+}
+
+/* BACKDROP OVERLAY */
+.menu-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.45);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 998;
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+.menu-backdrop.open {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* PREVENT BACKGROUND SCROLL WHEN MENU IS OPEN */
+html.menu-open,
+body.menu-open {
+  overflow: hidden !important;
+  overscroll-behavior: none !important;
+  touch-action: none;
+}
+
+.nav-drawer-header {
+  display: none;
+}
+
+@media(min-width: 1025px) {
+  .menu-btn { display: none !important; }
+  .nav-drawer-header { display: none !important; }
+  .menu-backdrop { display: none !important; }
+}
+
+@media(max-width:1200px) and (min-width:1025px) {
   .nav { gap: 2px; }
   .nav a { font-size: 12.5px; padding: 6px 8px; }
   .header-cta { padding: 0 14px; font-size: 12px; min-height: 38px; }
 }
-@media(max-width:980px) {
-  .nav { gap: 1px; }
-  .nav a { font-size: 11.5px; padding: 5px 6px; }
-  .header-cta { padding: 0 12px; font-size: 11.5px; min-height: 36px; }
-}
-/* MOBILE NAVIGATION */
-@media(max-width:920px) {
+
+/* RESPONSIVE DRAWER FOR TABLET & MOBILE (<= 1024px) */
+@media(max-width:1024px) {
   .header-inner { width: calc(100% - 32px); }
-  .nav, .header-cta { display: none; }
+  .header-cta { display: none; }
   .menu-btn { display: flex; }
-  .nav.open {
+  
+  .nav-drawer-header {
     display: flex;
-    position: absolute;
-    top: 66px;
-    left: 16px;
-    right: 16px;
-    flex-direction: column;
-    gap: 4px;
-    background: #ffffff;
-    border: 1px solid var(--vyntra-border);
-    border-radius: 16px;
-    padding: 12px;
-    box-shadow: 0 12px 36px rgba(17, 17, 17, 0.12);
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 4px 12px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid var(--vyntra-border);
+    flex-shrink: 0;
   }
-  .nav.open a {
+  .nav-drawer-title {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--vyntra-muted);
+  }
+  .nav-close-btn {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    border-radius: 8px;
+    border: 1px solid var(--vyntra-border);
+    background: var(--vyntra-bg);
+    color: var(--vyntra-text);
+    cursor: pointer;
+    font-size: 17px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+  }
+  .nav-close-btn:hover {
+    background: var(--vyntra-light-teal);
+    color: var(--vyntra-teal);
+    border-color: rgba(8, 127, 115, 0.3);
+  }
+  .nav-close-btn:active {
+    transform: scale(0.95);
+  }
+
+  .nav {
+    position: fixed;
+    top: 66px;
+    right: 0;
+    left: auto;
+    width: min(340px, calc(100vw - 32px));
+    height: calc(100vh - 66px);
+    height: calc(100dvh - 66px);
+    max-height: calc(100dvh - 66px);
+    background: #ffffff;
+    border-left: 1px solid var(--vyntra-border);
+    box-shadow: -12px 0 36px rgba(17, 17, 17, 0.14);
+    display: flex;
+    flex-direction: column;
+    padding: 16px 16px calc(24px + env(safe-area-inset-bottom, 0px));
+    gap: 4px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    transform: translateX(110%);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s ease;
+    visibility: hidden;
+    z-index: 1001;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .nav.open {
+    transform: translateX(0);
+    visibility: visible;
+  }
+  .nav a {
     width: 100%;
     min-height: 44px;
     display: flex;
     align-items: center;
-    padding: 10px 14px;
+    padding: 10px 16px;
     font-size: 14.5px;
     font-weight: 500;
-    border-radius: 8px;
+    border-radius: 10px;
     color: var(--vyntra-text);
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: color 0.15s ease, background 0.15s ease;
   }
-  .nav.open a:hover,
-  .nav.open a.active {
+  .nav a:hover,
+  .nav a.active {
     background: var(--vyntra-light-teal);
     color: var(--vyntra-teal);
     font-weight: 600;
   }
-  .nav.open .mobile-cta {
-    margin-top: 8px;
-    padding: 12px 14px;
+  .nav .mobile-cta {
+    display: block;
+    margin-top: auto;
+    padding-top: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
+  .nav .mobile-cta a {
+    min-height: 46px;
     background: var(--vyntra-teal);
-    color: #ffffff;
+    color: #ffffff !important;
     font-weight: 600;
+    font-size: 14px;
     justify-content: center;
     text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(8, 127, 115, 0.22);
+    transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
   }
-  .nav.open .mobile-cta:hover {
+  .nav .mobile-cta a:hover {
     background: var(--vyntra-teal-dark);
-    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(8, 127, 115, 0.3);
   }
 }
 @media(max-width:600px) {
   .site-header { height: 60px; }
-  .nav.open { top: 60px; }
+  .header-inner { width: calc(100% - 24px); }
+  .nav {
+    top: 60px;
+    height: calc(100vh - 60px);
+    height: calc(100dvh - 60px);
+    max-height: calc(100dvh - 60px);
+    width: min(320px, calc(100vw - 20px));
+    padding: 14px 14px calc(20px + env(safe-area-inset-bottom, 0px));
+  }
   .brand-word { font-size: 19px; }
   .brand-mark { width: 26px; height: 26px; }
 }
+@media(max-width:380px) {
+  .nav {
+    width: min(300px, calc(100vw - 16px));
+    padding: 12px 12px calc(18px + env(safe-area-inset-bottom, 0px));
+  }
+  .nav a {
+    font-size: 14px;
+    padding: 9px 12px;
+    min-height: 42px;
+  }
+}
 @media(prefers-reduced-motion:reduce) {
-  .site-header { transition: transform 0.01s linear!important; }
+  .site-header, .nav, .menu-backdrop { transition: none !important; }
 }
 </style>
 <header class="site-header" id="siteHeader">
@@ -242,6 +393,10 @@
       <span class="brand-word" data-site-brand>Vyntra</span>
     </a>
     <nav class="nav" id="mainNav" aria-label="Primary navigation">
+      <div class="nav-drawer-header">
+        <span class="nav-drawer-title">Navigation</span>
+        <button class="nav-close-btn" id="navCloseBtn" type="button" aria-label="Close navigation menu">✕</button>
+      </div>
       <a href="index.html" data-nav="index.html">Home</a>
       <a href="1-vico-solutions.html" data-nav="1-vico-solutions.html">Solutions</a>
       <a href="services.html" data-nav="services.html">Services</a>
@@ -249,12 +404,16 @@
       <a href="industries.html" data-nav="industries.html">Industries</a>
       <a href="careers.html" data-nav="careers.html">SAP Careers</a>
       <a href="contact.html" data-nav="contact.html">Contact Us</a>
+      <div class="mobile-cta">
+        <a href="contact.html#contact-form" data-site-form-link>Contact Us →</a>
+      </div>
     </nav>
     <a class="header-cta" href="contact.html#contact-form" data-site-form-link data-site-contact>
       Contact Us
     </a>
-    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
-      ☰
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+      <span class="menu-btn-icon" aria-hidden="true">☰</span>
     </button>
   </div>
 </header>
+<div class="menu-backdrop" id="menuBackdrop" aria-hidden="true"></div>
